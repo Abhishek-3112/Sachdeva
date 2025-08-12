@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Facilities | Sachdeva Diagnostics</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Custom styles for theme consistency and modal */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F8F9FA;
+        }
+        .theme-gradient-text {
+            background-image: linear-gradient(to right, #00A6C0, #00C2A3);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        /* Styles for the modal overlay */
+        #details-modal {
+            transition: opacity 0.3s ease;
+        }
+        /* Custom list styles for the modal content */
+        #modal-body ul {
+            list-style-type: disc;
+            list-style-position: inside;
+            text-align: left;
+            margin-left: 1rem;
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        #modal-body li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/Gemini_Generated_Image_7i4n4l7i4n4l7i4n.png" alt="Sachdeva Diagnostics Icon" class="logo-icon" />
+                Sachdeva <span> Diagnostics</span>
+            </a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            ☰
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="loca.html">Contact Us</a></li>
+            <li><a href="lab-tests.html">Lab Tests List</a></li>
+            <li><a href="facilities.html">Facilities</a></li>
+            <li><a href="health-packages.html">Health Packages</a></li>
+        </ul>
+    </nav>
+
+    <section class="py-16 md:py-24">
+        <div class="max-w-6xl mx-auto px-6">
+            
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800">Our Core Services</h1>
+                <p class="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">
+                    We offer a comprehensive range of diagnostic services using state-of-the-art technology to ensure accuracy and reliability.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" style="perspective: 1000px;">
+
+                <div data-service="pathology" class="service-card group h-full p-8 bg-white rounded-2xl shadow-lg transition-all duration-500 [transform-style:preserve-3d] hover:[transform:rotateY(-15deg)] hover:shadow-2xl cursor-pointer">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="flex-shrink-0">
+                            <i class="fa-solid fa-microscope text-6xl theme-gradient-text transition-transform duration-500 group-hover:scale-110"></i>
+                        </div>
+                        <div class="mt-6">
+                            <h2 class="text-2xl font-bold text-gray-800">
+                                Pathology & Lab Services
+                            </h2>
+                            <p class="mt-3 text-gray-500">
+                                Advanced clinical pathology for precise detection, diagnosis, and monitoring of diseases.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-service="radiology" class="service-card group h-full p-8 bg-white rounded-2xl shadow-lg transition-all duration-500 [transform-style:preserve-3d] hover:[transform:rotateY(-15deg)] hover:shadow-2xl cursor-pointer">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="flex-shrink-0">
+                            <i class="fa-solid fa-x-ray text-6xl theme-gradient-text transition-transform duration-500 group-hover:scale-110"></i>
+                        </div>
+                        <div class="mt-6">
+                            <h2 class="text-2xl font-bold text-gray-800">
+                                Radiology & Imaging
+                            </h2>
+                            <p class="mt-3 text-gray-500">
+                                High-resolution digital X-rays and ultrasound scans for detailed internal imaging.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-service="ecg" class="service-card group h-full p-8 bg-white rounded-2xl shadow-lg transition-all duration-500 [transform-style:preserve-3d] hover:[transform:rotateY(-15deg)] hover:shadow-2xl cursor-pointer">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="flex-shrink-0">
+                            <i class="fa-solid fa-heart-pulse text-6xl theme-gradient-text transition-transform duration-500 group-hover:scale-110"></i>
+                        </div>
+                        <div class="mt-6">
+                            <h2 class="text-2xl font-bold text-gray-800">
+                                Electrocardiogram (ECG)
+                            </h2>
+                            <p class="mt-3 text-gray-500">
+                                Quick and painless heart rhythm tests to assess cardiac health and detect irregularities.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="details-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-60 opacity-0 pointer-events-none">
+        <div id="modal-content" class="bg-white w-full max-w-3xl rounded-2xl shadow-2xl p-6 md:p-8 relative transform scale-95 transition-transform duration-300 max-h-[90vh] overflow-y-auto">
+            <button id="close-modal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-800 text-3xl leading-none">&times;</button>
+            <div id="modal-body" class="text-left">
+                </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-50 text-gray-700">
+    <div id="home-collection" class="max-w-7xl mx-auto p-6 md:flex md:items-center md:justify-between bg-white rounded-t-3xl shadow-md">
+        <div class="md:w-1/2 mb-6 md:mb-0">
+            <img src="images/labtech - Copy.png" alt="Lab Technician" class="rounded-2xl w-full max-w-md mx-auto md:mx-0">
+        </div>
+
+        <div class="md:w-1/2 text-center md:text-left">
+            <h2 class="text-2xl font-semibold text-center text-blue-900 mb-4 text">Book an appointment with us!</h2>
+            <form id="bookingForm" class="space-y-4">
+                
+                <div class="relative" id="search-container">
+                    <input type="text" id="testSearchInput" placeholder="Search for a Test *" required class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <div id="searchResults" class="absolute z-10 w-full bg-white border border-gray-300 rounded-md mt-1 max-h-60 overflow-y-auto hidden">
+                        </div>
+                </div>
+
+                <input id="fullName" type="text" placeholder="Full Name *" required class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <input id="age" type="number" placeholder="Age *" required class="w-full sm:w-1/2 px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <input id="phone" type="tel" placeholder="Phone Number *" required class="w-full sm:w-1/2 px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                
+                <input id="email" type="email" placeholder="Email (Optional)" class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+                <div class="relative">
+                    <input id="date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="dd-mm-yyyy *" required class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                
+                <div class="relative">
+                    <select id="time" name="time" required class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none bg-white">
+                        <option value="" disabled selected>Select preferred time slot *</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-700">
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition flex items-center justify-center h-12">
+                    Book Appointment
+                </button>
+                <p class="text-xs text-gray-500 mt-2">We'll reach out to you shortly to confirm your appointment.</p>
+                <p id="formMessage" class="text-sm text-center font-semibold hidden"></p>
+            </form>
+        </div>
+        </div>
+
+    <div class="bg-white max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+        <div>
+            <a href="index.html">
+                <h3 class="flex items-center justify-center md:justify-start text-xl font-bold text-blue-800 mb-1">
+                    <img src="images/Gemini_Generated_Image_7i4n4l7i4n4l7i4n.png" alt="Logo" class="w-8 h-8 mr-1">
+                    Sachdeva <span class="text-orange-400">Diagnostics</span>
+                </h3>
+            </a>
+            <p class="text-sm text-gray-500">Pathology, And beyond.</p>
+        </div>
+        <div>
+            <h4 class="text-lg font-semibold text-blue-900 mb-2">Quick Links</h4>
+            <ul class="space-y-1 text-sm text-gray-600">
+                <li><a href="loca.html" class="hover:text-blue-500">Location</a></li>
+                <li><a href="lab-tests.html" class="hover:text-blue-500">Test List</a></li>
+                <li><a href="about.html" class="hover:text-blue-500">About Us</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-lg font-semibold text-blue-900 mb-2">For Customers</h4>
+            <ul class="space-y-1 text-sm text-gray-600">
+                <li><a href="health-packages.html" class="hover:text-blue-500">Healthcare Packages</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-lg font-semibold text-blue-900 mb-2">Opening Hour</h4>
+            <ul class="text-sm text-gray-600 space-y-2">
+                <li class="flex flex-col sm:flex-row sm:justify-between items-center">
+                    <span>Monday-Saturday</span>
+                    <span class="text-blue-500 font-medium">08am–07pm</span>
+                </li>
+                <li class="flex flex-col sm:flex-row sm:justify-between items-center">
+                    <span>Sunday</span>
+                    <span class="text-blue-500 font-medium">08am–01pm</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="bg-white border-t border-gray-200 py-6">
+        <div class="max-w-7xl mx-auto px-6 
+            flex flex-col items-center md:flex-row justify-between 
+            text-sm text-gray-700 
+            space-y-6 md:space-y-0">
+            
+            <div class="flex items-center space-x-3">
+                <a href="tel:011-41600800">
+                    <div class="bg-blue-100 p-4 rounded-full text-blue-700 text-2xl">
+                        📞
+                    </div>
+                </a>
+                <div class="text-left">
+                    <span class="text-sm font-bold text-black">Need Help? Book Lab Visit</span> <br> 
+                    <span class="text-2xl text-blue-500 font-bold">011-41600800</span>
+                </div>
+            </div>
+
+            <div class="text-lg flex items-center space-x-2 font-bold">
+                ✉️ <a href="mailto:sachdevadiagnostics@yahoo.com" class="hover:text-blue-500">sachdevadiagnostics@yahoo.com</a>
+            </div>
+
+            <a href="https://www.google.com/maps/place/28%C2%B032'15.3%22N+77%C2%B015'22.9%22E/@28.5375711,77.2537896,17z/data=!3m1!4b1!4m4!3m3!8m2!3d28.5375711!4d77.2563645?entry=ttu&g_ep=EgoyMDI1MDgwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="hover:text-blue-500 text-lg flex items-center space-x-2 font-bold text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 inline-block text-red-500" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                </svg>
+                <span>D-616/ C R Park, New Delhi, 110019</span>
+            </a>
+
+            <div class="flex items-center justify-center space-x-4">
+                <a href="#"><img src="https://www.svgrepo.com/show/183607/facebook.svg" class="w-6 h-6" alt="Facebook"></a>
+                <a href="#"><img src="https://www.svgrepo.com/show/111199/instagram.svg" class="w-6 h-6" alt="Instagram"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center text-sm text-gray-400 py-4">
+        Copyright ©2024 <strong>Sachdeva Diagnostics</strong>, All Rights Reserved.
+    </div>
+</footer>
+
+
+<script>
+
+function toggleMenu() {
+        const nav = document.getElementById("navLinks");
+        nav.classList.toggle("show");
+      }
+
+    document.addEventListener("DOMContentLoaded", function () {
+         // --- BOOKING FORM LOGIC ---
+        const allTests = [
+            "ABSOLUTE EOSINOPHIL COUNT ; AEC", "ABSOLUTE NEUTROPHIL COUNT :ANC", "ABSOLUTE LYMPHOCYTE COUNT;ALC", "APTT / PTT; ACTIVATED PARTIAL THROMBOPLASTIN TIME", "BLEEDING TIME : BT", "BLOOD GROUP: ABO AND Rh FACTOR", "CLOT RETRACTION TEST", "CLOTING TIME -CT", "COOMBS TEST-DIRECT", "COOMBS TEST- INDIRECT", "DIFFERENTIAL LEUCOCYTE COUNT : DLC", "ESR (Westergren)", "HB HPLC / ELECTROPHORESIS", "HbA1c :GLYCOSYLATED Hb", "HEMOGLOBIN: Hb", "MCH", "MCHC", "MCV", "MICROFILARIA DETECTION IN PERIPHERAL SMEAR", "MALARIAL PARASITE /BLOOD PARASITE :P/S FOR MP", "PCV Hematocrit)", "PERIPHERAL BLOOD SMEAR: BLOOD PICTURE", "PLATELET COUNT", "PT WITH INR", "RED CELL DISRTIBUTION WIDTH :RDW- CV", "RED CELL DISTRIBUTION WIDTH :RDW- SD", "RETICULOCYTE COUNT", "TOTAL LEUCOCYTE COUNT :TLC", "RED BLOOD CELLS : RBC COUNT", "ANGIOTENSIN CONVERTING ENZYME: ACE", "GLUCOSE / SUGAR - FASTING", "GLUCOSE / SUGAR- PP", "GLUCOSE /.SUGAR - RANDOM", "UREA ,SERUM", "CPK – MB; CK –MB", "GLUCOSE CHALLENGE TEST :GCT", "GLUCOSE TOLERANCE TEST :GTT- PREGNANCY", "GLUCOSE TOLERANCE TEST -GTT-2.5 HOURS", "ACID PHOSPHATASE (PROSTATIC)", "ACID PHOSPHOTASE (TOTAL)", "FERRITIN,SERUM", "HOMOCYSTIENE QUANTITATIVE,SERUM", "MAGNESIUM,SERUM", "PROTEIN ELECTROPHORESIS,SERUM", "PROTEIN ELECTROPHORESIS, URINE", "TRANSFERRIN ,SERUM", "ALBUMIN ,SERUM", "ALKALINE PHOSPHATASE ,SERUM (ALP)", "AMYLASE ,SERUM", "BILIRUBIN (DIRECT) ,SERUM", "BILIRUBIN (INDIRECT) ,SERUM", "BILIRUBIN (TOTAL ,DIRECT AND INDIRECT)", "CALCIUM ,SERUM", "CHLORIDE ,SERUM", "CHOLESTROL ,SERUM", "CPK /CREATININE KINASE (CK)SERUM", "CREATININE ,SERUM", "HDL CHOLESTROL ,SERUM", "IRON , SERUM", "LACTATE DEHYDROGENASE ( LDH) ,SERUM", "LDL CHOLESTROL -DIRECT,SERUM", ".LIPASE ,SERUM", "PHOSPHOROUS ,SERUM", "POTASSIUM (K +) ,SERUM", "SODIUM (NA+)", "TOTAL PROTEIN ,SERUM", "TOTAL PROTEIN ,URINE", "TOTAL PROTEIN ,BODY FLUIDS", "TRIGLYCERIDES ,SERUM", "URIC ACID,SERUM", "VLDL,SERUM", "GAMMA GLUTAMYL TRANSPEPTIDASE (GGT),SERUM", "SGOT ;ASPARTATE AMINOTRANSFERASE (AST), SERUM", "SGPT ; (ALT)ALANINE AMINOTRANSFERASE, SERUM", "TIBC ,TOTAL IRON BINDING CAPACITY", "AIDS (HIV 1&11)", "ALLERGY PANEL", "ANTI- CCP", "ANTI ds DNA ANTIBODIES", "ANTI ECHINOCOCCUS ANTIBODY", "ANTI CARDIOLIPN ANTIBODY.", "ANA –IF METHOD ,ANTINUCLEAR ANTIBODY", "ANA- ELISA METHOD ,ANTINUCLEAR ANTIBODY,", "ANTPHOSPHOLIPID IgG", "ANTPHOSPHOLIPID lgM", "ANTISPERM ANTBODIES", "ANTI Tg ,ANTITHROGLOBULIN ANTIBODY", "ANTI- TPO ,ANTITHYROID PEROXIDASE ANTIBODY", "ASO – ANTISTREPTOLYSIN ANTIBODY WITH TITRE", "CYTOMEGALOVIRUS ANTIBODY lgG", "CYTOMEGALOVIRUS ANTIBODY - lgM", "COMPLEMENT C3", "CRP ,C REACTIVE PROTEIN WITH TITRE", "DENGUE- lgG & lgM", "DENGUE- NS1 ANTIGEN", "H. PYLORI- lgA", "H. PYLORI- IgG", "HEPATITIS A ANTIBODY (ANTI HAV) lgM", "HEPATITIS A ANTIBODY (ANTI HAV) TOTAL", "HEPATITIS B CORE ANTIBODY (ANTI HBc) lgM", "HEPATITIS CORE ANTIBODY (ANTI HBc) TOTAL", "HEPATITIS B ENVELOPE ANTIGEN (HBe Ag)", "HEPATITIS B SURFACE ANTIBODY (HBsAb)", "HEPATITIS SURFACE ANTIGEN (HBsAg )", "HEPATITIS B ENVELOPE ANTIBODY (HBe Ab)", "HEPATITIS C VIRUS( HCV) ANTIBODY; ICT METHOD FOR SCREENING", "HEPATITIS C VIRUS (HCV) ANTIBODY IgM", "HEPATITIS C VIRUS (HCV)ANTIBODY -TOTAL", "HEPATITIS E VIRUS (ANTI HEV) lgG", "HEPATITIS E VIRUS (ANTI HEV) lgM", "HERPES-1-IgG", "HERPES -1- IgM", "HERPES-2- lgG", "HERPES 2- lgM", "HSV 1 & 2- IgG/IgM", "(HSV) 1 &2—lgM AND IgG", "hs- CRP (CARDIO)", "MALARIAL ANTIGEN", "RHEUMATOID ARTHRITIS (RA )FACTOR", "RUBELLA-lG", "RUBELLA-IgM", "IMMUNOGLOBULIN IgA", "IMMUNOGLOBULIN Ig E", "IMMUNOGLOBULIN IgG", "TUBERCULIN SKIN TEST / MANTOUX TEST", "TB GOLD ;QUANTIFERON –TB (IFN GAMMA TEST)", "Ttga ;ANTI TISSUE TRANSGLUTAMINASE IgA", "TORCH PANEL - lgG", "TORCH PANEL - lgM", "TOXOPLASMA- lgG", "TOXOPLASMA - IgM", "TPHA", "TYPHID0T", "VDRL", "WIDAL - SLIDE", "WIDAL- TUBE", "AFB CULTURE", "BLOOD CỤLTURE AND SENSITIVITY (C/S)", "HIGH VAGINAL SWAB CULTURE AND SENSITIVITY (C/S)", "PCR FOR MYCO TUBERCULOSIS", "PUS - SWAB CUTURE AND SENSITIVITY (C/S)", "SEMEN- CULTURE AND SENSITIVITY (C/S)", "SKIN SCRAPPING FUNGUS", "SMEAR FOR AFB", "SMEAR FOR GRAM STAIN", "SPUTUM- CULTURE AND SENSITIVITY (C/S)", "STOOL- CULTURE AND SENSITIVITY(C/S)", "THROAT SWAB –CULTURE AND SENSITIVITY (C/S)", "WET MOUNT DIRECT SMEAR", "17-HYDROXYPROGESTRONE", "BETA HCG", "CORTISOL", "DHEA-S", "ESTRADIOL - E2", "ESTRIOL - E3", "FREE T3 ;FT3", "FREE T4 ;FT4", "FSH ;,FOLLICLE STIMULATING HORMONE", "GROWTH HORMONE ;GH", "HLA- B27", "INSULIN- FASTING", "INSULIN- PP", "INSULIN -RANDOM", "LH , LUTEINISING HORMONE", "PARATHYROID HORMONE ;PTH", "PROGESTERONE", "PROLACTIN", "TESTOSTERONE- FREE", "TESTOSTERONE-TOTAL", "TRIPPLE TEST", "TSH ;THYROID STIMULATING HORMONE", "CARBAMEZIPINE / TEGRETOL", "DIGOXIN", "DILANTIN / PHENYYTON", "FOLIC ACID", "LITHIUM", "VALPORIC ACID", "VITAMIN - B12", "VITAMIN D-25 HYDROXY", "BUCCAL SMEAR FOR BARR BODIES ( SEX CHROMATIN )", "CYTOLOGY ;FINE NEEDLE ASPIRATION (FNAC)", "CYTOLOGY ;BODY FLUIDS", "FNAC /PAP / BIOPSY SLIDES FOR OPINION", "HISTOPATHOLOGY (LARGE)", "HISTOPATHOLOGY (MEDIUM)", "HISTOPATHOLOGY (SMALL)", "CYTOLOGY GENITAL ; PAP SMEAR ;CONVENTIONAL", "CYTOLOGY GENITAL: PAP SMEAR ;LIQUiD BASED", "U/S GUIDED FNAC", "BODY FLUID EXAMINATION ROUTINE", "POST COITAL TEST ( PCT )", "SEMEN ANALYSIS", "SEMEN FRUCTOSE LEVEL", "ALFA FETO PROTEINS ( AFP )", "CA- 19.9 PANCREATIC CANCER MARKER", "CA 72.4 GASTRIC CANCER MARKER", "CA-125 OVARIAN CANCER MARKER", "CEA CARCINOEMBRYONIC ANTIGEN", "PSA - (PROSTATE SPECIFIC ANTIGEN ) FREE", "PSA - (PROSTATE SPECIFIC ANTIGEN ) TOTAL", "STOOL HANGING DROP PREPARATION", "STOOL OCCULT BLOOD", "pH & REDUCING SUBSTANCES", "STOOL- CUTURE & SENSITIVITY ;AEROBIC)", "STOOL ( CONCENTRATION METHOD)", "STOOL ANALYSIS -ROUTINE", "24 HRS URINARY SODIUM", "24 HRS URINARY URIC ACID", "24HRS URINARY CALCIUM", "24HRS URINARY CATECHOLMINE", "24HRS URNARY.CHLORIDE", "24HRS URINARY CORTISOL", "24HRS URINARY CREATININE", "24HRS URINARY PROTIEN", "24HRS URINARY UREA", "ALBUMIN ,URINE", "ALBUMIN CREATININE RATIO (ACR)", "BENCE JONES PROTEINS", "BLE SALTS & BILE PIGMENT,URINE", "CHYLURIA", "CREATNINE CLEARANCE", "CYTOLOGY FOR ATYPICAL CELLS /PAP SMEAR ,URINE", "KETONE BODES / ACETONE ,URINE", "MICROALBUMINURIA (24 HRS)", "MICROALBUMINURIA (RANDOM)", "OCCULT BLOOD", "PREGNANCY TEST", "PROTEINS ,URINE", "PROTEIN CREATININE RATIO (PCR)", "SPECIFIC GRAVTY ,URINE", "SUGAR,URINE", "URINE CULTURE & SENSITIVITY", "URINE PROTEIN ELECTROPHORESIS", "URINE ROUTINE AND MICROSCOPY",
+                "X-RAY CHEST PA / LAT / AP / APICOGRAM", "X-RAY ABDOMEN ERECT / SUPINE / KUB", "X-RAY CERVICAL SPINE AP / LAT / OBLIQUE", "X-RAY CERVICO-DORSAL SPINE LAT (Swimmers view)", "X-RAY DORSAL / THORACIC SPINE AP / LAT / OBLIQUE", "X-RAY LUMBAR SPINE AP / LAT (NEUTRAL / FLEXION / EXTENSION)", "X-RAY SACRO-COCGYGEAL SPINE AP / LAT", "X-RAY LIMB AP / LAT / OBLIQUE", "X-RAY JOINTS (SHOULDER, ELBOW, WRIST, HIP, KNEE, ANKLE)", "X-RAY T M JOINTS - (OPEN & CLOSED MOUTH)", "X-RAY SKULL AP / LAT / TOWNE'S", "X-RAY MASTOIDS SHULLER'S", "X-RAY ORBITS - AP & LAT", "X-RAY PNS WATER'S", "X-RAY STN AP/LAT", "X-RAY STYLOD PROCESSES", "X-RAYS CERAMIC PLATE",
+                "BARIUM SWALLOW", "BARIUM MEAL UPPER GIT", "BARIUM MEAL FOLLOW THROUGH", "BARIUM ENEMA", "IVP (Intravenous Pyelography)", "HSG (HYSTERO-SALPINGOGRAPHY)", "SINOGRAM / FISTULOGRAM",
+                "ULTRASOUND ABDOMEN (UPPER/ LOWER/ WHOLE)", "ULTRASOUND ABDOMEN WITH INGUINAL REGION", "ULTRASOUND PELVIS", "ULTRASOUND PELVIS (TVS)", "ULTRASOUND CHEST (for pleural effusion)", "ULTRASOUND FOLLICULAR STUDY", "ULTRASOUND KUB WITH PVR", "ULTRASOUND KUB WITH PROSTATE & PVR", "ULTRASOUND SCROTUM / TESTIS", "ULTRASOUND SOFT TISSUE (NECK / AXILLA / MALE BREAST)", "ULTRASOUND THYROID GLAND", "ULTRASOUND SALIVARY GLANDS / CHEEK / FACE", "ULTRASOUND NECK LYMPH NODES", "ULTRASOUND EARLY PREGNANCY / VIABILITY SCAN", "ULTRASOUND EARLY PREGNANCY TVS", "NT / NB SCAN", "LEVEL II SCAN / ANOMALIES SCAN", "GROWTH SCAN", "GROWTH SCAN WITH BIOPHYSICAL PROFILE", "GROWTH SCAN WITH COLOUR DOPPLER",
+                "ULTRASOUND PELVIS WITH CDFI", "VENOUS DOPPLER UPPER LIMB / LOWER LIMB",
+                "ECG / EKG"
+            ];
+            const timeSlots = [
+                "08:00 AM - 09:00 AM", "09:00 AM - 10:00 AM", "10:00 AM - 11:00 AM",
+                "11:00 AM - 12:00 PM", "12:00 PM - 01:00 PM", "01:00 PM - 02:00 PM",
+                "02:00 PM - 03:00 PM", "03:00 PM - 04:00 PM", "04:00 PM - 05:00 PM",
+                "05:00 PM - 06:00 PM"
+            ];
+
+            const timeSelect = document.getElementById('time');
+            const bookingForm = document.getElementById("bookingForm");
+            const formMessage = document.getElementById("formMessage");
+            const testSearchInput = document.getElementById("testSearchInput");
+            const searchResults = document.getElementById("searchResults");
+            const searchContainer = document.getElementById("search-container");
+
+            if (timeSelect) {
+                timeSlots.forEach(slot => {
+                    const option = document.createElement('option');
+                    option.value = slot;
+                    option.textContent = slot;
+                    timeSelect.appendChild(option);
+                });
+            }
+            
+            if (testSearchInput) {
+                testSearchInput.addEventListener('input', function() {
+                    const query = this.value.toLowerCase();
+                    searchResults.innerHTML = ''; 
+                    if (query.length < 1) {
+                        searchResults.classList.add('hidden');
+                        return;
+                    }
+                    const filteredTests = allTests.filter(test => test.toLowerCase().includes(query));
+                    if (filteredTests.length > 0) {
+                        filteredTests.forEach(test => {
+                            const resultItem = document.createElement('div');
+                            resultItem.className = 'p-2 hover:bg-gray-100 cursor-pointer';
+                            resultItem.textContent = test;
+                            resultItem.addEventListener('click', function() {
+                                testSearchInput.value = this.textContent;
+                                searchResults.classList.add('hidden');
+                            });
+                            searchResults.appendChild(resultItem);
+                        });
+                        searchResults.classList.remove('hidden');
+                    } else {
+                        searchResults.classList.add('hidden');
+                    }
+                });
+            }
+            
+            document.addEventListener('click', function(e) {
+                if (searchContainer && !searchContainer.contains(e.target)) {
+                    searchResults.classList.add('hidden');
+                }
+            });
+
+            if (bookingForm) {
+                bookingForm.addEventListener("submit", function (e) {
+                    e.preventDefault();
+                    const form = e.target;
+                    const submitButton = form.querySelector('button[type="submit"]');
+                    if (!submitButton) return;
+
+                    const formData = {
+                        test: form.querySelector("#testSearchInput").value.trim(),
+                        fullName: form.querySelector("#fullName").value.trim(),
+                        age: form.querySelector("#age").value.trim(),
+                        phone: form.querySelector("#phone").value.trim(),
+                        email: form.querySelector("#email").value.trim(),
+                        date: form.querySelector("#date").value.trim(),
+                        time: form.querySelector("#time").value.trim()
+                    };
+
+                    if (!formData.test || !formData.fullName || !formData.age || !formData.phone || !formData.date || !formData.time) {
+                        formMessage.textContent = "Please fill all required fields (*).";
+                        formMessage.className = "text-sm text-center font-semibold text-red-600 block";
+                        return;
+                    }
+                    
+                    const originalButtonContent = submitButton.innerHTML;
+                    submitButton.disabled = true;
+                    submitButton.innerHTML = 'Processing...';
+
+                    const messageBody = `🧪 *New Appointment Request*\n\n` +
+                                        `*Test*: ${formData.test}\n` +
+                                        `*Name*: ${formData.fullName}\n` +
+                                        `*Age*: ${formData.age}\n` +
+                                        `*Phone*: ${formData.phone}\n` +
+                                        `*Email*: ${formData.email || 'N/A'}\n` +
+                                        `*Date*: ${formData.date}\n` +
+                                        `*Time Slot*: ${formData.time}`;
+
+                    const labNumber = "917052301394";
+                    const waUrl = `https://wa.me/${labNumber}?text=${encodeURIComponent(messageBody)}`;
+                    
+                    window.open(waUrl, "_blank");
+                    
+                    setTimeout(() => {
+                        formMessage.textContent = "Success! Please press 'Send' in WhatsApp to confirm your booking.";
+                        formMessage.className = "text-sm text-center font-semibold text-green-600 block";
+                        submitButton.disabled = false;
+                        submitButton.innerHTML = originalButtonContent;
+                        form.reset();
+                    }, 1500);
+            });
+        }
+    });
+</script>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById("navLinks");
+            nav.classList.toggle("show");
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- DATA FOR THE MODAL ---
+            const serviceDetails = {
+    pathology: {
+        icon: 'fa-solid fa-microscope',
+        title: 'Pathology & Laboratory Services',
+        description: `
+            <div class="whitespace-pre-line text-gray-700 leading-relaxed space-y-4">
+
+  <h2 class="text-xl font-semibold">A. HEMATOLOGY</h2>
+  Hematology is the branch of medicine that focuses on the study of blood, the blood-forming organs, and blood diseases. It involves the diagnosis, treatment, and prevention of a wide range of conditions related to blood and its components, including:
+• Red Blood Cells (RBCs) – Carry oxygen to the body's tissues.
+• White Blood Cells (WBCs) – Fight infection.
+• Platelets – Help with blood clotting.
+• Plasma – The liquid portion of blood that carries cells and proteins.
+
+Common Tests and Procedures in Hematology : 
+
+a) CBC /  Hemogram :
+Hemogram test also known as a complete blood count (CBC), is a comprehensive blood analysis that assesses various blood components. It helps doctors evaluate overall health, diagnose conditions like anemia, infections and blood disorders, and also monitors treatment effectiveness. 
+
+What it checks:
+• Red blood cells (RBCs): Measures the number of RBCs and their characteristics (hemoglobin, hematocrit, RBC count ,MCV , MCH.  MCHC ,RDW etc.).
+
+• White blood cells (WBCs): Counts total and  different types of WBCs, which help fight infections.
+( TLC , DLC, Absolute counts as ANC, ALC , AEC and AMC)
+
+• Platelets: Checks the number  and morphology of platelets, essential for blood clotting.
+
+• Erythrocyte sedimentation rate (ESR) :  is an important marker of inflammation.
+
+No preparation is needed for doing a Hemogram.
+
+At Sachdeva Diagnostics :
+For haemoglobin estimation, platelet count and CBC every patient’s blood sample is run in a fully automated haematology analyser and a blood smear slide is also prepared to be viewed manually by the  Pathologist for cross checking results and improving accuracy.
+
+ESR is included in CBC for all patients as it is an important and useful marker.
+
+b) Peripheral Blood Smear : is the microscopic analysis of the various blood cells by the Pathologist. It provides complete morphological details of the cells and helps in diagnosing type of anaemia, infections like malaria and blood cancers.
+
+c) Coagulation Tests
+A coagulation profile test, also known as a clotting profile or hemostasis test, assesses the blood's ability to clot properly. It helps diagnose bleeding or clotting disorders .
+
+A coagulation profile typically includes the following tests: 
+
+• Prothrombin Time (PT) and International Normalized Ratio (INR)
+• Activated Partial Thromboplastin Time (aPTT)
+• Platelet Count:
+• Bleeding Time (BT): This test measures how long it takes for small blood vessels to stop bleeding after a small cut. 
+• Clotting Time (CT): This test measures the time it takes for blood to clot in a test tube. 
+
+Why is a coagulation profile test done?
+• To investigate unexplained bleeding or excessive bruising. 
+• To assess the risk of bleeding before surgery or other medical procedures. 
+• To monitor patients on anticoagulant medications like warfarin. 
+• To diagnose and monitor conditions that affect blood clotting, such as hemophilia, von Willebrand disease, and disseminated intravascular coagulation (DIC). 
+• To evaluate liver disease, as the liver produces many of the proteins involved in blood clotting. 
+
+d) Hb Electrophoresis / HPLC : Tests fot the percentage of various types of Hemoglobin.  Helps in diagnosing diseases like Thalassemia, Sickle Cell Diseasee
+
+e) Bone Marrow Aspiration / Biopsy:
+Is the cytological / histopathological examination of the bone marrow to diagnose  various blood and bone marrow disorders including cancers.
+
+  <h2 class="text-xl font-semibold mt-6">B. BIOCHEMISTRY</h2>
+  Biochemistry in medical laboratories plays a crucial role in diagnosing, monitoring, and managing diseases. It involves the analysis of chemical substances and processes in the human body, focusing on understanding the molecular and biochemical mechanisms of health and disease.
+
+Key Functions of Biochemistry in Medical Labs :
+• Blood glucose tests for diabetes.
+• Liver function tests (e.g., ALT, AST, bilirubin etc ).
+• Kidney function tests (e.g., urea, creatinine etc ).
+• Cardiac markers (e.g., troponin, CK-MB) for heart attacks.
+• Electrolyte panels (Na⁺, K⁺, Cl⁻, HCO₃⁻) for fluid balance.
+• HbA1c levels for long-term glucose control in diabetics.
+• Cholesterol panels to monitor lipid-lowering therapy.
+• Tumor markers to track cancer progression (e.g., PSA, CA-125).
+• Inherited metabolic disorders.
+• Hormone Assays like Thyroid function tests to detect hypo/hyperthyroidism 
+• Prenatal screening for genetic or developmental conditions.
+• Therapeutic drug monitoring (e.g.,Valproate, lithium).
+• Toxic substance screening (e.g., ethanol, heavy metals).
+
+
+
+Common biochemistry panels:
+
+Liver Function Tests / LFT :
+Liver function tests are blood tests that assess the health and functioning of the liver by measuring specific substances it produces or processes.
+
+Commonly measured substances in LFT: 
+1. Enzymes: Alanine transaminase (ALT), Aspartate transaminase (AST), Alkaline phosphatase (ALP), Gamma-glutamyl transferase (GGT).
+GGT is the earliest marker to show liver disease.
+AST/ALT ratio: helps in diagnosing alcoholic liver disease.
+2.  Proteins: Albumin, Globulin, Total protein.
+3.  Waste Products: Total,  direct and indirect bilirubin.
+
+Purpose
+a. Monitoring: LFTs can be used to monitor the progression of liver disease or the effectiveness of treatment.
+b. Screening: LFTs can be used to screen for liver infections like hepatitis.
+c. Evaluating Medications: LFTs can help determine if certain medications are causing liver damage. 
+No preparation is required for LFT
+
+RENAL FUCTION TEST / KIDNEY FUNCTION TEST / KFT :
+A renal function test, also known as a kidney function test , is a group of medical tests used to evaluate the health and efficiency of your kidneys. These tests measure levels of various substances in the blood to assess how well your kidneys are filtering waste products, balancing fluids and electrolytes, and producing essential hormones. 
+Renal Function Tests include:
+>Creatinine
+>Urea. and Blood Urea Nitrogen (BUN):
+>BUN / Creatinine ratio : This ratio helps doctors determine if kidney issues are due to a problem with blood flow to the kidneys or an actual kidney malfunction. 
+> Estimated Glomerular Filtration Rate (eGFR): Estimates how well your kidneys are filtering blood.
+>Electrolytes: Sodium, potassium, chloride, ionic calcium
+>Total Proteins, Albumin ,  Globulin and A/G ratio:
+Total protein and Albumin decreases in chronic kidney disease.
+>Total Calcium and Phosphorus:
+In renal failure, disrupted calcium and phosphate imbalance leads to hyperphosphatemia, hypocalcaemia, and secondary hyperparathyroidism, impacting bone health and increasing cardiovascular risk.
+Ionic calcium  gives added advantage as it helps in detecting pseudo-hypocalcaemia cases.
+> Uric Acid 
+
+
+
+Purpose: The renal function test is ordered 
+
+>When there are changes in urine output, swelling over the face and body, muscle cramps, nausea, hiccups and unexplained weight fluctuations these are signs and symptoms that might prompt a doctor to order a renal function test.
+
+>To assess renal health in patients with diabetes, high blood pressure, heart disease, liver diseases and other conditions that can affect the kidney.
+
+Preparation - No preparation is required. Sample can be given anytime of the day.
+
+Lipid Profile :
+◦ A lipid profile test, also known as a lipid panel, is a blood test that measures the levels of different types of fats (lipids) in the blood, including cholesterol and triglycerides. The test measures:
+
+• Total cholesterol: The sum of all cholesterol types in the blood. 
+• LDL cholesterol (Low-density lipoprotein) : Often referred to as "bad cholesterol" as high levels can contribute to atherosclerosis in arteries. 
+• HDL cholesterol (High-density lipoprotein): Known as "good cholesterol" as it helps remove LDL from the bloodstream. 
+• Triglycerides: A type of fat that the body uses for energy. 
+• VLDL cholesterol (Very low-density lipoprotein): A type of lipoprotein that carries triglycerides. 
+• Cholesterol / HDL ratio : The higher the ratio , the more risk of heart disease
+• Non-HDL Cholesterol :This refers to all cholesterol which is not good and promotes atherosclerosis
+
+Purpose : 
+It's a crucial screening tool for assessing and identifying risk factors
+for diseases like heart attack and brain stroke in Individuals with a  positive family history of heart disease or stroke, in obese patients, those with a sedentary life style and smokers
+
+◦Preparation :  Overnight fasting state (8-10hrs) is preferable for  giving blood sample. Non fasting samples is accepted only from patients who have been advised so by the treating physician.
+
+Thyroid function tests (TFT)
+TFT are a group of blood tests used to assess how well the thyroid gland is working. These tests help diagnose and monitor thyroid conditions like hypothyroidism (underactive thyroid) and hyperthyroidism (overactive thyroid).
+Tests include
+Thyroid-stimulating hormone (TSH), FreeT3, and FreeT4.
+Preparation : Morning sample in fasting state is preferable. For patients on thyroid medications, sample is taken before taking thyroid medicines.
+
+  <h2 class="text-xl font-semibold mt-6">C. SEROLOGY</h2>
+  Serology is the scientific study of blood / serum  with regard to the response of the immune system to pathogens and is used in medical diagnostics to detect the presence of antibodies or antigens in a patient’s blood.
+
+Types of Antibodies Detected:
+IgM – Indicates recent or acute infection.
+IgG – Indicates past exposure or long-term immunity.
+IgA -  Crucial for mucosal immunity as in the respiratory and digestive system 
+IgE – Crucial for allergic diseases
+
+Main Applications:
+1. Diagnosis of infections
+Detect antibodies (IgM, IgG) against viruses, bacteria, fungi, or parasites.
+Common in diseases like HIV, Hepatitis, Typhoid, Malaria,  COVID-19, Syphilis, and more.
+
+2. Blood typing and compatibility testing 
+A, B, AB, O and Rh positive or negative
+Essential in blood transfusion and organ transplantation.
+
+3. Autoimmune disease testing
+Detects autoantibodies, e.g., ANA (antinuclear antibodies) for SLE,  RA factor for Rheumatoid Arthritis
+
+4. Vaccine response monitoring
+Measures antibody levels post-vaccination to ensure immunity like in Covid, Hepatitis B etc.
+
+  <h2 class="text-xl font-semibold mt-6">D. MICROBIOLOGY</h2>
+  Microbiology in Medical Diagnostics is a vital branch of laboratory medicine focused on detecting and identifying microorganisms (bacteria, viruses, fungi, and parasites) that cause infectious diseases. It supports clinical decision-making by guiding diagnosis, treatment, infection control, and prevention strategies.
+
+Key Roles of Microbiology in Medical Diagnostics
+
+1  Detection of Pathogens :
+Identifying bacterial, viral, fungal, and parasitic infections. like  tuberculosis, COVID-19, UTIs, malaria, sepsis, etc.
+Methods of detection:
+a) Microscopy:  Direct visualization using stains (e.g., Gram stain, Ziehl-Neelsen, KOH preparation).
+b) Serology:  Detects antibodies or antigens (e.g., HIV, Hepatitis B).
+c) Molecular Techniques:   PCR, RT-PCR for DNA/RNA detection (e.g., COVID-19, TB, HPV).
+d) Rapid Antigen Tests: Quick detection of pathogens like influenza, malaria
+e) Culture
+A culture involves growing a sample of tissue or fluid in a special medium to identify the infectious agent and then testing its susceptibility to various drugs.
+
+2. Antimicrobial Susceptibility Testing (Sensitivity)  Determines which antibiotics / drugs are effective against a specific pathogen.
+Helps prevent antibiotic resistance by supporting appropriate therapy
+
+Common Types of Culture and Sensitivity Tests: 
+1. Urine culture: Used to detect urinary tract infections (UTIs).
+2. Blood culture: Used to detect bloodstream infections (bacteremia or fungemia).
+3. Pus  culture: Used to identify infections in wounds or skin and soft tissue.
+4. Sputum culture: Used to detect respiratory infections.
+5. Stool culture: Used to detect gastrointestinal infections.
+6. Throat swab culture: Used to detect throat infections.
+7. Conjunctival swab culture : done for eye infections
+8. HVS (High Vaginal Swab) test and culture is a medical procedure used in  gynecology to collect a sample of vaginal discharge for testing. The sample is analyzed to identify potential infections, such as bacterial vaginosis and vaginal thrush.
+
+
+  <h2 class="text-xl font-semibold mt-6">E. CYTOLOGY & HISTOPATHOLOGY</h2>
+  Cytology  is the study of individual cells to detect disease, especially cancer and infections. It is a key tool in pathology that focuses on the microscopic examination of cells to identify abnormalities in their appearance, size, shape, and organization.
+
+Main Purpose of Cytology in Diagnostics
+• Early detection of cancer (e.g., cervical, lung, breast).
+• Screening for precancerous lesions.
+• Diagnosis of infections (e.g., viral, fungal).
+
+Advantages of Cytology
+• Minimally invasive or non-invasive.
+• Quick turnaround time for results.
+• Cost-effective and widely accessible.
+• Early detection of malignancy and infections.
+
+Types of Cytological Tests :
+a)  Exfoliative Cytology:
+Cells are naturally shed or collected from epithelial surfaces.
+Example: Cervical Pap smear
+Cervical Pap smear is a screening procedure used to check for abnormal cells on the cervix that could indicate cervical cancer or pre-cancerous changes. It involves collecting cells from the cervix and examining them under a microscope. ICMR suggests regular Pap smear screenings, for women aged 21 and older every 3 years and if combined with HPV testing then every 5 yrs.
+Purpose:
+1) Screening for cervical cancer: The primary purpose is to detect abnormal cells that could lead to cervical cancer before it develops.
+2) Detecting infections. It can also help diagnose infections like those caused by HPV, which is a major cause of cervical cancer.  It also helps to differentiate viral , fungal and certain bacterial infections.
+Procedure:
+A small disposable and sterile brush or a spatula is used to collect cells from the cervix. Whole procedure is done under aseptic conditions by a Gynaecologist  or a Pathologist.  The collected cells are then  microscopically examined by the Pathologist in the  laboratory.
+• It's recommended to avoid sexual intercourse, tampons, douches, or vaginal creams for 1-2 days before the test. 
+• It's best to schedule the test after bleeding has ended in the menstrual cycle.
+
+b) Aspirational Cytology (FNAC)
+• Cells are aspirated using a fine needle from lumps or masses.
+• Example: Breast lump, thyroid nodule.
+
+Fine Needle Aspiration Cytology (FNAC) is a minimally invasive procedure used to collect a small sample of cells from a lump or mass for microscopic examination.
+Purpose:
+• To determine if a lump or mass is benign (non-cancerous) or malignant (cancerous). 
+
+Procedure:
+• A thin needle is inserted into the lump or mass.
+• Cells are extracted from the tissue.
+• The sample is then examined under a microscope by the pathologist. 
+
+Common uses:
+• Breast lumps.
+• Thyroid nodules.
+• Enlarged lymph nodes.
+• Salivary gland swellings.
+• Superficial Soft tissue mass in any part of body
+• For deeper lumps or which are not easily palpable, ultrasound guided facility for FNA is also available.
+
+Benefits:
+• Minimally invasive and less painful than other biopsy methods.
+• Fast and relatively inexpensive.
+• Can be performed in an outpatient setting. You can usually return to your normal activities  after the procedure
+preparation
+•   No preparation is required.
+
+c)   Fluid Cytology
+ Examines cells in body fluids.
+  Examples:
+  - Pleural fluid (chest) /  Peritoneal fluid (abdomen) 
+  Cerebrospinal fluid (CSF) (brain/spinal cord)  
+ - Urine cytology for bladder cancer detection
+ - Semen Analysis 
+
+
+
+Histopathology is the branch of pathology that involves the study of tissues under a microscope to identify diseases, especially cancer and other abnormalities.
+Process:
+• Biopsy/Surgical Removal: Tissue samples are obtained via biopsy or surgery.
+• The tissue is preserved using a fixative, typically formalin. The sample is embedded in paraffin wax to allow thin slicing. Very thin slices (around 4–5 µm thick) are cut using a microtome. The sections are the stained (commonly with Hematoxylin and Eosin (H&E)) to differentiate structures.
+• Microscopy: A pathologist examines the stained tissue under a light microscope.
+• Immunohistochemistry (IHC): Uses antibodies to detect specific antigens in tissues.
+
+Applications:
+• Diagnosis of cancer, infections, and inflammatory diseases like nephritis in kidneys and hepatitis in liver.
+• Evaluation of transplanted organs
+• Forensic pathology
+
+
+</div>
+                    `
+                },
+               radiology: {
+    icon: 'fa-solid fa-x-ray',
+    title: 'RADIOLOGY & IMAGING SERVICES:',
+    description: `
+<div class="whitespace-pre-line text-gray-700 leading-relaxed space-y-4">
+
+  <h2 class="text-xl font-semibold">A. Digital X-rays (Radiograph)</h2>
+
+  <p>Radiography is a type of imaging that uses electromagnetic radiation to view the inside of the body, especially bones and certain tissues. It is a fast, painless, and non-invasive diagnostic tool commonly used in medicine and dentistry. When computers are used to capture and display the images it is called digital radiography.</p>
+
+  <p>At Sachdeva Diagnostics we use a High Frequency 600mA Xray Machine from Medtronics and the topend AGFA CR System for the digital X-rays.</p>
+
+  <h3 class="font-semibold">Safety Note:</h3>
+  <ul class="list-disc ml-6">
+    <li>X-rays involve ionizing radiation, but the dose is generally very low, especially when high powered x-ray machines are used. The dose further reduces in digital radiography.</li>
+    <li>Not recommended for pregnant women unless absolutely necessary. It is done after covering the baby with a lead shield.</li>
+  </ul>
+
+  <h3 class="font-semibold mt-2">Common Types of X-rays:</h3>
+
+  <h4 class="font-semibold">1. Plain X-rays :</h4>
+  <p>• Chest X-ray : To examine lungs, heart, and chest wall.</p>
+  <p>• Abdominal X-ray : To check for bowel obstruction, stones or abnormal masses.</p>
+  <p>• Dental X-rays : To assess teeth, bone loss, cavities, or root problems.</p>
+  <p>• Bone X-rays : To detect fractures, dislocations, or arthritis.</p>
+  <p><strong>Preparation:</strong> Most plain xrays do not require any preparation and can be done any time. Except plain Xray of the KUB region where you are asked to take a laxative one night prior and come empty stomach the next day after your bowel has nicely cleared.</p>
+
+  <h4 class="font-semibold mt-2">2. Special X-rays:</h4>
+  <p><strong>Orthopantomogram (OPG):</strong></p>
+  <p>Panoramic dental X-ray for full jaw and teeth. Key Features:</p>
+  <ul class="list-disc ml-6">
+    <li>Panoramic View: Captures the entire mouth in a single image.</li>
+    <li>Non-invasive: The patient simply stands biting on a mouthpiece; the machine rotates around their head.</li>
+    <li>Quick and Painless: Usually takes less than a minute.</li>
+    <li>Low Radiation: Relatively low dose compared to other radiographic methods.</li>
+  </ul>
+
+  <p><strong>Uses of OPG :</strong></p>
+  <ul class="list-disc ml-6">
+    <li>Evaluating tooth development and eruption patterns.</li>
+    <li>Detecting impacted teeth (e.g., wisdom teeth).</li>
+    <li>Planning for orthodontic treatments.</li>
+    <li>Identifying jaw fractures, tumors, cysts, or infections.</li>
+    <li>Assessing the bone structure for dental implants.</li>
+    <li>Checking for temporomandibular joint (TMJ) disorders.</li>
+  </ul>
+
+  <h4 class="font-semibold mt-2">3. Contrast Xray Studies:</h4>
+  <p>• Xray studies after using a contrast medium: IVP (intravenous pyelography), barium studies, HSG (Hysterosalpingography), sonogram / fistulogram.</p>
+
+  <p><strong>HSG</strong> stands for Hysterosalpingography — a special type of X-ray procedure used primarily to evaluate the uterus and fallopian tubes in women, especially in cases of infertility.</p>
+  <p><strong>When Is It Done?</strong> Typically performed between days 7 and 10 of a woman’s menstrual cycle (after menstruation, before ovulation).</p>
+  <p><strong>Procedure:</strong> A cannula is passed into the cervix and contrast is injected through the cannula and xrays are taken subsequently.</p>
+  <p>At Sachdeva Diagnostics the procedure is done by Dr Savita Sachdeva who has a vast experience of doing nearly five thousand HSG procedures in the last 20 years.</p>
+
+  <p><strong>Intravenous Pyelography (IVP)</strong> is a medical imaging technique used to visualize the urinary tract, including the kidneys, ureters, and bladder, by using a contrast dye and X-rays.</p>
+  <p><strong>Purpose</strong></p>
+  <ul class="list-disc ml-6">
+    <li>Detect location of Urinary Tract obstruction as in kidney stones or urinary tract tumor</li>
+    <li>Investigate frequent urinary tract infections (UTIs)</li>
+    <li>Assess structural abnormalities in the urinary tract</li>
+  </ul>
+
+  <p><strong>Preparation:</strong></p>
+  <ul class="list-disc ml-6">
+    <li>You may be asked to fast for several hours and take a laxative to clear your bowels.</li>
+    <li><strong>Injection:</strong> A contrast dye is injected into a vein, usually in your arm.</li>
+    <li><strong>Imaging:</strong> As the dye travels through your bloodstream to the kidneys and urinary tract, X-rays are taken at timed intervals.</li>
+    <li><strong>Observation:</strong> The dye outlines the urinary structures, allowing doctors to observe their shape, size, and function.</li>
+  </ul>
+
+  <p><strong>Risks and Considerations</strong></p>
+  <ul class="list-disc ml-6">
+    <li>Allergic reaction to the contrast dye (rare but possible)</li>
+    <li>Not ideal for people with poor kidney function or iodine allergy</li>
+    <li>Radiation exposure, though generally low</li>
+  </ul>
+
+  <h3 class="font-semibold mt-2">Barium studies</h3>
+  <p>Barium studies are a group of diagnostic imaging tests that use barium sulfate, a contrast material, to help visualize parts of the gastrointestinal (GI) tract.</p>
+
+  <p><strong>Types of Barium Studies</strong></p>
+  <ol class="list-decimal ml-6">
+    <li><strong>Barium Swallow (Esophagogram)</strong>
+      <p>• Examines: Pharynx and esophagus</p>
+      <p>• Used for: Difficulty swallowing, GERD, strictures, tumors</p>
+    </li>
+    <li><strong>Barium Meal / Upper GI Series</strong>
+      <p>• Examines: Esophagus, stomach, and duodenum</p>
+      <p>• Used for: Ulcers, hiatal hernia, gastric tumors</p>
+    </li>
+    <li><strong>Barium Follow-Through</strong>
+      <p>• Examines: Small intestine</p>
+      <p>• Used for: Crohn’s disease, malabsorption, small bowel obstruction</p>
+    </li>
+    <li><strong>Barium Enema (Lower GI Series)</strong>
+      <p>• Examines: Colon and rectum</p>
+      <p>• Used for: Polyps, diverticulosis, colorectal cancer, IBD</p>
+    </li>
+  </ol>
+
+  <p><strong>Preparation</strong></p>
+  <ul class="list-disc ml-6">
+    <li>Fasting for several hours (usually overnight)</li>
+    <li>For lower GI: Laxatives or enemas to cleanse the colon</li>
+  </ul>
+
+  <h2 class="text-xl font-semibold mt-4">B. Ultrasound Scan (also called a Sonogram)</h2>
+
+  <p>An ultrasound is a non-invasive imaging test that uses high-frequency sound waves to create real-time images of structures inside the body.</p>
+
+  <h3 class="font-semibold">How It Works:</h3>
+  <ul class="list-disc ml-6">
+    <li>A device called a transducer emits sound waves.</li>
+    <li>These waves bounce off tissues and organs.</li>
+    <li>The returning echoes are captured and turned into images on a monitor.</li>
+  </ul>
+
+  <h3 class="font-semibold">Key Features:</h3>
+  <ul class="list-disc ml-6">
+    <li>No radiation (unlike X-rays or CT scans)</li>
+    <li>Safe for pregnant women and babies</li>
+    <li>Provides real-time imaging (great for observing motion, like fetal heartbeat)</li>
+  </ul>
+
+  <p>At Sachdeva Diagnostics we use the latest technology RS 85 Prestige Whole Body Ultrasound Scan System from SAMSUNG; fully equipped with an array of probes: Convex, High frequency Linear, Intracavitary (TVS, TRUS) and 3D/4D.</p>
+
+  <h3 class="font-semibold">Common Uses of Ultrasound:</h3>
+  <ol class="list-decimal ml-6">
+    <li>Obstetric: Monitor pregnancy, fetal growth, heartbeat, and position.</li>
+    <li>Pelvic: Evaluate uterus, ovaries, fallopian tubes, bladder.</li>
+    <li>Abdominal: Examine liver, kidneys, gallbladder, pancreas, spleen.</li>
+    <li>KUB: assess kidneys, urinary bladder, prostate.</li>
+    <li>Vascular/ Colour Doppler: Check blood flow in arteries and veins.</li>
+    <li>Musculoskeletal: Look at muscles, joints, tendons, or soft tissue masses.</li>
+  </ol>
+
+  <h3 class="font-semibold mt-2">Specialized Ultrasounds:</h3>
+
+  <p><strong>1. 3D/4D Ultrasound:</strong> shows organs / fetus in a three dimensional view.</p>
+
+  <p><strong>2. Transvaginal/Transrectal Ultrasound:</strong> Provides close-up internal views using special probes.</p>
+
+  <p><strong>3. Color Doppler</strong> is a specialized type of ultrasound imaging that shows the flow of blood through blood vessels — including arteries and veins — using color-coded visuals.</p>
+
+  <p><strong>Purpose of a Color Doppler:</strong></p>
+  <ul class="list-disc ml-6">
+    <li>Assess blood flow direction, speed, and volume.</li>
+    <li>Detect blockages, narrowing or clots.</li>
+    <li>Check fetal blood circulation in pregnancy.</li>
+    <li>Monitor organ perfusion (e.g., kidneys, liver, testicles).</li>
+  </ul>
+
+  <p><strong>Common Uses:</strong></p>
+  <ul class="list-disc ml-6">
+    <li>Deep vein thrombosis (DVT)</li>
+    <li>Varicose Veins</li>
+    <li>Carotid artery evaluation (stroke risk)</li>
+    <li>Pregnancy: check placental and fetal blood flow</li>
+    <li>Liver or kidney transplant assessment</li>
+    <li>Testicular torsion evaluation</li>
+  </ul>
+
+  <h3 class="font-semibold mt-2">4. Shearwave Ultrasound (Shearwave Elastography)</h3>
+  <p>Shear Wave Elastography (SWE) is an advanced, non-invasive imaging technique that measures tissue stiffness using ultrasound-generated shear waves. It’s especially useful for assessing liver fibrosis, tumors, and muscle conditions.</p>
+
+  <p><strong>How It Works</strong></p>
+  <ul class="list-disc ml-6">
+    <li>The ultrasound probe sends acoustic pulses into the tissue.</li>
+    <li>These pulses generate shear waves.</li>
+    <li>The machine tracks how fast these waves move through the tissue:</li>
+    <ul class="list-disc ml-8">
+      <li>Faster waves = stiffer tissue</li>
+      <li>Slower waves = softer tissue</li>
+    </ul>
+    <li>The result is a color-coded map of stiffness (an elastogram) over a conventional ultrasound image.</li>
+  </ul>
+
+  <p><strong>Common Uses</strong></p>
+  <ul class="list-disc ml-6">
+    <li>Liver: (Fibroscan) Assess fibrosis and cirrhosis (e.g., hepatitis B/C, NAFLD)</li>
+    <li>Breast: Alternative to biopsy in many cases. Distinguish benign vs. malignant lesions</li>
+    <li>Thyroid: Evaluate suspicious nodules</li>
+    <li>Prostate: Guide biopsies, assess stiffness in cancer-suspicious regions</li>
+    <li>Muscles & Tendons: Detect strain, tear, or scar tissue</li>
+    <li>Lymph nodes & tumors: benign vs malignant</li>
+  </ul>
+
+  <h3 class="font-semibold mt-2">5. Fat Quantification (QUS)</h3>
+  <p>It assesses the amount of fat in the liver by two techniques: TAI (tissue attenuation index) called by various names like CAP or UGAP value and TSI (tissue scattering index) and then combines the two to give a Fat Fraction % (UDFF).</p>
+  <p>Shearwave Ultrasound and Fat Quantification are used together to study the liver. While most centres just give the tissue attenuation value (CAP / UGAP), at Sachdeva Diagnostics we use the top end machines which gives the Fat Fraction (UDFF%) also along with the tissue attenuation value.</p>
+
+</div>
+`
+},
+
+                ecg: {
+    icon: 'fa-solid fa-heart-pulse',
+    title: 'Electrocardiogram (ECG / EKG) ',
+    description: `
+        <p>
+            A test that records the electrical activity of the heart over a period of time using electrodes placed on the skin.
+        </p>
+
+        <h4>Purpose of an ECG:</h4>
+        <ul>
+            <li>Detect abnormal heart rhythms (arrhythmias)</li>
+            <li>Detect heart attacks (past or ongoing)</li>
+            <li>Assess heart structure issues</li>
+            <li>Monitor the effectiveness of heart medications or pacemakers</li>
+        </ul>
+
+        <h4>Types of ECG:</h4>
+        <ul>
+            <li><strong>Resting ECG</strong> – Done while lying still — most common. At Sachdeva Diagnostics, we only do Resting ECG</li>
+            <li><strong>Stress ECG</strong> – Done while walking on a treadmill or cycling</li>
+            <li><strong>Holter Monitor</strong> – Worn for 24–48 hours to track heart activity over time</li>
+        </ul>
+
+        <h4>What It Can Detect:</h4>
+        <ul>
+            <li>Arrhythmias (e.g., atrial fibrillation, bradycardia)</li>
+            <li>Heart attack (current or past)</li>
+            <li>Ischemia (reduced blood flow to the heart)</li>
+            <li>Enlarged heart chambers</li>
+            <li>Electrolyte imbalances</li>
+            <li>Drug effects (e.g., digoxin)</li>
+        </ul>
+    `
+}
+
+            };
+
+            const modal = document.getElementById('details-modal');
+            const modalContent = document.getElementById('modal-content');
+            const modalBody = document.getElementById('modal-body');
+            const closeModalButton = document.getElementById('close-modal');
+            const serviceCards = document.querySelectorAll('.service-card');
+
+            const openModal = (serviceKey) => {
+                const details = serviceDetails[serviceKey];
+                if (!details) return;
+                modalBody.innerHTML = `
+                    <div class="text-center">
+                        <i class="${details.icon} text-5xl md:text-6xl theme-gradient-text mb-4"></i>
+                        <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6">${details.title}</h2>
+                    </div>
+                    <div class="text-base">${details.description}</div>
+                `;
+                modal.classList.remove('opacity-0', 'pointer-events-none');
+                modalContent.classList.remove('scale-95');
+            };
+
+            const closeModal = () => {
+                modal.classList.add('opacity-0', 'pointer-events-none');
+                modalContent.classList.add('scale-95');
+            };
+
+            serviceCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const serviceKey = card.getAttribute('data-service');
+                    openModal(serviceKey);
+                });
+            });
+
+            closeModalButton.addEventListener('click', closeModal);
+            
+            modal.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
