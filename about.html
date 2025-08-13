@@ -124,7 +124,7 @@
                 <button type="submit" class="w-full bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition flex items-center justify-center h-12">
                     Book Appointment
                 </button>
-                <p class="text-xs text-gray-500 mt-2">We'll reach out to you shortly to confirm your appointment.</p>
+                <p class="text-xs text-gray-500 mt-2">We'll reach out to you shortly once your booking is confirmed.</p>
                 <p id="formMessage" class="text-sm text-center font-semibold hidden"></p>
             </form>
         </div>
@@ -152,6 +152,7 @@
             <h4 class="text-lg font-semibold text-blue-900 mb-2">For Customers</h4>
             <ul class="space-y-1 text-sm text-gray-600">
                 <li><a href="health-packages.html" class="hover:text-blue-500">Healthcare Packages</a></li>
+                <li><a href="loca.html" class="hover:text-blue-500">Contact Us</a></li>
             </ul>
         </div>
         <div>
@@ -159,11 +160,11 @@
             <ul class="text-sm text-gray-600 space-y-2">
                 <li class="flex flex-col sm:flex-row sm:justify-between items-center">
                     <span>Monday-Saturday</span>
-                    <span class="text-blue-500 font-medium">08am–07pm</span>
+                    <span class="text-blue-500 font-medium">08:30am–07:30pm</span>
                 </li>
                 <li class="flex flex-col sm:flex-row sm:justify-between items-center">
                     <span>Sunday</span>
-                    <span class="text-blue-500 font-medium">08am–01pm</span>
+                    <span class="text-blue-500 font-medium">Closed</span>
                 </li>
             </ul>
         </div>
@@ -228,7 +229,8 @@ function toggleMenu() {
                 "ULTRASOUND PELVIS WITH CDFI", "VENOUS DOPPLER UPPER LIMB / LOWER LIMB",
                 "ECG / EKG"
             ];
-            const timeSlots = [
+            
+        const timeSlots = [
           "08:30 AM - 09:30 AM",
           "09:30 AM - 10:30 AM",
           "10:30 AM - 11:30 AM",

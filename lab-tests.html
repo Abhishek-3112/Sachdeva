@@ -108,9 +108,10 @@
             </ul>
         </div>
         <div>
-            <h4 class="text-lg font-semibold text-blue-900 mb-2">For Customers</h4>
+              <h4 class="text-lg font-semibold text-blue-900 mb-2">For Customers</h4>
             <ul class="space-y-1 text-sm text-gray-600">
                 <li><a href="health-packages.html" class="hover:text-blue-500">Healthcare Packages</a></li>
+                <li><a href="loca.html" class="hover:text-blue-500">Contact Us</a></li>
             </ul>
         </div>
         <div>
@@ -118,11 +119,11 @@
             <ul class="text-sm text-gray-600 space-y-2">
                 <li class="flex flex-col sm:flex-row sm:justify-between items-center">
                     <span>Monday-Saturday</span>
-                    <span class="text-blue-500 font-medium">08am–07pm</span>
+                    <span class="text-blue-500 font-medium">08:30am–07:30pm</span>
                 </li>
                 <li class="flex flex-col sm:flex-row sm:justify-between items-center">
                     <span>Sunday</span>
-                    <span class="text-blue-500 font-medium">08am–01pm</span>
+                    <span class="text-blue-500 font-medium">Closed</span>
                 </li>
             </ul>
         </div>
@@ -196,8 +197,8 @@
                 "Colour Doppler Studies": ["ULTRASOUND PELVIS WITH CDFI", "VENOUS DOPPLER UPPER LIMB / LOWER LIMB"],
                 "Electrocardiogram (ECG)": ["ECG / EKG"] 
             };
-            const allTestsFlat = Object.values(allTestsCategorized).flat();
-            const timeSlots = [
+        const allTestsFlat = Object.values(allTestsCategorized).flat();
+        const timeSlots = [
           "08:30 AM - 09:30 AM",
           "09:30 AM - 10:30 AM",
           "10:30 AM - 11:30 AM",
@@ -407,11 +408,18 @@
                     const labNumber = "917052301394";
                     const waUrl = `https://wa.me/${labNumber}?text=${encodeURIComponent(messageBody)}`;
                     window.open(waUrl, "_blank");
-                    form.reset();
-                    alert("Success! Please press 'Send' in WhatsApp to confirm your booking.");
+
+                   setTimeout(() => {
+                        formMessage.textContent = "Success! Please press 'Send' in WhatsApp to confirm your booking.";
+                        formMessage.className = "text-sm text-center font-semibold text-green-600 block";
+                        submitButton.disabled = false;
+                        submitButton.innerHTML = originalButtonContent;
+                        form.reset();
+                    }, 1500);
                 });
             }
         });
     </script>
 </body>
 </html>
+
