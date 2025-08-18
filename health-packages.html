@@ -90,11 +90,11 @@
         <ul class="nav-links" id="navLinks">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="lab-tests.html">Lab Tests List</a></li>
             <li><a href="facilities.html">Facilities</a></li>
+            <li><a href="lab-tests.html">Lab Tests List</a></li>
             <li><a href="health-packages.html">Health Packages</a></li>
-            <li><a href="#">Blog</a></li>
             <li><a href="loca.html">Contact Us</a></li>
+            <li><a href="#">Blog</a></li>
         </ul>
     </nav>
 
@@ -489,18 +489,22 @@
             // --- GENERATE PACKAGE CARDS ---
             packageDetails.forEach(pkg => {
                 const cardContainer = document.createElement('div');
-                cardContainer.className = 'theme-card flex flex-col p-6 text-center';
+               cardContainer.className = 'theme-card flex flex-col justify-between p-6 text-center bg-white rounded-2xl shadow-md hover:shadow-lg transition';
                 
-                cardContainer.innerHTML = `
-                    <div class="flex-grow">
-                        <h3 class="text-xl font-bold theme-text">${pkg.name}</h3>
-                        <p class="text-3xl font-bold theme-gradient-text my-4">${pkg.price}</p>
-                        <p class="text-gray-500 text-sm">${pkg.description.split('.')[0]}.</p>
-                    </div>
-                    <div class="mt-6">
-                        <button data-package-id="${pkg.id}" class="view-details-btn w-full mb-3 px-6 py-2 text-sm font-semibold text-blue-600 bg-blue-100 rounded-full hover:bg-blue-200">View Details</button>
-                    </div>
-                `;
+cardContainer.innerHTML = `
+    <div class="flex-grow flex flex-col items-center justify-center">
+        <h3 class="text-xl font-bold theme-text mb-3">${pkg.name}</h3>
+        <p class="text-gray-500 text-sm">${pkg.description.split('.')[0]}.</p>
+    </div>
+    <div class="mt-6">
+        <button data-package-id="${pkg.id}" 
+            class="view-details-btn w-full px-6 py-2 text-sm font-semibold text-blue-600 bg-blue-100 rounded-full hover:bg-blue-200">
+            View Details
+        </button>
+    </div>
+`;
+
+
                 packagesGrid.appendChild(cardContainer);
             });
 
