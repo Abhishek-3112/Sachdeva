@@ -799,6 +799,86 @@ body {
 }
 
 /* Add this to your style.css file */
-html {
-  scroll-behavior: smooth;
+
+.nav-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  padding: 20px;
 }
+
+/* Nav Item Links */
+.nav-item {
+  text-decoration: none;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Rotating Box */
+.rotating-box {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Background Squares */
+.square {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid;
+  top: 0;
+  left: 0;
+  transform-origin: center;
+  animation: rotate 6s linear infinite;
+}
+
+/* Red Square */
+.square.red {
+  border-color: #ff4c4c;
+  animation-duration: 8s; /* slower */
+}
+
+/* Cyan Square */
+.square.cyan {
+  border-color: #00eaff;
+  animation-duration: 5s; /* faster */
+}
+
+/* Text Label */
+.nav-label {
+  position: relative;
+  z-index: 2;
+  font-size: 16px;
+  font-weight: bold;
+  color: #00289f;; /* blue text */
+  white-space: nowrap;
+}
+
+/* Hover Effect */
+.rotating-box:hover .nav-label {
+  color: #335fe3; /* green on hover */
+}
+
+
+/* Rotation Animation */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  background: transparent; /* inherits page background */
+}
+
