@@ -118,64 +118,88 @@
 
     </nav>
 
-   <section class="bg-white py-12 md:py-20">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center gap-8">
-                <div class="md:w-1/2 text-center md:text-left">
-                    <h1 class="text-blue-900 text-4xl md:text-6xl font-extrabold theme-text leading-tight">
-                        Precision Diagnostics, For a Healthier You
-                    </h1>
-                    <p class="mt-6 text-lg text-gray-600">
-                        Experience reliable and accurate lab testing with state-of-the-art technology, ensuring fast
-                        results you can trust.
-                    </p>
-                    <div class="mt-8">
-                        <a href="#home-collection" class="theme-button">Book a Test Now</a>
-                    </div>
-                </div>
-                
-                <div class="md:w-1/2 mt-8 md:mt-0">
-    <div class="swiper mySwiper aspect-video"> 
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="images/healthcare-professional-shows-lab-test-results-patient-consultation.jpg"
-                    alt="Healthcare professionals" class="rounded-3xl shadow-xl w-full h-full object-cover">
-            </div>
-            <div class="swiper-slide">
-                <img src="images/bg-aboutus.webp"
-                    alt="Doctor with tablet" class="rounded-3xl shadow-xl w-full h-full object-cover">
-            </div>
-            <div class="swiper-slide">
-                <img src="images/Gemini_Generated_Image_ywo71yywo71yywo7.png"
-                    alt="Scientist in a lab" class="rounded-3xl shadow-xl w-full h-full object-cover">
-            </div>
+  <!-- Full Width Carousel Section -->
+<section class="relative w-full">
+  <!-- Swiper Carousel -->
+  <div class="swiper mySwiper w-full h-[350px] md:h-[450px]">
+    <div class="swiper-wrapper">
+      
+      <!-- Slide 1 -->
+      <div class="swiper-slide relative">
+        <img src="images/healthcare-professional-shows-lab-test-results-patient-consultation.jpg"
+          alt="Healthcare professionals" class="w-full h-full object-cover">
+        <!-- Overlay Content -->
+        <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-4">
+          <h1 class="text-white text-3xl md:text-5xl font-bold mb-4">
+            Precision Diagnostics, For a Healthier You
+          </h1>
+          <p class="text-gray-200 text-lg md:text-xl max-w-2xl mb-6">
+            Experience reliable and accurate lab testing with state-of-the-art technology, ensuring fast
+            results you can trust.
+          </p>
+          <a href="#home-collection"
+             class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-full shadow-md hover:bg-blue-700 transition">
+            Book a Test Now
+          </a>
         </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide relative">
+        <img src="images/bg-aboutus.webp" alt="Doctor with tablet" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-4">
+          <h1 class="text-white text-3xl md:text-5xl font-bold mb-4">
+            Precision Diagnostics, For a Healthier You
+          </h1>
+          <p class="text-gray-200 text-lg md:text-xl max-w-2xl mb-6">
+            Experience reliable and accurate lab testing with state-of-the-art technology, ensuring fast
+            results you can trust.
+          </p>
+          <a href="#home-collection"
+             class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-full shadow-md hover:bg-blue-700 transition">
+            Book a Test Now
+          </a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="swiper-slide relative">
+        <img src="images/Gemini_Generated_Image_ywo71yywo71yywo7.png" alt="Scientist in a lab" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-4">
+          <h1 class="text-white text-3xl md:text-5xl font-bold mb-4">
+            Precision Diagnostics, For a Healthier You
+          </h1>
+          <p class="text-gray-200 text-lg md:text-xl max-w-2xl mb-6">
+            Experience reliable and accurate lab testing with state-of-the-art technology, ensuring fast
+            results you can trust.
+          </p>
+          <a href="#home-collection"
+             class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-full shadow-md hover:bg-blue-700 transition">
+            Book a Test Now
+          </a>
+        </div>
+      </div>
     </div>
-</div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
-                </div>
-        </div>
-    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Navigation -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</section>
 
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            spaceBetween: 30,
-            effect: "fade", // Use a fade effect
-            loop: true,      // Enable continuous looping
-            autoplay: {
-                delay: 1000, // Time in ms between slides
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-        });
-    </script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: ".swiper-pagination", clickable: true },
+    navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+  });
+</script>
+
 
     <section class="py-16 md:py-24">
         <div class="max-w-7xl mx-auto px-6 text-center">
@@ -228,8 +252,7 @@
         </div>
     </section>
 
-    
-
+  <section>
     <div class="nav-grid"> <a href="#home" class="nav-item">
             <div class="rotating-box">
                 <div class="square red"></div>
@@ -273,7 +296,66 @@
                 <div class="nav-label">Blog</div>
             </div>
         </a> </div>
+      </section>
 
+      <section class="bg-white py-16">
+  <div class="max-w-7xl mx-auto px-6 space-y-16">
+    
+    <!-- Section Heading -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-blue-900">
+        Committed to Quality: Your Trusted Diagnostic Partner
+      </h2>
+    </div>
+
+    <!-- Row 1: Image Left, Content Right -->
+    <div class="flex flex-col md:flex-row items-center gap-10">
+  <!-- Image -->
+  <div class="md:w-1/2 flex justify-center">
+    <img src="images/ISO-removebg-preview.png" 
+         alt="ISO Certification" 
+         class="rounded-2xl shadow-lg max-h-80 w-auto object-contain">
+  </div>
+
+  <!-- Content -->
+  <div class="md:w-1/2 text-center md:text-left">
+    <p class="text-lg text-gray-700 leading-relaxed">
+      At <span class="font-semibold">Sachdeva Diagnostics</span>, we are dedicated to providing accurate, reliable, 
+      and timely diagnostic services. Our commitment to quality is reflected in our prestigious certifications. 
+      We are proud to be <span class="font-semibold">ISO 9001:2015 certified</span> (as shown in the image), 
+      demonstrating our adherence to internationally recognized quality management system standards. 
+      This certification ensures that our processes are consistently monitored and improved to meet the 
+      highest levels of quality and patient satisfaction.
+    </p>
+  </div>
+</div>
+
+    <!-- Row 2: Content Left, Image Right -->
+    <div class="flex flex-col md:flex-row items-center gap-10 md:flex-row-reverse">
+      <!-- Image -->
+      <div class="md:w-1/2">
+        <img src="images/CQI.jpg" 
+             alt="ILAC Certification" 
+             class="rounded-2xl shadow-lg w-full object-cover">
+      </div>
+      <!-- Content -->
+      <div class="md:w-1/2 text-center md:text-left">
+        <p class="text-lg text-gray-700 leading-relaxed">
+           Our participation in the 
+          <span class="font-semibold">ILAC (International Laboratory Accreditation Cooperation) Continuous Quality Improvement</span> 
+          program (as shown in the image) underscores our ongoing pursuit of excellence. 
+          This external quality assurance program, based on ISO 9001 standards, validates our technical competence 
+          and commitment to delivering dependable results.
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed mt-4">
+          Choose <span class="font-semibold">Sachdeva Diagnostics</span> for diagnostic services you can trust, 
+          backed by our internationally recognized certifications and unwavering commitment to quality.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 
     <section class="py-16 md:py-24 bg-white">
