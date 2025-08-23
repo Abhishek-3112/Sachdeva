@@ -879,6 +879,6 @@ body {
 }
 
 body {
-  background: transparent; /* inherits page background */
+  background-color: rgba(11, 95, 239, 0.189); /* inherits page background */
 }
 

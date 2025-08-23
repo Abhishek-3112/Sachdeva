@@ -72,6 +72,24 @@
             margin-bottom: 1rem;
             color: white;
         }
+
+         /* Optional: Custom styles for pagination dots */
+        .swiper-pagination-bullet-active {
+            background-color: #1a73e8 !important; /* Change to your theme color */
+        }
+        
+        .theme-button {
+            background-color: #1a73e8;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .theme-button:hover {
+            background-color: #1662c4;
+        }
+
     </style>
 </head>
 
@@ -100,11 +118,11 @@
 
     </nav>
 
-    <section class="bg-white py-12 md:py-20">
+   <section class="bg-white py-12 md:py-20">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center gap-8">
                 <div class="md:w-1/2 text-center md:text-left">
-                    <h1 class="text-4xl md:text-6xl font-extrabold theme-text leading-tight">
+                    <h1 class="text-blue-900 text-4xl md:text-6xl font-extrabold theme-text leading-tight">
                         Precision Diagnostics, For a Healthier You
                     </h1>
                     <p class="mt-6 text-lg text-gray-600">
@@ -115,14 +133,102 @@
                         <a href="#home-collection" class="theme-button">Book a Test Now</a>
                     </div>
                 </div>
+                
                 <div class="md:w-1/2 mt-8 md:mt-0">
-                    <img src="images/healthcare-professional-shows-lab-test-results-patient-consultation.jpg"
-                        alt="Healthcare professionals" class="rounded-3xl shadow-xl w-full">
+    <div class="swiper mySwiper aspect-video"> 
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/healthcare-professional-shows-lab-test-results-patient-consultation.jpg"
+                    alt="Healthcare professionals" class="rounded-3xl shadow-xl w-full h-full object-cover">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/bg-aboutus.webp"
+                    alt="Doctor with tablet" class="rounded-3xl shadow-xl w-full h-full object-cover">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/Gemini_Generated_Image_ywo71yywo71yywo7.png"
+                    alt="Scientist in a lab" class="rounded-3xl shadow-xl w-full h-full object-cover">
+            </div>
+        </div>
+    </div>
+</div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            effect: "fade", // Use a fade effect
+            loop: true,      // Enable continuous looping
+            autoplay: {
+                delay: 1000, // Time in ms between slides
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+
+    <section class="py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold theme-text">Why Choose Sachdeva Diagnostics?</h2>
+            <p class="mt-4 text-gray-600 max-w-2xl mx-auto">We combine 30+ years of experience with the latest technology to provide reports you and your doctor can trust.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                <div class="theme-card p-8 flex flex-col items-center">
+                    <div class="icon-circle theme-gradient">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                    <h3 class="text-xl font-bold theme-text mt-4">Experienced Doctors</h3>
+                    <p class="text-gray-600 mt-2">Senior MD Pathologist & Radiologist with over 30 years of experience.</p>
+                </div>
+                <div class="theme-card p-8 flex flex-col items-center">
+                    <div class="icon-circle theme-gradient">
+                        <i class="fa-solid fa-microscope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold theme-text mt-4">Latest Technology</h3>
+                    <p class="text-gray-600 mt-2">State-of-the-art analyzers and imaging equipment for accurate results.</p>
+                </div>
+                <div class="theme-card p-8 flex flex-col items-center">
+                    <div class="icon-circle theme-gradient">
+                        <i class="fa-solid fa-house-medical"></i>
+                    </div>
+                    <h3 class="text-xl font-bold theme-text mt-4">Comprehensive Diagnostics</h3>
+                    <p class="text-gray-600 mt-2"> One-stop solution for labs, X-rays, imaging, ECGs, and more.</p>
+                </div>
+                 <div class="theme-card p-8 flex flex-col items-center">
+                    <div class="icon-circle theme-gradient">
+                        <i class="fa-solid fa-user-nurse"></i>
+                    </div>
+                    <h3 class="text-xl font-bold theme-text mt-4">Qualified Staff</h3>
+                    <p class="text-gray-600 mt-2">Expert technicians skilled in handling samples for adults, children & newborns.</p>
+                </div>
+                 <div class="theme-card p-8 flex flex-col items-center">
+                    <div class="icon-circle theme-gradient">
+                        <i class="fa-solid fa-check-double"></i>
+                    </div>
+                    <h3 class="text-xl font-bold theme-text mt-4">Quality Control</h3>
+                    <p class="text-gray-600 mt-2">Strict protocols and personal supervision on every report to ensure accuracy.</p>
+                </div>
+                 <div class="theme-card p-8 flex flex-col items-center">
+                    <div class="icon-circle theme-gradient">
+                        <i class="fa-solid fa-bolt-lightning"></i>
+                    </div>
+                    <h3 class="text-xl font-bold theme-text mt-4">Fast Reports</h3>
+                    <p class="text-gray-600 mt-2">In-house testing facility allows for same-day delivery of most reports.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    
 
     <div class="nav-grid"> <a href="#home" class="nav-item">
             <div class="rotating-box">
@@ -217,12 +323,28 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-                <div class="order-last lg:order-first">
-                    <img src="images/healthcare-professional-uses-oximeter-measure-oxygen-levels.jpg"
-                        alt="A doctor consulting with a patient in a modern clinic"
-                        class="rounded-2xl shadow-xl w-full h-full object-cover">
-                </div>
-
+               <div class="order-last lg:order-first">
+    <div class="swiper mySwiper2 aspect-video">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/healthcare-professional-uses-oximeter-measure-oxygen-levels.jpg"
+                    alt="A doctor consulting with a patient in a modern clinic"
+                    class="rounded-2xl shadow-xl w-full h-full object-cover">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?q=80&w=1932&auto-format&fit=crop"
+                    alt="Doctor checking patient records on a tablet"
+                    class="rounded-2xl shadow-xl w-full h-full object-cover">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1612534954388-dd80119958a7?q=80&w=1964&auto-format&fit=crop"
+                    alt="Advanced laboratory equipment"
+                    class="rounded-2xl shadow-xl w-full h-full object-cover">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
                 <div class="text-center lg:text-left">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-800" style="color: #0d2354;">What Sets Us Apart
                     </h2>
@@ -230,27 +352,22 @@
                         We are committed to providing unparalleled accuracy and patient care. Our long-standing
                         experience and dedication to quality are the cornerstones of our service.
                     </p>
-
                     <div class="grid grid-cols-2 gap-x-6 gap-y-10 mt-10 text-left">
-
                         <div>
                             <p class="text-4xl font-bold" style="color: #5842be;">30+</p>
                             <p class="font-semibold text-gray-700">Years of Trusted Service</p>
                             <div class="w-10 h-0.5 mt-2" style="background-color: #5842be;"></div>
                         </div>
-
                         <div>
                             <p class="text-4xl font-bold" style="color: #5842be;">1.5L+</p>
                             <p class="font-semibold text-gray-700">Happy Patients Served</p>
                             <div class="w-10 h-0.5 mt-2" style="background-color: #5842be;"></div>
                         </div>
-
                         <div>
                             <p class="text-4xl font-bold" style="color: #5842be;">200+</p>
                             <p class="font-semibold text-gray-700">Types of Tests Available</p>
                             <div class="w-10 h-0.5 mt-2" style="background-color: #5842be;"></div>
                         </div>
-
                         <div>
                             <p class="text-4xl font-bold" style="color: #5842be;">100%</p>
                             <p class="font-semibold text-gray-700">Data Privacy & Confidentiality</p>
@@ -263,58 +380,25 @@
         </div>
     </section>
 
-     <section class="py-16 md:py-24">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold theme-text">Why Choose Sachdeva Diagnostics?</h2>
-            <p class="mt-4 text-gray-600 max-w-2xl mx-auto">We combine 30+ years of experience with the latest technology to provide reports you and your doctor can trust.</p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-                <div class="theme-card p-8 flex flex-col items-center">
-                    <div class="icon-circle theme-gradient">
-                        <i class="fa-solid fa-user-doctor"></i>
-                    </div>
-                    <h3 class="text-xl font-bold theme-text mt-4">Experienced Doctors</h3>
-                    <p class="text-gray-600 mt-2">Senior MD Pathologist & Radiologist with over 30 years of experience.</p>
-                </div>
-                <div class="theme-card p-8 flex flex-col items-center">
-                    <div class="icon-circle theme-gradient">
-                        <i class="fa-solid fa-microscope"></i>
-                    </div>
-                    <h3 class="text-xl font-bold theme-text mt-4">Latest Technology</h3>
-                    <p class="text-gray-600 mt-2">State-of-the-art analyzers and imaging equipment for accurate results.</p>
-                </div>
-                <div class="theme-card p-8 flex flex-col items-center">
-                    <div class="icon-circle theme-gradient">
-                        <i class="fa-solid fa-house-medical"></i>
-                    </div>
-                    <h3 class="text-xl font-bold theme-text mt-4">Comprehensive Diagnostics</h3>
-                    <p class="text-gray-600 mt-2"> One-stop solution for labs, X-rays, imaging, ECGs, and more.</p>
-                </div>
-                 <div class="theme-card p-8 flex flex-col items-center">
-                    <div class="icon-circle theme-gradient">
-                        <i class="fa-solid fa-user-nurse"></i>
-                    </div>
-                    <h3 class="text-xl font-bold theme-text mt-4">Qualified Staff</h3>
-                    <p class="text-gray-600 mt-2">Expert technicians skilled in handling samples for adults, children & newborns.</p>
-                </div>
-                 <div class="theme-card p-8 flex flex-col items-center">
-                    <div class="icon-circle theme-gradient">
-                        <i class="fa-solid fa-check-double"></i>
-                    </div>
-                    <h3 class="text-xl font-bold theme-text mt-4">Quality Control</h3>
-                    <p class="text-gray-600 mt-2">Strict protocols and personal supervision on every report to ensure accuracy.</p>
-                </div>
-                 <div class="theme-card p-8 flex flex-col items-center">
-                    <div class="icon-circle theme-gradient">
-                        <i class="fa-solid fa-bolt-lightning"></i>
-                    </div>
-                    <h3 class="text-xl font-bold theme-text mt-4">Fast Reports</h3>
-                    <p class="text-gray-600 mt-2">In-house testing facility allows for same-day delivery of most reports.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <section class="py-16 md:py-24">
+    <script>
+        // Note: Using a new class name ".mySwiper2" for this slider
+        var swiper2 = new Swiper(".mySwiper2", {
+            loop: true,
+            effect: "fade", // A nice, smooth fade effect
+            autoplay: {
+                delay: 1000, // A slightly different delay
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+
+     <section class="py-16 md:py-24">
         <div class="max-w-7xl mx-auto px-6 text-center">
             <h2 class="text-3xl md:text-4xl font-bold theme-text">Preventive Health Care Packages</h2>
             <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Prevention is better than cure. Choose from our range of
@@ -350,6 +434,7 @@
             </div>
         </div>
     </section>
+
 
     <section class="bg-gradient-to-br from-teal-800 to-teal-800 text-white aria-label py-12 px-4">
         <div class="max-w-7xl mx-auto">
