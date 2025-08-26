@@ -417,36 +417,34 @@
 
 
 
-    <section class="relative py-16 md:py-24 bg-gradient-to-r from-blue-50 via-cyan-50 to-sky-100 overflow-hidden">
-  <!-- Decorative blobs -->
-  <div class="absolute -top-20 -left-20 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
-  <div class="absolute bottom-0 right-0 w-96 h-96 bg-cyan-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
+    <section class="relative py-16 md:py-24 bg-gradient-to-r from-orange-50 via-amber-50 to-yellow-100 overflow-hidden">
+  <!-- Background Blobs -->
+  <div class="absolute -top-20 -left-20 w-72 h-72 bg-orange-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
+  <div class="absolute bottom-0 right-0 w-96 h-96 bg-yellow-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
 
-  <div class="max-w-7xl mx-auto px-6 relative z-10">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 relative">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
+      
       <!-- Swiper Slider -->
-      <div class="order-last lg:order-first">
-        <div class="swiper mySwiper2 aspect-video">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="images/healthcare-professional-uses-oximeter-measure-oxygen-levels.jpg"
-                alt="A doctor consulting with a patient in a modern clinic"
-                class="rounded-2xl shadow-xl w-full h-full object-cover">
-            </div>
-            <div class="swiper-slide">
-              <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?q=80&w=1932&auto-format&fit=crop"
-                alt="Doctor checking patient records on a tablet"
-                class="rounded-2xl shadow-xl w-full h-full object-cover">
-            </div>
-            <div class="swiper-slide">
-              <img src="https://images.unsplash.com/photo-1612534954388-dd80119958a7?q=80&w=1964&auto-format&fit=crop"
-                alt="Advanced laboratory equipment"
-                class="rounded-2xl shadow-xl w-full h-full object-cover">
-            </div>
+      <div class="swiper mySwiper2 rounded-2xl overflow-hidden shadow-xl">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="images/healthcare-professional-uses-oximeter-measure-oxygen-levels.jpg"
+              alt="A doctor consulting with a patient in a modern clinic"
+              class="w-full h-80 md:h-[420px] object-cover">
           </div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-slide">
+            <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?q=80&w=1932&auto-format&fit=crop"
+              alt="Doctor checking patient records on a tablet"
+              class="w-full h-80 md:h-[420px] object-cover">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://images.unsplash.com/photo-1612534954388-dd80119958a7?q=80&w=1964&auto-format&fit=crop"
+              alt="Advanced laboratory equipment"
+              class="w-full h-80 md:h-[420px] object-cover">
+          </div>
         </div>
+        <div class="swiper-pagination"></div>
       </div>
 
       <!-- Text Content -->
@@ -456,28 +454,26 @@
           We are committed to providing unparalleled accuracy and patient care. Our long-standing
           experience and dedication to quality are the cornerstones of our service.
         </p>
-
-        <!-- Stats Grid -->
         <div class="grid grid-cols-2 gap-x-6 gap-y-10 mt-10 text-left">
           <div>
-            <p class="text-4xl font-bold text-indigo-600">30+</p>
+            <p class="text-4xl font-bold" style="color: #d97706;">30+</p>
             <p class="font-semibold text-gray-700">Years of Trusted Service</p>
-            <div class="w-10 h-0.5 mt-2 bg-indigo-600"></div>
+            <div class="w-10 h-0.5 mt-2 bg-amber-500"></div>
           </div>
           <div>
-            <p class="text-4xl font-bold text-indigo-600">1.5L+</p>
+            <p class="text-4xl font-bold" style="color: #d97706;">1.5L+</p>
             <p class="font-semibold text-gray-700">Happy Patients Served</p>
-            <div class="w-10 h-0.5 mt-2 bg-indigo-600"></div>
+            <div class="w-10 h-0.5 mt-2 bg-amber-500"></div>
           </div>
           <div>
-            <p class="text-4xl font-bold text-indigo-600">200+</p>
+            <p class="text-4xl font-bold" style="color: #d97706;">200+</p>
             <p class="font-semibold text-gray-700">Types of Tests Available</p>
-            <div class="w-10 h-0.5 mt-2 bg-indigo-600"></div>
+            <div class="w-10 h-0.5 mt-2 bg-amber-500"></div>
           </div>
           <div>
-            <p class="text-4xl font-bold text-indigo-600">100%</p>
+            <p class="text-4xl font-bold" style="color: #d97706;">100%</p>
             <p class="font-semibold text-gray-700">Data Privacy & Confidentiality</p>
-            <div class="w-10 h-0.5 mt-2 bg-indigo-600"></div>
+            <div class="w-10 h-0.5 mt-2 bg-amber-500"></div>
           </div>
         </div>
       </div>
@@ -487,9 +483,7 @@
 </section>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
 <script>
-  // Swiper Slider
   var swiper2 = new Swiper(".mySwiper2", {
     loop: true,
     effect: "fade",
@@ -682,7 +676,7 @@
 
                 <div class="flex items-center space-x-3">
                     <a href="tel:011-41600800">
-                        <div class="bg-transparent p-4 rounded-full text-blue-700 text-2xl">
+                        <div class="bg-blue-100 p-4 rounded-full text-blue-700 text-2xl">
                             📞
                         </div>
                     </a>
