@@ -884,8 +884,7 @@ body {
   background-color: rgba(11, 95, 239, 0.189); /* inherits page background */
 }
 
-/* Scoped only to .new section */
-.new .grid a {
+.new .grid .card {
   display: block;
   padding: 1.5rem;
   border-radius: 1.25rem;
@@ -896,14 +895,14 @@ body {
   overflow: hidden;
 }
 
-/* Hover effect */
-.new .grid a:hover {
+/* Hover effect: lift + glow */
+.new .grid .card:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
 
 /* Title */
-.new .grid a h3 {
+.new .grid .card h3 {
   font-size: 1.125rem;
   font-weight: 700;
   transition: color 0.3s ease;
@@ -912,47 +911,46 @@ body {
 /* --- Unique styles per card --- */
 
 /* About Us */
-.new .grid a.about {
+.new .grid .card.about {
   background: linear-gradient(135deg, #fef3c7, #fde68a);
   border: 2px solid #f59e0b;
 }
-.new .grid a.about h3 { color: #92400e; }
+.new .grid .card.about h3 { color: #92400e; }
 
 /* Facilities */
-.new .grid a.facilities {
+.new .grid .card.facilities {
   background: linear-gradient(135deg, #dcfce7, #bbf7d0);
   border: 2px solid #22c55e;
 }
-.new .grid a.facilities h3 { color: #065f46; }
+.new .grid .card.facilities h3 { color: #065f46; }
 
 /* Lab Tests */
-.new .grid a.lab {
+.new .grid .card.lab {
   background: linear-gradient(135deg, #e0f2fe, #bae6fd);
   border: 2px solid #0284c7;
 }
-.new .grid a.lab h3 { color: #075985; }
+.new .grid .card.lab h3 { color: #075985; }
 
 /* Health Packages */
-.new .grid a.health {
+.new .grid .card.health {
   background: linear-gradient(135deg, #fce7f3, #fbcfe8);
   border: 2px solid #db2777;
 }
-.new .grid a.health h3 { color: #9d174d; }
+.new .grid .card.health h3 { color: #9d174d; }
 
 /* Contact Us */
-.new .grid a.contact {
+.new .grid .card.contact {
   background: linear-gradient(135deg, #ede9fe, #ddd6fe);
   border: 2px solid #7c3aed;
 }
-.new .grid a.contact h3 { color: #4c1d95; }
+.new .grid .card.contact h3 { color: #4c1d95; }
 
 /* Blog */
-.new .grid a.blog {
+.new .grid .card.blog {
   background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
   border: 2px solid #475569;
-  
 }
-.new .grid a.blog h3 { color: #1e293b; }
+.new .grid .card.blog h3 { color: #1e293b; }
 
 
 

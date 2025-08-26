@@ -884,77 +884,17 @@ body {
   background-color: rgba(11, 95, 239, 0.189); /* inherits page background */
 }
 
-/* Scoped only to .new section */
-.new .grid a {
+
+/* Card Base Styles - only inside .new section */
+.new .grid .card {
   display: block;
-  padding: 1.5rem;
-  border-radius: 1.25rem;
+  background: #ffffff;
+  border-radius: 1rem;       /* rounded-2xl */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 1.5rem;           /* p-6 */
   text-align: center;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
   transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
 }
-
-/* Hover effect */
-.new .grid a:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-}
-
-/* Title */
-.new .grid a h3 {
-  font-size: 1.125rem;
-  font-weight: 700;
-  transition: color 0.3s ease;
-}
-
-/* --- Unique styles per card --- */
-
-/* About Us */
-.new .grid a.about {
-  background: linear-gradient(135deg, #fef3c7, #fde68a);
-  border: 2px solid #f59e0b;
-}
-.new .grid a.about h3 { color: #92400e; }
-
-/* Facilities */
-.new .grid a.facilities {
-  background: linear-gradient(135deg, #dcfce7, #bbf7d0);
-  border: 2px solid #22c55e;
-}
-.new .grid a.facilities h3 { color: #065f46; }
-
-/* Lab Tests */
-.new .grid a.lab {
-  background: linear-gradient(135deg, #e0f2fe, #bae6fd);
-  border: 2px solid #0284c7;
-}
-.new .grid a.lab h3 { color: #075985; }
-
-/* Health Packages */
-.new .grid a.health {
-  background: linear-gradient(135deg, #fce7f3, #fbcfe8);
-  border: 2px solid #db2777;
-}
-.new .grid a.health h3 { color: #9d174d; }
-
-/* Contact Us */
-.new .grid a.contact {
-  background: linear-gradient(135deg, #ede9fe, #ddd6fe);
-  border: 2px solid #7c3aed;
-}
-.new .grid a.contact h3 { color: #4c1d95; }
-
-/* Blog */
-.new .grid a.blog {
-  background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
-  border: 2px solid #475569;
-  
-}
-.new .grid a.blog h3 { color: #1e293b; }
-
-
 
 /* Hover Effects */
 .new .grid .card:hover {
@@ -975,5 +915,4 @@ body {
 .new .grid .card:hover h3 {
   color: #065f46;        /* emerald-800 */
 }
-
 
