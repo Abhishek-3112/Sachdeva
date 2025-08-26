@@ -887,28 +887,31 @@ body {
 /* Scoped only to .new section */
 .new .grid a {
   display: block;
-  padding: 1.5rem;
-  border-radius: 1.25rem;
+  padding: 1.25rem;           /* between 1rem and 1.5rem */
+  border-radius: 1rem;
   text-align: center;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.07);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  max-width: 400px;
+
+  max-width: 280px;          /* not too wide, not too small */
+  margin: 0 auto;            /* center inside each grid cell */
 }
 
 /* Hover effect */
 .new .grid a:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 }
 
 /* Title */
 .new .grid a h3 {
-  font-size: 1.125rem;
-  font-weight: 700;
+  font-size: 1.05rem;         /* slightly larger than before */
+  font-weight: 600;
   transition: color 0.3s ease;
 }
+
 
 /* --- Unique styles per card --- */
 

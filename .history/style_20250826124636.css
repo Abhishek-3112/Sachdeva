@@ -886,15 +886,19 @@ body {
 
 /* Scoped only to .new section */
 .new .grid a {
-  display: block;
-  padding: 1.5rem;
-  border-radius: 1.25rem;
+  display: flex;                  /* make equal height boxes */
+  align-items: center;
+  justify-content: center;
   text-align: center;
+
+  padding: 2rem;                  /* bigger box */
+  border-radius: 1.25rem;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
   transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  max-width: 400px;
+
+  height: 180px;                  /* fixed equal height */
+  max-width: 320px;               /* balanced width */
+  margin: 0 auto;                 /* center each inside grid */
 }
 
 /* Hover effect */
@@ -905,10 +909,11 @@ body {
 
 /* Title */
 .new .grid a h3 {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 700;
   transition: color 0.3s ease;
 }
+
 
 /* --- Unique styles per card --- */
 
