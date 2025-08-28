@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sachdeva Diagnostics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Custom styles to apply the new theme */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F8F9FA;
+        }
+
+        .theme-gradient {
+            background-image: linear-gradient(to right, #00A6C0, #00C2A3);
+        }
+
+        .theme-text {
+            color: #002D5B;
+        }
+
+        .theme-accent-text {
+            color: #00A6C0;
+        }
+
+        .theme-card {
+            background-color: white;
+            border-radius: 1.5rem;
+            /* 24px */
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .theme-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .theme-button {
+            display: inline-block;
+            background-image: linear-gradient(to right, #00A6C0, #00C2A3);
+            color: white;
+            font-weight: 600;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 15px 0 rgba(0, 180, 172, 0.4);
+        }
+
+        .theme-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 20px 0 rgba(0, 180, 172, 0.6);
+        }
+
+        .icon-circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+         /* Optional: Custom styles for pagination dots */
+        .swiper-pagination-bullet-active {
+            background-color: #1a73e8 !important; /* Change to your theme color */
+        }
+        
+        .theme-button {
+            background-color: #1a73e8;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .theme-button:hover {
+            background-color: #1662c4;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+      <div class="logo">
+    <a href="index.html" style="text-decoration: none; color: inherit;">
+        <img src="images/Logo_Sachdeva-Final-Transparent.png" alt="Sachdeva Diagnostics Icon"
+            class="logo-icon" style="display: block; margin: 0 auto 5px auto;" />
+        
+        <div style="text-align: center; color: blue;">
+            Sachdeva <span> Diagnostics</span>
+            <br>
+            <small style="color: rgb(46, 46, 46);">C.R. Park</small>
+        </div>
+    </a>
+</div>
+        <div class="hamburger" onclick="toggleMenu()">
+            ☰
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="facilities.html">Facilities</a></li>
+            <li><a href="lab-tests.html">Lab Tests List</a></li>
+            <li><a href="health-packages.html">Health Packages</a></li>
+            <li><a href="loca.html">Contact Us</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+
+    </nav>
+
+  <!-- Full Width Carousel Section -->
+<section class="relative w-full">
+  <!-- Swiper Carousel -->
+  <div class="swiper mySwiper w-full h-[350px] md:h-[450px]">
+    <div class="swiper-wrapper">
+      
+      <!-- Slide 1 -->
+      <div class="swiper-slide relative">
+        <img src="images/healthcare-professional-shows-lab-test-results-patient-consultation.jpg"
+          alt="Healthcare professionals" class="w-full h-full object-cover">
+        <!-- Overlay Content -->
+        <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-4">
+          <h1 class="text-white text-3xl md:text-5xl font-bold mb-4">
+            Precision Diagnostics, For a Healthier You
+          </h1>
+          <p class="text-gray-200 text-lg md:text-xl max-w-2xl mb-6">
+            Experience reliable and accurate lab testing with state-of-the-art technology, ensuring fast
+            results you can trust.
+          </p>
+          <a href="#home-collection"
+             class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-full shadow-md hover:bg-blue-700 transition">
+            Book a Test Now
+          </a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide relative">
+        <img src="images/bg-aboutus.webp" alt="Doctor with tablet" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-4">
+          <h1 class="text-white text-3xl md:text-5xl font-bold mb-4">
+            Precision Diagnostics, For a Healthier You
+          </h1>
+          <p class="text-gray-200 text-lg md:text-xl max-w-2xl mb-6">
+            Experience reliable and accurate lab testing with state-of-the-art technology, ensuring fast
+            results you can trust.
+          </p>
+          <a href="#home-collection"
+             class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-full shadow-md hover:bg-blue-700 transition">
+            Book a Test Now
+          </a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="swiper-slide relative">
+        <img src="images/Gemini_Generated_Image_ywo71yywo71yywo7.png" alt="Scientist in a lab" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-4">
+          <h1 class="text-white text-3xl md:text-5xl font-bold mb-4">
+            Precision Diagnostics, For a Healthier You
+          </h1>
+          <p class="text-gray-200 text-lg md:text-xl max-w-2xl mb-6">
+            Experience reliable and accurate lab testing with state-of-the-art technology, ensuring fast
+            results you can trust.
+          </p>
+          <a href="#home-collection"
+             class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-full shadow-md hover:bg-blue-700 transition">
+            Book a Test Now
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Navigation -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</section>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: ".swiper-pagination", clickable: true },
+    navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+  });
+</script>
+
+
+   <section class="py-16 md:py-24 bg-gradient-to-r from-blue-900 to-green-800">
+    <div class="max-w-7xl mx-auto px-6 text-center text-white">
+        <h2 class="text-3xl md:text-4xl font-bold">Why Choose Sachdeva Diagnostics?</h2>
+        <p class="mt-4 text-gray-200 max-w-2xl mx-auto">
+            We combine 30+ years of experience with the latest technology to provide reports you and your doctor can trust.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div class="theme-card p-8 flex flex-col items-center bg-white/10 rounded-2xl shadow-lg">
+                <div class="icon-circle bg-gradient-to-r from-blue-600 to-green-500 text-white text-3xl p-4 rounded-full">
+                    <i class="fa-solid fa-user-doctor"></i>
+                </div>
+                <h3 class="text-xl font-bold mt-4">Experienced Doctors</h3>
+                <p class="text-gray-200 mt-2">Senior MD Pathologist & Radiologist with over 30 years of experience.</p>
+            </div>
+
+            <div class="theme-card p-8 flex flex-col items-center bg-white/10 rounded-2xl shadow-lg">
+                <div class="icon-circle bg-gradient-to-r from-blue-600 to-green-500 text-white text-3xl p-4 rounded-full">
+                    <i class="fa-solid fa-microscope"></i>
+                </div>
+                <h3 class="text-xl font-bold mt-4">Latest Technology</h3>
+                <p class="text-gray-200 mt-2">State-of-the-art analyzers and imaging equipment for accurate results.</p>
+            </div>
+
+            <div class="theme-card p-8 flex flex-col items-center bg-white/10 rounded-2xl shadow-lg">
+                <div class="icon-circle bg-gradient-to-r from-blue-600 to-green-500 text-white text-3xl p-4 rounded-full">
+                    <i class="fa-solid fa-house-medical"></i>
+                </div>
+                <h3 class="text-xl font-bold mt-4">Comprehensive Diagnostics</h3>
+                <p class="text-gray-200 mt-2">One-stop solution for labs, X-rays, imaging, ECGs, and more.</p>
+            </div>
+
+            <div class="theme-card p-8 flex flex-col items-center bg-white/10 rounded-2xl shadow-lg">
+                <div class="icon-circle bg-gradient-to-r from-blue-600 to-green-500 text-white text-3xl p-4 rounded-full">
+                    <i class="fa-solid fa-user-nurse"></i>
+                </div>
+                <h3 class="text-xl font-bold mt-4">Qualified Staff</h3>
+                <p class="text-gray-200 mt-2">Expert technicians skilled in handling samples for adults, children & newborns.</p>
+            </div>
+
+            <div class="theme-card p-8 flex flex-col items-center bg-white/10 rounded-2xl shadow-lg">
+                <div class="icon-circle bg-gradient-to-r from-blue-600 to-green-500 text-white text-3xl p-4 rounded-full">
+                    <i class="fa-solid fa-check-double"></i>
+                </div>
+                <h3 class="text-xl font-bold mt-4">Quality Control</h3>
+                <p class="text-gray-200 mt-2">Strict protocols and personal supervision on every report to ensure accuracy.</p>
+            </div>
+
+            <div class="theme-card p-8 flex flex-col items-center bg-white/10 rounded-2xl shadow-lg">
+                <div class="icon-circle bg-gradient-to-r from-blue-600 to-green-500 text-white text-3xl p-4 rounded-full">
+                    <i class="fa-solid fa-bolt-lightning"></i>
+                </div>
+                <h3 class="text-xl font-bold mt-4">Fast Reports</h3>
+                <p class="text-gray-200 mt-2">In-house testing facility allows for same-day delivery of most reports.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="new">
+  <div class=" grid grid-cols-2 md:grid-cols-3 gap-8 p-6">
+    
+    <a href="about.html" class="about">
+      <h3>About Us</h3>
+    </a>
+
+    <a href="facilities.html" class="facilities">
+      <h3>Facilities</h3>
+    </a>
+
+    <a href="lab-tests.html" class="lab">
+      <h3>Lab Tests List</h3>
+    </a>
+
+    <a href="health-packages.html" class="health">
+      <h3>Health Packages</h3>
+    </a>
+
+    <a href="loca.html" class="contact">
+      <h3>Contact Us</h3>
+    </a>
+
+    <a href="#blog" class="blog">
+      <h3>Blog</h3>
+    </a>
+  </div>
+</section>
+
+
+   <section class="bg-white pt-16 pb-12">
+  <div class="max-w-7xl mx-auto px-6 space-y-6">
+    
+    <!-- Section Heading -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+        Committed to Quality: Your Trusted Diagnostic Partner
+      </h2>
+       <p class="text-lg text-gray-700 leading-relaxed mt-4">
+          Choose <span class="font-semibold">Sachdeva Diagnostics</span> for diagnostic services you can trust, 
+          backed by our internationally recognized certifications and unwavering commitment to quality.
+        </p>
+    </div>
+ 
+    <!-- Card 1 -->
+    <div class="flex flex-col md:flex-row items-center gap-4 p-6 bg-gradient-to-r from-orange-500 via-pink-500 to-red-500 rounded-xl shadow-lg hover:shadow-xl transition">
+      <!-- Image -->
+      <div class="md:w-1/3 flex justify-center">
+        <img src="images/ISO-removebg-preview.png" 
+             alt="ISO Certification" 
+             class="rounded-lg max-w-full h-auto max-h-48 object-contain">
+      </div>
+
+      <!-- Content -->
+      <div class="md:w-2/3 text-center md:text-left">
+        <p class="text-sm text-white leading-relaxed">
+          At <span class="font-semibold">Sachdeva Diagnostics</span>, we are dedicated to providing accurate, reliable, 
+          and timely diagnostic services. Our commitment to quality is reflected in our prestigious certifications. 
+          We are proud to be <span class="font-semibold">ISO 9001:2015 certified</span>, 
+          demonstrating our adherence to internationally recognized quality management system standards. 
+          This certification ensures that our processes are consistently monitored and improved to meet the 
+          highest levels of quality and patient satisfaction.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="flex flex-col md:flex-row items-center gap-4 md:flex-row-reverse p-6 bg-gradient-to-r from-red-500 via-pink-500 to-orange-500  rounded-xl shadow-lg hover:shadow-xl transition">
+      <!-- Image -->
+      <div class="md:w-1/3 flex justify-center">
+        <img src="images/CQI_new-removebg-preview.png" 
+             alt="ILAC Certification" 
+             class="rounded-lg max-w-full h-auto max-h-48 object-contain">
+      </div>
+      
+      <!-- Content -->
+      <div class="md:w-2/3 text-center md:text-left">
+        <p class="text-sm text-white leading-relaxed">
+           Our participation in the 
+          <span class="font-semibold">ILAC (International Laboratory Accreditation Cooperation) Continuous Quality Improvement</span> 
+          program (as shown in the image) underscores our ongoing pursuit of excellence. 
+          This external quality assurance program, based on ISO 9001 standards, validates our technical competence 
+          and commitment to delivering dependable results.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+    <section class="relative py-16 md:py-24 bg-gradient-to-r from-blue-50 via-cyan-50 to-sky-100 overflow-hidden">
+  <!-- Decorative blobs -->
+  <div class="absolute -top-20 -left-20 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
+  <div class="absolute bottom-0 right-0 w-96 h-96 bg-cyan-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
+
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+      <!-- Swiper Slider -->
+      <div class="order-last lg:order-first">
+        <div class="swiper mySwiper2 aspect-video">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/healthcare-professional-uses-oximeter-measure-oxygen-levels.jpg"
+                alt="A doctor consulting with a patient in a modern clinic"
+                class="rounded-2xl shadow-xl w-full h-full object-cover">
+            </div>
+            <div class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?q=80&w=1932&auto-format&fit=crop"
+                alt="Doctor checking patient records on a tablet"
+                class="rounded-2xl shadow-xl w-full h-full object-cover">
+            </div>
+            <div class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1612534954388-dd80119958a7?q=80&w=1964&auto-format&fit=crop"
+                alt="Advanced laboratory equipment"
+                class="rounded-2xl shadow-xl w-full h-full object-cover">
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <!-- Text Content -->
+      <div class="text-center lg:text-left">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800" style="color: #0d2354;">What Sets Us Apart</h2>
+        <p class="mt-4 text-lg text-gray-600">
+          We are committed to providing unparalleled accuracy and patient care. Our long-standing
+          experience and dedication to quality are the cornerstones of our service.
+        </p>
+
+        <!-- Stats Grid -->
+        <div class="grid grid-cols-2 gap-x-6 gap-y-10 mt-10 text-left">
+          <div>
+            <p class="text-4xl font-bold text-indigo-600">30+</p>
+            <p class="font-semibold text-gray-700">Years of Trusted Service</p>
+            <div class="w-10 h-0.5 mt-2 bg-indigo-600"></div>
+          </div>
+          <div>
+            <p class="text-4xl font-bold text-indigo-600">1.5L+</p>
+            <p class="font-semibold text-gray-700">Happy Patients Served</p>
+            <div class="w-10 h-0.5 mt-2 bg-indigo-600"></div>
+          </div>
+          <div>
+            <p class="text-4xl font-bold text-indigo-600">200+</p>
+            <p class="font-semibold text-gray-700">Types of Tests Available</p>
+            <div class="w-10 h-0.5 mt-2 bg-indigo-600"></div>
+          </div>
+          <div>
+            <p class="text-4xl font-bold text-indigo-600">100%</p>
+            <p class="font-semibold text-gray-700">Data Privacy & Confidentiality</p>
+            <div class="w-10 h-0.5 mt-2 bg-indigo-600"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  // Swiper Slider
+  var swiper2 = new Swiper(".mySwiper2", {
+    loop: true,
+    effect: "fade",
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+</script>
+
+
+
+    <section class="bg-gradient-to-br from-teal-800 to-teal-800 text-white aria-label py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center flex-wrap gap-4 mb-8">
+                <div class="w-full text-center mb-8">
+                    <p class="text-gray-200 text-sm">See What Our Patients Say</p>
+                    <h2 class="text-5xl font-bold mt-1">Clients Testimonial</h2>
+                </div>
+                <div class="flex gap-3 mx-auto md:ml-auto md:mx-0">
+                    <button id="prevBtn"
+                        class="border border-white text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white hover:text-blue-600 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button id="nextBtn"
+                        class="border border-white text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white hover:text-blue-600 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="testimonial-wrapper" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-50 text-gray-700">
+        <div id="home-collection"
+            class="max-w-7xl mx-auto p-6 md:flex md:items-center md:justify-between bg-white rounded-t-3xl shadow-md">
+            <div class="md:w-1/2 mb-6 md:mb-0">
+                <img src="images/labtech - Copy.png" alt="Lab Technician"
+                    class="rounded-2xl w-full max-w-md mx-auto md:mx-0">
+            </div>
+
+            <div class="md:w-1/2 text-center md:text-left">
+                <h2 class="text-2xl font-semibold text-center text-blue-900 mb-4 text">Book an appointment with us!</h2>
+                <form id="bookingForm" class="space-y-4">
+
+                    <div class="relative" id="search-container">
+                        <input type="text" id="testSearchInput" placeholder="Search for a Test *" required
+                            class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <div id="searchResults"
+                            class="absolute z-10 w-full bg-white border border-gray-300 rounded-md mt-1 max-h-60 overflow-y-auto hidden">
+                        </div>
+                    </div>
+
+                    <input id="fullName" type="text" placeholder="Full Name *" required
+                        class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <input id="age" type="number" placeholder="Age *" required
+                            class="w-full sm:w-1/2 px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <input id="phone" type="tel" placeholder="Phone Number *" required
+                            class="w-full sm:w-1/2 px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+
+                    <input id="email" type="email" placeholder="Email (Optional)"
+                        class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+                    <div class="relative">
+                        <input id="date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
+                            placeholder="dd-mm-yyyy *" required
+                            class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+
+                    <div class="relative">
+                        <select id="time" name="time" required
+                            class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none bg-white">
+                            <option value="" disabled selected>Select preferred time slot *</option>
+                        </select>
+                        <div
+                            class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-700">
+                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition flex items-center justify-center h-12">
+                        Book Appointment
+                    </button>
+
+                </form>
+            </div>
+        </div>
+
+        <div
+            class="bg-white max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+            <div>
+                <a href="index.html">
+                    <h3 class="flex items-center justify-center md:justify-start text-xl font-bold text-blue-800 mb-1">
+                        <img src="images/Logo_Sachdeva-removebg-preview.png" alt="Logo" class="w-8 h-8 mr-1">
+                        Sachdeva <span class="text-orange-400">Diagnostics</span>
+                    </h3>
+                </a>
+                <p class="text-sm text-gray-500">Pathology, And beyond.</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold text-blue-900 mb-2">Quick Links</h4>
+                <ul class="space-y-1 text-sm text-gray-600">
+                    <li><a href="about.html" class="hover:text-blue-500">About Us</a></li>
+                    <li><a href="lab-tests.html" class="hover:text-blue-500">Test List</a></li>
+                    <li><a href="loca.html" class="hover:text-blue-500">Location</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold text-blue-900 mb-2">For Customers</h4>
+                <ul class="space-y-1 text-sm text-gray-600">
+                    <li><a href="health-packages.html" class="hover:text-blue-500">Healthcare Packages</a></li>
+                    <li><a href="loca.html" class="hover:text-blue-500">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold text-blue-900 mb-2">Opening Hour</h4>
+                <ul class="text-sm text-gray-600 space-y-2">
+                    <li class="flex flex-col sm:flex-row sm:justify-between items-center">
+                        <span>Monday-Saturday</span>
+                        <span class="text-blue-500 font-medium">08:30am–07:30pm</span>
+                    </li>
+                    <li class="flex flex-col sm:flex-row sm:justify-between items-center">
+                        <span>Sunday</span>
+                        <span class="text-blue-500 font-medium">Closed</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="bg-white border-t border-gray-200 py-6">
+            <div class="max-w-7xl mx-auto px-6 
+            flex flex-col items-center md:flex-row justify-between 
+            text-sm text-gray-700 
+            space-y-6 md:space-y-0">
+
+                <div class="flex items-center space-x-3">
+                    <a href="tel:011-41600800">
+                        <div class="bg-transparent p-4 rounded-full text-blue-700 text-2xl">
+                            📞
+                        </div>
+                    </a>
+                    <div class="text-left">
+                        <span class="text-sm font-bold text-black">Need Help? Book Lab Visit</span> <br>
+                        <span class="text-2xl text-blue-500 font-bold">011-41600800</span>
+                    </div>
+                </div>
+
+                <div class="text-lg flex items-center space-x-2 font-bold">
+                    ✉️ <a href="mailto:sachdevadiagnostics@yahoo.com"
+                        class="hover:text-blue-500">sachdevadiagnostics@yahoo.com</a>
+                </div>
+
+                <a href="https://www.google.com/maps/place/28%C2%B032'15.3%22N+77%C2%B015'22.9%22E/@28.5375711,77.2537896,17z/data=!3m1!4b1!4m4!3m3!8m2!3d28.5375711!4d77.2563645?entry=ttu&g_ep=EgoyMDI1MDgwNi4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    class="hover:text-blue-500 text-lg flex items-center space-x-2 font-bold text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 inline-block text-red-500"
+                        fill="currentColor" viewBox="0 0 16 16">
+                        <path
+                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                    </svg>
+                    <span>D-616/ C R Park, New Delhi, 110019</span>
+                </a>
+
+                <div class="flex items-center justify-center space-x-4">
+                    <a href="#"><img src="https://www.svgrepo.com/show/183607/facebook.svg" class="w-6 h-6"
+                            alt="Facebook"></a>
+                    <a href="#"><img src="https://www.svgrepo.com/show/111199/instagram.svg" class="w-6 h-6"
+                            alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center text-sm text-gray-400 py-4">
+            Copyright ©2024 <strong>Sachdeva Diagnostics</strong>, All Rights Reserved.
+        </div>
+    </footer>
+
+
+    <script>
+        // --- NAV HAMBURGER ---
+        function toggleMenu() {
+            const nav = document.getElementById("navLinks");
+            if (nav) nav.classList.toggle("show");
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // ========= TESTIMONIALS (kept separate; harmless if you already load it elsewhere) =========
+            try {
+                const testimonials = [
+                    { name: "Param Bhargava", rating: 5, review: "Sachdeva Diagnostics services are very good, staff behaviour is polite and reporting is excellent. May be a little expensive but justified by the report high quality. Highly recommended." },
+                    { name: "Riya Sharma", rating: 4, review: "Best lab! The staff were just outstanding, very committed and made sure that my reports were on time without my follow up: recommend." },
+                    { name: "Ritika Anand", rating: 5, review: " Sachdeva Diagnostics provides the perfect blend of accuracy and speed. I received my comprehensive health package results quickly, and my doctor confirmed their thoroughness. A reliable partner in health." },
+                    { name: "Rajeev Sinha", rating: 4, review: "Prompt service and high quality testing. Very clean and well-maintained lab." }
+                ];
+                let currentIndex = 0;
+                const testimonialWrapper = document.getElementById("testimonial-wrapper");
+                const prevButton = document.getElementById("prevBtn");
+                const nextButton = document.getElementById("nextBtn");
+                function showTestimonials() {
+                    if (!testimonialWrapper) return;
+                    testimonialWrapper.innerHTML = "";
+                    for (let i = currentIndex; i < currentIndex + 2 && i < testimonials.length; i++) {
+                        const t = testimonials[i];
+                        testimonialWrapper.innerHTML += `
+          <div class="bg-white text-gray-700 p-6 rounded-3xl shadow-md">
+            <div class="flex items-center mb-4">
+              <div><h3 class="text-xl font-semibold text-blue-900">${t.name}</h3></div>
+              <div class="ml-auto text-right">
+                <p class="font-bold text-blue-900">Rating:</p>
+                <div class="text-yellow-400">${"⭐".repeat(t.rating)}</div>
+              </div>
+            </div>
+            <p class="text-sm leading-relaxed">${t.review}</p>
+          </div>`;
+                    }
+                }
+                function nextTestimonial() {
+                    currentIndex = (currentIndex + 2 < testimonials.length) ? currentIndex + 2 : 0;
+                    showTestimonials();
+                }
+                function prevTestimonial() {
+                    currentIndex = (currentIndex - 2 >= 0)
+                        ? currentIndex - 2
+                        : testimonials.length - (testimonials.length % 2 === 0 ? 2 : 1);
+                    showTestimonials();
+                }
+                if (prevButton) prevButton.addEventListener("click", prevTestimonial);
+                if (nextButton) nextButton.addEventListener("click", nextTestimonial);
+                showTestimonials();
+            } catch (e) {
+                // If anything fails here, don't block the rest of the page
+                console.warn("Testimonials init skipped:", e);
+            }
+
+            // ========= BOOKING FORM =========
+            const allTests = [
+                "ABSOLUTE EOSINOPHIL COUNT ; AEC", "ABSOLUTE NEUTROPHIL COUNT :ANC", "ABSOLUTE LYMPHOCYTE COUNT;ALC", "APTT / PTT; ACTIVATED PARTIAL THROMBOPLASTIN TIME", "BLEEDING TIME : BT", "BLOOD GROUP: ABO AND Rh FACTOR", "CLOT RETRACTION TEST", "CLOTING TIME -CT", "COOMBS TEST-DIRECT", "COOMBS TEST- INDIRECT", "DIFFERENTIAL LEUCOCYTE COUNT : DLC", "ESR (Westergren)", "HB HPLC / ELECTROPHORESIS", "HbA1c :GLYCOSYLATED Hb", "HEMOGLOBIN: Hb", "MCH", "MCHC", "MCV", "MICROFILARIA DETECTION IN PERIPHERAL SMEAR", "MALARIAL PARASITE /BLOOD PARASITE :P/S FOR MP", "PCV Hematocrit)", "PERIPHERAL BLOOD SMEAR: BLOOD PICTURE", "PLATELET COUNT", "PT WITH INR", "RED CELL DISRTIBUTION WIDTH :RDW- CV", "RED CELL DISTRIBUTION WIDTH :RDW- SD", "RETICULOCYTE COUNT", "TOTAL LEUCOCYTE COUNT :TLC", "RED BLOOD CELLS : RBC COUNT", "ANGIOTENSIN CONVERTING ENZYME: ACE", "GLUCOSE / SUGAR - FASTING", "GLUCOSE / SUGAR- PP", "GLUCOSE /.SUGAR - RANDOM", "UREA ,SERUM", "CPK – MB; CK –MB", "GLUCOSE CHALLENGE TEST :GCT", "GLUCOSE TOLERANCE TEST :GTT- PREGNANCY", "GLUCOSE TOLERANCE TEST -GTT-2.5 HOURS", "ACID PHOSPHATASE (PROSTATIC)", "ACID PHOSPHOTASE (TOTAL)", "FERRITIN,SERUM", "HOMOCYSTIENE QUANTITATIVE,SERUM", "MAGNESIUM,SERUM", "PROTEIN ELECTROPHORESIS,SERUM", "PROTEIN ELECTROPHORESIS, URINE", "TRANSFERRIN ,SERUM", "ALBUMIN ,SERUM", "ALKALINE PHOSPHATASE ,SERUM (ALP)", "AMYLASE ,SERUM", "BILIRUBIN (DIRECT) ,SERUM", "BILIRUBIN (INDIRECT) ,SERUM", "BILIRUBIN (TOTAL ,DIRECT AND INDIRECT)", "CALCIUM ,SERUM", "CHLORIDE ,SERUM", "CHOLESTROL ,SERUM", "CPK /CREATININE KINASE (CK)SERUM", "CREATININE ,SERUM", "HDL CHOLESTROL ,SERUM", "IRON , SERUM", "LACTATE DEHYDROGENASE ( LDH) ,SERUM", "LDL CHOLESTROL -DIRECT,SERUM", ".LIPASE ,SERUM", "PHOSPHOROUS ,SERUM", "POTASSIUM (K +) ,SERUM", "SODIUM (NA+)", "TOTAL PROTEIN ,SERUM", "TOTAL PROTEIN ,URINE", "TOTAL PROTEIN ,BODY FLUIDS", "TRIGLYCERIDES ,SERUM", "URIC ACID,SERUM", "VLDL,SERUM", "GAMMA GLUTAMYL TRANSPEPTIDASE (GGT),SERUM", "SGOT ;ASPARTATE AMINOTRANSFERASE (AST), SERUM", "SGPT ; (ALT)ALANINE AMINOTRANSFERASE, SERUM", "TIBC ,TOTAL IRON BINDING CAPACITY", "AIDS (HIV 1&11)", "ALLERGY PANEL", "ANTI- CCP", "ANTI ds DNA ANTIBODIES", "ANTI ECHINOCOCCUS ANTIBODY", "ANTI CARDIOLIPN ANTIBODY.", "ANA –IF METHOD ,ANTINUCLEAR ANTIBODY", "ANA- ELISA METHOD ,ANTINUCLEAR ANTIBODY,", "ANTPHOSPHOLIPID IgG", "ANTPHOSPHOLIPID lgM", "ANTISPERM ANTBODIES", "ANTI Tg ,ANTITHROGLOBULIN ANTIBODY", "ANTI- TPO ,ANTITHYROID PEROXIDASE ANTIBODY", "ASO – ANTISTREPTOLYSIN ANTIBODY WITH TITRE", "CYTOMEGALOVIRUS ANTIBODY lgG", "CYTOMEGALOVIRUS ANTIBODY - lgM", "COMPLEMENT C3", "CRP ,C REACTIVE PROTEIN WITH TITRE", "DENGUE- lgG & lgM", "DENGUE- NS1 ANTIGEN", "H. PYLORI- lgA", "H. PYLORI- IgG", "HEPATITIS A ANTIBODY (ANTI HAV) lgM", "HEPATITIS A ANTIBODY (ANTI HAV) TOTAL", "HEPATITIS B CORE ANTIBODY (ANTI HBc) lgM", "HEPATITIS CORE ANTIBODY (ANTI HBc) TOTAL", "HEPATITIS B ENVELOPE ANTIGEN (HBe Ag)", "HEPATITIS B SURFACE ANTIBODY (HBsAb)", "HEPATITIS SURFACE ANTIGEN (HBsAg )", "HEPATITIS B ENVELOPE ANTIBODY (HBe Ab)", "HEPATITIS C VIRUS( HCV) ANTIBODY; ICT METHOD FOR SCREENING", "HEPATITIS C VIRUS (HCV) ANTIBODY IgM", "HEPATITIS C VIRUS (HCV)ANTIBODY -TOTAL", "HEPATITIS E VIRUS (ANTI HEV) lgG", "HEPATITIS E VIRUS (ANTI HEV) lgM", "HERPES-1-IgG", "HERPES -1- IgM", "HERPES-2- lgG", "HERPES 2- lgM", "HSV 1 & 2- IgG/IgM", "(HSV) 1 &2—lgM AND IgG", "hs- CRP (CARDIO)", "MALARIAL ANTIGEN", "RHEUMATOID ARTHRITIS (RA )FACTOR", "RUBELLA-lG", "RUBELLA-IgM", "IMMUNOGLOBULIN IgA", "IMMUNOGLOBULIN Ig E", "IMMUNOGLOBULIN IgG", "TUBERCULIN SKIN TEST / MANTOUX TEST", "TB GOLD ;QUANTIFERON –TB (IFN GAMMA TEST)", "Ttga ;ANTI TISSUE TRANSGLUTAMINASE IgA", "TORCH PANEL - lgG", "TORCH PANEL - lgM", "TOXOPLASMA- lgG", "TOXOPLASMA - IgM", "TPHA", "TYPHID0T", "VDRL", "WIDAL - SLIDE", "WIDAL- TUBE", "AFB CULTURE", "BLOOD CỤLTURE AND SENSITIVITY (C/S)", "HIGH VAGINAL SWAB CULTURE AND SENSITIVITY (C/S)", "PCR FOR MYCO TUBERCULOSIS", "PUS - SWAB CUTURE AND SENSITIVITY (C/S)", "SEMEN- CULTURE AND SENSITIVITY (C/S)", "SKIN SCRAPPING FUNGUS", "SMEAR FOR AFB", "SMEAR FOR GRAM STAIN", "SPUTUM- CULTURE AND SENSITIVITY (C/S)", "STOOL- CULTURE AND SENSITIVITY(C/S)", "THROAT SWAB –CULTURE AND SENSITIVITY (C/S)", "WET MOUNT DIRECT SMEAR", "17-HYDROXYPROGESTRONE", "BETA HCG", "CORTISOL", "DHEA-S", "ESTRADIOL - E2", "ESTRIOL - E3", "FREE T3 ;FT3", "FREE T4 ;FT4", "FSH ;,FOLLICLE STIMULATING HORMONE", "GROWTH HORMONE ;GH", "HLA- B27", "INSULIN- FASTING", "INSULIN- PP", "INSULIN -RANDOM", "LH , LUTEINISING HORMONE", "PARATHYROID HORMONE ;PTH", "PROGESTERONE", "PROLACTIN", "TESTOSTERONE- FREE", "TESTOSTERONE-TOTAL", "TRIPPLE TEST", "TSH ;THYROID STIMULATING HORMONE", "CARBAMEZIPINE / TEGRETOL", "DIGOXIN", "DILANTIN / PHENYYTON", "FOLIC ACID", "LITHIUM", "VALPORIC ACID", "VITAMIN - B12", "VITAMIN D-25 HYDROXY", "BUCCAL SMEAR FOR BARR BODIES ( SEX CHROMATIN )", "CYTOLOGY ;FINE NEEDLE ASPIRATION (FNAC)", "CYTOLOGY ;BODY FLUIDS", "FNAC /PAP / BIOPSY SLIDES FOR OPINION", "HISTOPATHOLOGY (LARGE)", "HISTOPATHOLOGY (MEDIUM)", "HISTOPATHOLOGY (SMALL)", "CYTOLOGY GENITAL ; PAP SMEAR ;CONVENTIONAL", "CYTOLOGY GENITAL: PAP SMEAR ;LIQUiD BASED", "U/S GUIDED FNAC", "BODY FLUID EXAMINATION ROUTINE", "POST COITAL TEST ( PCT )", "SEMEN ANALYSIS", "SEMEN FRUCTOSE LEVEL", "ALFA FETO PROTEINS ( AFP )", "CA- 19.9 PANCREATIC CANCER MARKER", "CA 72.4 GASTRIC CANCER MARKER", "CA-125 OVARIAN CANCER MARKER", "CEA CARCINOEMBRYONIC ANTIGEN", "PSA - (PROSTATE SPECIFIC ANTIGEN ) FREE", "PSA - (PROSTATE SPECIFIC ANTIGEN ) TOTAL", "STOOL HANGING DROP PREPARATION", "STOOL OCCULT BLOOD", "pH & REDUCING SUBSTANCES", "STOOL- CUTURE & SENSITIVITY ;AEROBIC)", "STOOL ( CONCENTRATION METHOD)", "STOOL ANALYSIS -ROUTINE", "24 HRS URINARY SODIUM", "24 HRS URINARY URIC ACID", "24HRS URINARY CALCIUM", "24HRS URINARY CATECHOLMINE", "24HRS URNARY.CHLORIDE", "24HRS URINARY CORTISOL", "24HRS URINARY CREATININE", "24HRS URINARY PROTIEN", "24HRS URINARY UREA", "ALBUMIN ,URINE", "ALBUMIN CREATININE RATIO (ACR)", "BENCE JONES PROTEINS", "BLE SALTS & BILE PIGMENT,URINE", "CHYLURIA", "CREATNINE CLEARANCE", "CYTOLOGY FOR ATYPICAL CELLS /PAP SMEAR ,URINE", "KETONE BODES / ACETONE ,URINE", "MICROALBUMINURIA (24 HRS)", "MICROALBUMINURIA (RANDOM)", "OCCULT BLOOD", "PREGNANCY TEST", "PROTEINS ,URINE", "PROTEIN CREATININE RATIO (PCR)", "SPECIFIC GRAVTY ,URINE", "SUGAR,URINE", "URINE CULTURE & SENSITIVITY", "URINE PROTEIN ELECTROPHORESIS", "URINE ROUTINE AND MICROSCOPY",
+                "X-RAY CHEST PA / LAT / AP / APICOGRAM", "X-RAY ABDOMEN ERECT / SUPINE / KUB", "X-RAY CERVICAL SPINE AP / LAT / OBLIQUE", "X-RAY CERVICO-DORSAL SPINE LAT (Swimmers view)", "X-RAY DORSAL / THORACIC SPINE AP / LAT / OBLIQUE", "X-RAY LUMBAR SPINE AP / LAT (NEUTRAL / FLEXION / EXTENSION)", "X-RAY SACRO-COCGYGEAL SPINE AP / LAT", "X-RAY LIMB AP / LAT / OBLIQUE", "X-RAY JOINTS (SHOULDER, ELBOW, WRIST, HIP, KNEE, ANKLE)", "X-RAY T M JOINTS - (OPEN & CLOSED MOUTH)", "X-RAY SKULL AP / LAT / TOWNE'S", "X-RAY MASTOIDS SHULLER'S", "X-RAY ORBITS - AP & LAT", "X-RAY PNS WATER'S", "X-RAY STN AP/LAT", "X-RAY STYLOD PROCESSES", "X-RAYS CERAMIC PLATE",
+                "BARIUM SWALLOW", "BARIUM MEAL UPPER GIT", "BARIUM MEAL FOLLOW THROUGH", "BARIUM ENEMA", "IVP (Intravenous Pyelography)", "HSG (HYSTERO-SALPINGOGRAPHY)", "SINOGRAM / FISTULOGRAM",
+                "ULTRASOUND ABDOMEN (UPPER/ LOWER/ WHOLE)", "ULTRASOUND ABDOMEN WITH INGUINAL REGION", "ULTRASOUND PELVIS", "ULTRASOUND PELVIS (TVS)", "ULTRASOUND CHEST (for pleural effusion)", "ULTRASOUND FOLLICULAR STUDY", "ULTRASOUND KUB WITH PVR", "ULTRASOUND KUB WITH PROSTATE & PVR", "ULTRASOUND SCROTUM / TESTIS", "ULTRASOUND SOFT TISSUE (NECK / AXILLA / MALE BREAST)", "ULTRASOUND THYROID GLAND", "ULTRASOUND SALIVARY GLANDS / CHEEK / FACE", "ULTRASOUND NECK LYMPH NODES", "ULTRASOUND EARLY PREGNANCY / VIABILITY SCAN", "ULTRASOUND EARLY PREGNANCY TVS", "NT / NB SCAN", "LEVEL II SCAN / ANOMALIES SCAN", "GROWTH SCAN", "GROWTH SCAN WITH BIOPHYSICAL PROFILE", "GROWTH SCAN WITH COLOUR DOPPLER",
+                "ULTRASOUND PELVIS WITH CDFI", "VENOUS DOPPLER UPPER LIMB / LOWER LIMB",
+                "ECG / EKG"
+            ];
+
+            const timeSlots = [
+                "08:30 AM - 09:30 AM", "09:30 AM - 10:30 AM", "10:30 AM - 11:30 AM", "11:30 AM - 12:30 PM",
+                "12:30 PM - 01:30 PM", "01:30 PM - 02:30 PM", "02:30 PM - 03:30 PM", "03:30 PM - 04:30 PM",
+                "04:30 PM - 05:30 PM", "05:30 PM - 06:30 PM", "06:30 PM - 07:30 PM"
+            ];
+
+            // --- Elements
+            const bookingForm = document.getElementById("bookingForm");
+            const timeSelect = document.getElementById("time");
+            const testSearchInput = document.getElementById("testSearchInput");
+            const searchResults = document.getElementById("searchResults");
+            const searchContainer = document.getElementById("search-container");
+
+            // --- Helpers
+            function ensureFormMessageEl() {
+                let el = document.getElementById("formMessage");
+                if (!el && bookingForm) {
+                    el = document.createElement("p");
+                    el.id = "formMessage";
+                    el.className = "text-sm text-center font-semibold hidden";
+                    bookingForm.appendChild(el);
+                }
+                return el;
+            }
+            function showStatus(msg, klass) {
+                const el = ensureFormMessageEl();
+                if (!el) return;
+                el.textContent = msg;
+                el.className = "text-sm text-center font-semibold " + klass;
+                el.classList.remove("hidden");
+            }
+            function restoreButton(btn) {
+                if (!btn) return;
+                btn.disabled = false;
+                btn.innerHTML = btn.dataset.originalText || "Book Appointment";
+            }
+
+            // --- Populate time slots
+            if (timeSelect) {
+                timeSlots.forEach(slot => {
+                    const opt = document.createElement("option");
+                    opt.value = slot; opt.textContent = slot;
+                    timeSelect.appendChild(opt);
+                });
+            }
+
+            // --- Search typeahead
+            if (testSearchInput && searchResults) {
+                testSearchInput.addEventListener("input", function () {
+                    const q = this.value.toLowerCase();
+                    searchResults.innerHTML = "";
+                    if (q.length < 1) { searchResults.classList.add("hidden"); return; }
+                    const filtered = allTests.filter(t => t.toLowerCase().includes(q)).slice(0, 50); // cap results
+                    if (filtered.length) {
+                        filtered.forEach(t => {
+                            const div = document.createElement("div");
+                            div.className = "p-2 hover:bg-gray-100 cursor-pointer";
+                            div.textContent = t;
+                            div.addEventListener("click", function () {
+                                testSearchInput.value = t;
+                                searchResults.classList.add("hidden");
+                            });
+                            searchResults.appendChild(div);
+                        });
+                        searchResults.classList.remove("hidden");
+                    } else {
+                        searchResults.classList.add("hidden");
+                    }
+                });
+                document.addEventListener("click", function (e) {
+                    if (searchContainer && !searchContainer.contains(e.target)) {
+                        searchResults.classList.add("hidden");
+                    }
+                });
+            }
+
+            // --- Show success when returning from WhatsApp
+            window.addEventListener("pageshow", function () {
+                if (sessionStorage.getItem("waPending") === "1") {
+                    sessionStorage.removeItem("waPending");
+                    showStatus("Success! Please press 'Send' in WhatsApp to confirm your booking.", "text-green-600");
+                    if (bookingForm) {
+                        const btn = bookingForm.querySelector('button[type="submit"]');
+                        restoreButton(btn);
+                    }
+                    const section = document.getElementById("home-collection");
+                    if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+            });
+
+            // --- Form submit
+            if (bookingForm) {
+                bookingForm.addEventListener("submit", function (e) {
+                    e.preventDefault();
+                    const form = e.target;
+                    const submitButton = form.querySelector('button[type="submit"]');
+                    if (!submitButton) return;
+                    if (!submitButton.dataset.originalText) {
+                        submitButton.dataset.originalText = submitButton.innerHTML;
+                    }
+
+                    const data = {
+                        test: form.querySelector("#testSearchInput")?.value.trim(),
+                        fullName: form.querySelector("#fullName")?.value.trim(),
+                        age: form.querySelector("#age")?.value.trim(),
+                        phone: form.querySelector("#phone")?.value.trim(),
+                        email: form.querySelector("#email")?.value.trim(),
+                        date: form.querySelector("#date")?.value.trim(),
+                        time: form.querySelector("#time")?.value.trim(),
+                    };
+
+                    if (!data.test || !data.fullName || !data.age || !data.phone || !data.date || !data.time) {
+                        showStatus("Please fill all required fields (*).", "text-red-600");
+                        return;
+                    }
+
+                    submitButton.disabled = true;
+                    submitButton.innerHTML = "Processing...";
+
+                    const msg =
+                        `🧪 *New Appointment Request*\n\n` +
+                        `*Test*: ${data.test}\n` +
+                        `*Name*: ${data.fullName}\n` +
+                        `*Age*: ${data.age}\n` +
+                        `*Phone*: ${data.phone}\n` +
+                        `*Email*: ${data.email || 'N/A'}\n` +
+                        `*Date*: ${data.date}\n` +
+                        `*Time Slot*: ${data.time}`;
+
+                    const labNumber = "917052301394";
+                    const waUrl = `https://wa.me/${labNumber}?text=${encodeURIComponent(msg)}`;
+
+                    // Mark pending so we can show success when user returns
+                    sessionStorage.setItem("waPending", "1");
+
+                    // Open WhatsApp in a new tab/window
+                    window.open(waUrl, "_blank");
+
+                    // Fallback: if the browser doesn't fire pageshow soon, still restore UI
+                    setTimeout(() => {
+                        if (sessionStorage.getItem("waPending") === "1") {
+                            showStatus("Success! Please press 'Send' in WhatsApp to confirm your booking.", "text-green-600");
+                            restoreButton(submitButton);
+                            // don't clear the form yet; let the user review it if they didn't switch to WA
+                        }
+                    }, 1500);
+                });
+            }
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>

@@ -27,7 +27,7 @@ body {
 }
 
 .logo span {
-  color: orange;
+  color: red;
   font-weight: bold;
 }
 
@@ -910,71 +910,61 @@ body {
   transition: color 0.3s ease;
 }
 
-/* --- Unique styles per card --- */
+/* --- Modern Navigation Card Grid --- */
 
-/* About Us */
-.new .grid a.about {
-  background: linear-gradient(135deg, #fef3c7, #fde68a);
-  border: 2px solid #f59e0b;
-}
-.new .grid a.about h3 { color: #92400e; }
+/* --- Modern Navigation Card Grid --- */
 
-/* Facilities */
-.new .grid a.facilities {
-  background: linear-gradient(135deg, #dcfce7, #bbf7d0);
-  border: 2px solid #22c55e;
-}
-.new .grid a.facilities h3 { color: #065f46; }
+/* Style for each card link */
+.new .grid .nav-card {
+  /* Layout & Centering */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem; /* 12px space between icon and text */
 
-/* Lab Tests */
-.new .grid a.lab {
-  background: linear-gradient(135deg, #e0f2fe, #bae6fd);
-  border: 2px solid #0284c7;
-}
-.new .grid a.lab h3 { color: #075985; }
+  /* Appearance */
+  /* UPDATED: Lighter, more vibrant gradient */
+  background: linear-gradient(135deg, #1e2937, #0d9488); /* Slate-800 to Teal-700 */
+  color: #cbd5e1; /* Light gray text */
+  padding: 1.5rem;
+  border-radius: 1rem; /* 16px rounded corners */
+  border: 2px solid transparent; /* Placeholder for hover border to prevent layout shift */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
 
-/* Health Packages */
-.new .grid a.health {
-  background: linear-gradient(135deg, #fce7f3, #fbcfe8);
-  border: 2px solid #db2777;
-}
-.new .grid a.health h3 { color: #9d174d; }
-
-/* Contact Us */
-.new .grid a.contact {
-  background: linear-gradient(135deg, #ede9fe, #ddd6fe);
-  border: 2px solid #7c3aed;
-}
-.new .grid a.contact h3 { color: #4c1d95; }
-
-/* Blog */
-.new .grid a.blog {
-  background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
-  border: 2px solid #475569;
-  
-}
-.new .grid a.blog h3 { color: #1e293b; }
-
-
-
-/* Hover Effects */
-.new .grid .card:hover {
-  background: #e0f2fe;       /* light sky blue */
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-  transform: translateY(-8px);
+  /* Smooth Transitions */
+  transition: transform 0.3s ease, 
+              box-shadow 0.3s ease, 
+              border-color 0.3s ease,
+              color 0.3s ease;
 }
 
-/* Text inside cards */
-.new .grid .card h3 {
-  font-size: 1.125rem;   /* text-lg */
-  font-weight: 600;
-  color: #1d4ed8;        /* blue-700 */
+/* Icon Styles */
+.new .grid .nav-card i {
+  font-size: 2rem; /* 32px icon size */
   transition: color 0.3s ease;
 }
 
-/* Text hover */
-.new .grid .card:hover h3 {
-  color: #065f46;        /* emerald-800 */
+/* Heading Styles */
+.new .grid .nav-card h3 {
+  font-size: 1.125rem; /* 18px */
+  font-weight: 600;
+  text-align: center;
+  transition: color 0.3s ease;
 }
 
+/* --- Hover Effects --- */
+.new .grid .nav-card:hover {
+  /* Lift effect */
+  transform: translateY(-12px);
+  
+  /* Brighter glow and text */
+  color: #ffffff; /* Pure white text on hover */
 
+  /* Vibrant border appears */
+  border-color: #2dd4bf; /* Bright Teal */
+
+  /* Enhanced shadow */
+  box-shadow: 0 10px 25px rgba(45, 212, 191, 0.2);
+}
