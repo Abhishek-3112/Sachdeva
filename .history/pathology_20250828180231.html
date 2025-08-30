@@ -36,7 +36,7 @@
 <div class="max-w-4xl mx-auto my-10">
   <!-- Accordion Item -->
   <div class="border-b">
-    <button class="w-full flex justify-between items-center py-4 text-lg font-bold accordion-btn">
+    <button class="w-full flex justify-between items-center py-4 text-lg font-semibold accordion-btn">
       A. Hematology
       <span class="text-xl">+</span>
     </button>
@@ -127,7 +127,7 @@
 
   <!-- Accordion Item -->
   <div class="border-b">
-    <button class="w-full flex justify-between items-center py-4 text-lg font-bold accordion-btn">
+    <button class="w-full flex justify-between items-center py-4 text-lg font-semibold accordion-btn">
       B. Biochemistry
       <span class="text-xl">+</span>
     </button>
@@ -222,7 +222,7 @@
 
   <!-- Accordion Item -->
   <div class="border-b">
-    <button class="w-full flex justify-between items-center py-4 text-lg font-bold accordion-btn">
+    <button class="w-full flex justify-between items-center py-4 text-lg font-semibold accordion-btn">
       C. Serology
       <span class="text-xl">+</span>
     </button>
@@ -271,202 +271,28 @@
 
   <!-- Accordion Item -->
   <div class="border-b">
-    <button class="w-full flex justify-between items-center py-4 text-lg font-bold accordion-btn">
+    <button class="w-full flex justify-between items-center py-4 text-lg font-semibold accordion-btn">
       D. Microbiology
       <span class="text-xl">+</span>
     </button>
-
     <div class="accordion-content hidden pb-4 text-gray-700">
-  <h2 class="text-2xl font-bold text-indigo-800 mb-4">Microbiology</h2>
-  <p class="text-gray-700 mb-4">
-    Microbiology in medical diagnostics is a <span class="font-semibold text-indigo-700">vital branch of laboratory medicine</span> 
-    focused on detecting and identifying microorganisms (<span class="font-semibold">bacteria, viruses, fungi, and parasites</span>) 
-    that cause infectious diseases.  
-    It supports <span class="font-semibold">diagnosis, treatment, infection control, and prevention</span>.
-  </p>
-
-  <h3 class="text-xl font-semibold text-indigo-700 mt-6 mb-2">Key Roles in Medical Diagnostics</h3>
-  <ol class="list-decimal pl-6 text-gray-700 space-y-4">
-
-    <!-- Detection of Pathogens -->
-    <li>
-      <span class="font-semibold text-indigo-700">Detection of Pathogens</span>  
-      <p class="ml-2">Identifies bacterial, viral, fungal, and parasitic infections such as 
-        <span class="font-semibold">tuberculosis, COVID-19, UTIs, malaria, sepsis</span>, etc.</p>
-      <h4 class="font-semibold text-gray-800 mt-2">Methods of detection:</h4>
-      <ul class="list-disc pl-6 text-gray-700 space-y-1">
-        <li><span class="font-semibold">Microscopy:</span> Direct visualization using stains (e.g., Gram stain, Ziehl-Neelsen, KOH prep).</li>
-        <li><span class="font-semibold">Serology:</span> Detects antibodies/antigens (e.g., HIV, Hepatitis B).</li>
-        <li><span class="font-semibold">Molecular Techniques:</span> PCR, RT-PCR for DNA/RNA detection (COVID-19, TB, HPV).</li>
-        <li><span class="font-semibold">Rapid Antigen Tests:</span> Quick detection (influenza, malaria).</li>
-        <li><span class="font-semibold">Culture:</span> Growing samples in special media to identify pathogens & test drug susceptibility.</li>
-      </ul>
-    </li>
-
-    <!-- Antimicrobial Susceptibility -->
-    <li>
-      <span class="font-semibold text-indigo-700">Antimicrobial Susceptibility Testing (AST)</span>  
-      <p class="ml-2">Determines which antibiotics or drugs are effective against a specific pathogen.  
-      Supports <span class="font-semibold">appropriate therapy</span> and helps prevent 
-      <span class="font-semibold">antibiotic resistance</span>.</p>
-
-      <h4 class="font-semibold text-gray-800 mt-2">Common Culture & Sensitivity Tests:</h4>
-      <ul class="list-disc pl-6 text-gray-700 space-y-1">
-        <li><span class="font-semibold">Urine culture:</span> Detects urinary tract infections (UTIs).</li>
-        <li><span class="font-semibold">Blood culture:</span> Identifies bloodstream infections (bacteremia, fungemia).</li>
-        <li><span class="font-semibold">Pus culture:</span> Used for wound/skin and soft tissue infections.</li>
-        <li><span class="font-semibold">Sputum culture:</span> Detects respiratory infections.</li>
-        <li><span class="font-semibold">Stool culture:</span> Identifies gastrointestinal infections.</li>
-        <li><span class="font-semibold">Throat swab culture:</span> Detects throat infections.</li>
-        <li><span class="font-semibold">Conjunctival swab culture:</span> Used for eye infections.</li>
-        <li><span class="font-semibold">HVS (High Vaginal Swab) test & culture:</span> Used in gynecology to detect infections like 
-          <span class="font-semibold">bacterial vaginosis</span> and <span class="font-semibold">vaginal thrush</span>.
-        </li>
-      </ul>
-    </li>
-  </ol>
-</div>
-
-
- <!-- Accordion Item -->
-<div class="border-b">
-  <button class="w-full flex justify-between items-center py-4 text-lg font-bold accordion-btn">
-    E. Cytology & Histopathology
-    <span class="text-xl">+</span>
-  </button>
-  <div class="accordion-content hidden pb-4 text-gray-700">
-    <section class="py-16 bg-gray-50">
-      <div class="max-w-6xl mx-auto px-6">
-        
-        <!-- Heading -->
-        <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-10">
-          Cytology & Histopathology
-        </h2>
-
-        <!-- Tabs (Needs Alpine.js) -->
-        <div x-data="{ tab: 'cytology' }">
-          <div class="flex justify-center space-x-4 mb-8">
-            <button @click="tab = 'cytology'" 
-              :class="tab === 'cytology' ? 'bg-blue-600 text-white' : 'bg-white text-blue-600 border'"
-              class="px-5 py-2 rounded-lg font-medium shadow">
-              Cytology
-            </button>
-            <button @click="tab = 'histopathology'" 
-              :class="tab === 'histopathology' ? 'bg-blue-600 text-white' : 'bg-white text-blue-600 border'"
-              class="px-5 py-2 rounded-lg font-medium shadow">
-              Histopathology
-            </button>
-          </div>
-
-     
-       <!-- Cytology Content -->
-          <div x-show="tab === 'cytology'" class="space-y-6">
-        <p class="text-gray-700 leading-relaxed">
-          <span class="font-semibold">Cytology</span> is the study of individual cells to detect
-          <span class="font-semibold">cancer, precancerous lesions, and infections</span> by examining 
-          cell size, shape, and organization.
-        </p>
-
-        <div class="bg-white shadow-md rounded-xl p-6">
-          <h3 class="text-xl font-semibold text-blue-700 mb-2">Main Purposes</h3>
-          <ul class="list-disc list-inside text-gray-700 space-y-1">
-            <li>Early detection of cancers (cervical, lung, breast).</li>
-            <li>Screening for precancerous lesions.</li>
-            <li>Diagnosis of infections (viral, fungal, bacterial).</li>
-          </ul>
-        </div>
-
-        <div class="bg-white shadow-md rounded-xl p-6">
-          <h3 class="text-xl font-semibold text-blue-700 mb-2">Advantages</h3>
-          <ul class="list-disc list-inside text-gray-700 space-y-1">
-            <li>Minimally or non-invasive.</li>
-            <li>Quick results.</li>
-            <li>Cost-effective and widely accessible.</li>
-            <li>Helps in early detection of malignancy & infections.</li>
-          </ul>
-        </div>
-
-        <!-- Types -->
-        <div class="space-y-6">
-          <!-- Exfoliative Cytology -->
-          <div class="bg-white shadow-md rounded-xl p-6">
-            <h3 class="text-lg font-semibold text-blue-700 mb-2">a) Exfoliative Cytology</h3>
-            <p class="text-gray-700 mb-3">Cells naturally shed or collected from epithelial surfaces.</p>
-            <p class="text-gray-700"><span class="font-medium">Example:</span> Cervical Pap Smear</p>
-            <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
-              <li>Detects abnormal/pre-cancerous cells.</li>
-              <li>Helps diagnose infections (HPV, viral, fungal).</li>
-            </ul>
-            <p class="text-gray-700 mt-2">
-              <span class="font-medium">Procedure:</span> Cells collected from cervix using sterile brush/spatula,
-              examined microscopically. Avoid intercourse, tampons, or creams 1–2 days before test.
-            </p>
-            <p class="text-gray-700 mt-1">
-              <span class="font-medium">ICMR Guideline:</span> Women ≥21 yrs → every 3 yrs. With HPV test → every 5 yrs.
-            </p>
-          </div>
-
-          <!-- FNAC -->
-          <div class="bg-white shadow-md rounded-xl p-6">
-            <h3 class="text-lg font-semibold text-blue-700 mb-2">b) Fine Needle Aspiration Cytology (FNAC)</h3>
-            <p class="text-gray-700 mb-3">Cells aspirated with a fine needle from lumps or masses.</p>
-            <p class="text-gray-700"><span class="font-medium">Purpose:</span> To determine benign vs malignant lumps.</p>
-            <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
-              <li>Breast lumps, thyroid nodules.</li>
-              <li>Enlarged lymph nodes, salivary gland swellings.</li>
-              <li>Superficial & deeper lumps (USG-guided for non-palpable).</li>
-            </ul>
-            <p class="text-gray-700 mt-2"><span class="font-medium">Benefits:</span> Minimally invasive, quick, inexpensive, outpatient-based. No preparation required.</p>
-          </div>
-
-          <!-- Fluid Cytology -->
-          <div class="bg-white shadow-md rounded-xl p-6">
-            <h3 class="text-lg font-semibold text-blue-700 mb-2">c) Fluid Cytology</h3>
-            <p class="text-gray-700">Examines cells in body fluids:</p>
-            <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
-              <li>Pleural fluid (chest), Peritoneal fluid (abdomen).</li>
-              <li>CSF (brain/spinal cord).</li>
-              <li>Urine cytology for bladder cancer.</li>
-              <li>Semen analysis.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Histopathology Content -->
-      <div x-show="tab === 'histopathology'" class="space-y-6">
-        <p class="text-gray-700 leading-relaxed">
-          <span class="font-semibold">Histopathology</span> is the microscopic study of tissues to detect 
-          <span class="font-semibold">cancers, infections, inflammatory, and systemic diseases</span>.
-        </p>
-
-        <div class="bg-white shadow-md rounded-xl p-6">
-          <h3 class="text-xl font-semibold text-blue-700 mb-2">Process</h3>
-          <ul class="list-disc list-inside text-gray-700 space-y-1">
-            <li>Tissue obtained via biopsy/surgery.</li>
-            <li>Preserved in formalin, embedded in paraffin.</li>
-            <li>Thin slicing (4–5µm) with microtome.</li>
-            <li>Staining with H&E for visualization.</li>
-            <li>Microscopic examination by Pathologist.</li>
-            <li>Immunohistochemistry (IHC) for antigen detection.</li>
-          </ul>
-        </div>
-
-        <div class="bg-white shadow-md rounded-xl p-6">
-          <h3 class="text-xl font-semibold text-blue-700 mb-2">Applications</h3>
-          <ul class="list-disc list-inside text-gray-700 space-y-1">
-            <li>Diagnosis of cancers.</li>
-            <li>Detection of infections & inflammatory diseases (e.g., nephritis, hepatitis).</li>
-            <li>Evaluation of transplanted organs.</li>
-            <li>Forensic pathology.</li>
-          </ul>
-        </div>
-      </div>
+      <p>🔹 Microbiology in Medical Diagnostics is a vital branch...</p>
+      <!-- Full Microbiology content goes here -->
     </div>
   </div>
-</section> 
 
-
+  <!-- Accordion Item -->
+  <div class="border-b">
+    <button class="w-full flex justify-between items-center py-4 text-lg font-semibold accordion-btn">
+      E. Cytology & Histopathology
+      <span class="text-xl">+</span>
+    </button>
+    <div class="accordion-content hidden pb-4 text-gray-700">
+      <p>🔹 Cytology & Histopathology focuses on cellular and tissue study...</p>
+      <!-- Full Cytology content goes here -->
+    </div>
+  </div>
+</div>
 
 <script>
   const accordions = document.querySelectorAll(".accordion-btn");
@@ -491,8 +317,13 @@
   });
 </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
+
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-6 text-center text-sm">
+    © 2025 Sachdeva Diagnostics. All Rights Reserved.
+  </footer>
 
 </body>
 </html>

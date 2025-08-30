@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pathology & Laboratory Services | Sachdeva Diagnostics</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-pink-500 text-white py-8">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+    
+    <!-- Heading -->
+    <div class="text-center md:text-left">
+      <h1 class="text-4xl md:text-5xl font-extrabold">Pathology & Laboratory Services</h1>
+      <p class="mt-3 text-lg text-blue-100">
+        Comprehensive diagnostic services with precision and reliability
+      </p>
+    </div>
+
+    <!-- Back Button -->
+    <div class="mt-6 md:mt-0">
+      <a href="facilities.html" 
+         class="inline-block bg-white text-blue-900 font-semibold px-5 py-2 rounded-full shadow-md  hover:bg-blue-500 transition ">
+        ← Back to Facilities
+      </a>
+    </div>
+
+  </div>
+</header>
+
+
+<!-- Tabs Navigation -->
+<div class="max-w-6xl mx-auto px-6 py-8">
+  <div class="flex flex-wrap justify-center gap-4 border-b-4 border-indigo-300 pb-5">
+    <button class="tab-btn px-6 py-3 rounded-xl text-lg font-extrabold text-indigo-700 bg-indigo-100 hover:bg-indigo-200 transition" data-tab="hematology">
+      A. Hematology
+    </button>
+    <button class="tab-btn px-6 py-3 rounded-xl text-lg font-extrabold text-gray-700 hover:bg-indigo-100 transition" data-tab="biochemistry">
+      B. Biochemistry
+    </button>
+    <button class="tab-btn px-6 py-3 rounded-xl text-lg font-extrabold text-gray-700 hover:bg-indigo-100 transition" data-tab="serology">
+      C. Serology
+    </button>
+    <button class="tab-btn px-6 py-3 rounded-xl text-lg font-extrabold text-gray-700 hover:bg-indigo-100 transition" data-tab="microbiology">
+      D. Microbiology
+    </button>
+    <button class="tab-btn px-6 py-3 rounded-xl text-lg font-extrabold text-gray-700 hover:bg-indigo-100 transition" data-tab="cytology">
+      E. Cytology & Histopathology
+    </button>
+  </div>
+</div>
+
+
+<div class="max-w-4xl mx-auto my-10">
+  <!-- Accordion Item -->
+  <div class="border-b">
+    <button class="w-full flex justify-between items-center py-4 text-lg font-semibold accordion-btn">
+      A. Hematology
+      <span class="text-xl">+</span>
+    </button>
+    <div class="accordion-content hidden pb-4 text-gray-700">
+      <p>🔹 Hematology is the study of blood and blood-related disorders...</p>
+      <!-- Full Hematology content goes here -->
+    </div>
+  </div>
+
+  <!-- Accordion Item -->
+  <div class="border-b">
+    <button class="w-full flex justify-between items-center py-4 text-lg font-semibold accordion-btn">
+      B. Biochemistry
+      <span class="text-xl">+</span>
+    </button>
+    <div class="accordion-content hidden pb-4 text-gray-700">
+      <p>🔹 Biochemistry helps in analyzing chemical substances in the body...</p>
+      <!-- Full Biochemistry content goes here -->
+    </div>
+  </div>
+
+  <!-- Accordion Item -->
+  <div class="border-b">
+    <button class="w-full flex justify-between items-center py-4 text-lg font-semibold accordion-btn">
+      C. Serology
+      <span class="text-xl">+</span>
+    </button>
+    <div class="accordion-content hidden pb-4 text-gray-700">
+      <p>🔹 Serology deals with the study of antibodies in the blood...</p>
+      <!-- Full Serology content goes here -->
+    </div>
+  </div>
+
+  <!-- Accordion Item -->
+  <div class="border-b">
+    <button class="w-full flex justify-between items-center py-4 text-lg font-semibold accordion-btn">
+      D. Microbiology
+      <span class="text-xl">+</span>
+    </button>
+    <div class="accordion-content hidden pb-4 text-gray-700">
+      <p>🔹 Microbiology in Medical Diagnostics is a vital branch...</p>
+      <!-- Full Microbiology content goes here -->
+    </div>
+  </div>
+
+  <!-- Accordion Item -->
+  <div class="border-b">
+    <button class="w-full flex justify-between items-center py-4 text-lg font-semibold accordion-btn">
+      E. Cytology & Histopathology
+      <span class="text-xl">+</span>
+    </button>
+    <div class="accordion-content hidden pb-4 text-gray-700">
+      <p>🔹 Cytology & Histopathology focuses on cellular and tissue study...</p>
+      <!-- Full Cytology content goes here -->
+    </div>
+  </div>
+</div>
+
+<script>
+  const accordions = document.querySelectorAll(".accordion-btn");
+
+  accordions.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const content = btn.nextElementSibling;
+      const symbol = btn.querySelector("span");
+
+      // Close all other accordions
+      document.querySelectorAll(".accordion-content").forEach((el) => {
+        if (el !== content) {
+          el.classList.add("hidden");
+          el.previousElementSibling.querySelector("span").textContent = "+";
+        }
+      });
+
+      // Toggle current accordion
+      content.classList.toggle("hidden");
+      symbol.textContent = content.classList.contains("hidden") ? "+" : "–";
+    });
+  });
+</script>
+
+
+
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-6 text-center text-sm">
+    © 2025 Sachdeva Diagnostics. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
+

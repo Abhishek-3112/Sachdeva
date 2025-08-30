@@ -31,62 +31,51 @@
   </header>
 
   <!-- Main Content -->
-<main class="max-w-6xl mx-auto px-6 py-12 space-y-6">
+  <main class="max-w-6xl mx-auto px-6 py-12 space-y-16">
 
-  <!-- Accordion A -->
-  <div class="border rounded-lg overflow-hidden">
-    <button class="w-full flex justify-between items-center px-4 py-3 text-left text-lg font-bold hover:bg-indigo-100 focus:outline-none accordion-btn">
-      A. What is an ECG?
-      <span class="accordion-icon">+</span>
-    </button>
-    <div class="accordion-content hidden px-4 pb-4 text-gray-700">
-      <p>
+    <!-- Overview -->
+    <section>
+      <h2 class="text-3xl font-bold text-indigo-700 border-b-4 border-indigo-200 pb-2 mb-6">
+        A. What is an ECG?
+      </h2>
+      <p class="text-gray-700">
         An <strong>Electrocardiogram (ECG or EKG)</strong> is a test that records the electrical activity of the heart 
         over a period of time using electrodes placed on the skin. It provides vital insights into heart health.
       </p>
-    </div>
-  </div>
+    </section>
 
-  <!-- Accordion B -->
-  <div class="border rounded-lg overflow-hidden">
-    <button class="w-full flex justify-between items-center px-4 py-3 text-left text-lg font-bold  hover:bg-indigo-100 focus:outline-none accordion-btn">
-      B. Purpose of an ECG
-      <span class="accordion-icon">+</span>
-    </button>
-    <div class="accordion-content hidden px-4 pb-4 text-gray-700">
-      <ul class="list-disc pl-6 space-y-2">
+    <!-- Purpose -->
+    <section>
+      <h2 class="text-3xl font-bold text-indigo-700 border-b-4 border-indigo-200 pb-2 mb-6">
+        B. Purpose of an ECG
+      </h2>
+      <ul class="list-disc pl-6 space-y-2 text-gray-700">
         <li>Detect abnormal heart rhythms (arrhythmias)</li>
         <li>Identify heart attacks (past or ongoing)</li>
         <li>Assess heart structure issues</li>
         <li>Monitor the effectiveness of heart medications or pacemakers</li>
       </ul>
-    </div>
-  </div>
+    </section>
 
-  <!-- Accordion C -->
-  <div class="border rounded-lg overflow-hidden">
-    <button class="w-full flex justify-between items-center px-4 py-3 text-left text-lg font-bold  hover:bg-indigo-100 focus:outline-none accordion-btn">
-      C. Types of ECG
-      <span class="accordion-icon">+</span>
-    </button>
-    <div class="accordion-content hidden px-4 pb-4 text-gray-700">
-      <ul class="list-disc pl-6 space-y-2">
+    <!-- Types -->
+    <section>
+      <h2 class="text-3xl font-bold text-indigo-700 border-b-4 border-indigo-200 pb-2 mb-6">
+        C. Types of ECG
+      </h2>
+      <ul class="list-disc pl-6 space-y-2 text-gray-700">
         <li><strong>Resting ECG:</strong> Done while lying still — most common. <br>
             <em>At Sachdeva Diagnostics, we only perform Resting ECG.</em></li>
         <li><strong>Stress ECG:</strong> Done while walking on a treadmill or cycling</li>
         <li><strong>Holter Monitor:</strong> Worn for 24–48 hours to track heart activity over time</li>
       </ul>
-    </div>
-  </div>
+    </section>
 
-  <!-- Accordion D -->
-  <div class="border rounded-lg overflow-hidden">
-    <button class="w-full flex justify-between items-center px-4 py-3 text-left text-lg font-bold  hover:bg-indigo-100 focus:outline-none accordion-btn">
-      D. What an ECG Can Detect
-      <span class="accordion-icon">+</span>
-    </button>
-    <div class="accordion-content hidden px-4 pb-4 text-gray-700">
-      <ul class="list-disc pl-6 space-y-2">
+    <!-- What It Detects -->
+    <section>
+      <h2 class="text-3xl font-bold text-indigo-700 border-b-4 border-indigo-200 pb-2 mb-6">
+        D. What an ECG Can Detect
+      </h2>
+      <ul class="list-disc pl-6 space-y-2 text-gray-700">
         <li>Arrhythmias (e.g., atrial fibrillation, bradycardia)</li>
         <li>Heart attack (current or past)</li>
         <li>Ischemia (reduced blood flow to the heart)</li>
@@ -94,24 +83,14 @@
         <li>Electrolyte imbalances</li>
         <li>Drug effects (e.g., digoxin)</li>
       </ul>
-    </div>
-  </div>
+    </section>
 
-</main>
+  </main>
 
-<!-- Accordion Script -->
-<script>
-  document.querySelectorAll(".accordion-btn").forEach(button => {
-    button.addEventListener("click", () => {
-      const content = button.nextElementSibling;
-      const icon = button.querySelector(".accordion-icon");
-
-      // Toggle open/close
-      content.classList.toggle("hidden");
-      icon.textContent = content.classList.contains("hidden") ? "+" : "–";
-    });
-  });
-</script>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-6 text-center text-sm">
+    © 2025 Sachdeva Diagnostics. All Rights Reserved.
+  </footer>
 
 </body>
 </html>

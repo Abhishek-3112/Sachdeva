@@ -33,7 +33,7 @@
       <!-- Accordion Item 1 -->
       <div class="border rounded-lg shadow-sm">
         <button @click="open === 'xray' ? open = '' : open = 'xray'" 
-          class="w-full flex justify-between items-center px-4 py-4 text-xl font-bold ">
+          class="w-full flex justify-between items-center px-4 py-4 text-xl font-semibold ">
           A. Digital X-rays (Radiograph)
           <span x-text="open === 'xray' ? '-' : '+'"></span>
         </button>
@@ -75,7 +75,7 @@
       <!-- Accordion Item 2 -->
       <div class="border rounded-lg shadow-sm">
         <button @click="open === 'ultrasound' ? open = '' : open = 'ultrasound'" 
-          class="w-full flex justify-between items-center px-4 py-4 text-xl font-bold ">
+          class="w-full flex justify-between items-center px-4 py-4 text-xl font-semibold bg-indigo-100">
           B. Ultrasound Scan (Sonogram)
           <span x-text="open === 'ultrasound' ? '-' : '+'"></span>
         </button>
