@@ -116,97 +116,46 @@
     </div>
 
     <!-- Accordion Item 2 -->
-<div class="border rounded-lg shadow-sm">
-  <button 
-    @click="open === 'ultrasound' ? open = '' : open = 'ultrasound'" 
-    class="w-full flex justify-between items-center px-4 py-4 text-xl font-bold bg-gray-50 hover:bg-gray-100"
-  >
-    B. Ultrasound Scan (Sonogram)
-    <span x-text="open === 'ultrasound' ? '-' : '+'"></span>
-  </button>
+    <div class="border rounded-lg shadow-sm">
+      <button @click="open === 'ultrasound' ? open = '' : open = 'ultrasound'" 
+        class="w-full flex justify-between items-center px-4 py-4 text-xl font-bold ">
+        B. Ultrasound Scan (Sonogram)
+        <span x-text="open === 'ultrasound' ? '-' : '+'"></span>
+      </button>
+      <div x-show="open === 'ultrasound'" x-transition class="p-6 space-y-6 text-gray-700">
 
-  <div x-show="open === 'ultrasound'" x-transition class="p-6 space-y-6 text-gray-700">
+        <p>
+          Ultrasound is a <span class="font-semibold">non-invasive imaging test</span> using high-frequency sound waves to create real-time images. 
+          It is safe, radiation-free, and ideal for pregnancy.
+        </p>
 
-    <!-- Intro -->
-    <p>
-      <span class="font-semibold">Ultrasound Scan (Sonogram)</span> is a 
-      <span class="font-semibold">non-invasive imaging test</span> that uses high-frequency 
-      sound waves to create real-time images of structures inside the body.
-    </p>
+        <div class="bg-green-50 border-l-4 border-green-600 p-4 rounded">
+          <h3 class="font-semibold text-green-800">Equipment:</h3>
+          <p>RS 85 Prestige Whole Body Ultrasound System (Samsung) with Convex, Linear, Intracavitary (TVS/TRUS), and 3D/4D probes.</p>
+        </div>
 
-    <!-- How it Works -->
-    <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded">
-      <h3 class="font-semibold text-blue-800">How It Works:</h3>
-      <ul class="list-disc list-inside">
-        <li>A device called a <span class="font-semibold">transducer</span> emits sound waves.</li>
-        <li>These waves bounce off tissues and organs.</li>
-        <li>The returning echoes are captured and converted into images on a monitor.</li>
-      </ul>
+        <h4 class="font-semibold text-indigo-700">Common Uses:</h4>
+        <ul class="list-disc list-inside">
+          <li>Obstetric → monitor pregnancy, fetal growth, heartbeat</li>
+          <li>Pelvic → uterus, ovaries, bladder</li>
+          <li>Abdominal → liver, kidneys, gallbladder, pancreas, spleen</li>
+          <li>KUB → kidneys, bladder, prostate</li>
+          <li>Vascular/Color Doppler → blood flow in arteries/veins</li>
+          <li>Musculoskeletal → muscles, joints, tendons</li>
+        </ul>
+
+        <div class="bg-purple-50 border-l-4 border-purple-600 p-4 rounded">
+          <h4 class="font-semibold text-purple-800">Specialized Ultrasounds:</h4>
+          <ul class="list-disc list-inside">
+            <li><span class="font-semibold">3D/4D Ultrasound:</span> 3D views of fetus/organs</li>
+            <li><span class="font-semibold">Transvaginal/Transrectal:</span> Close-up internal imaging</li>
+            <li><span class="font-semibold">Color Doppler:</span> Blood flow mapping (arteries/veins, pregnancy circulation, DVT, varicose veins, transplant, torsion eval)</li>
+            <li><span class="font-semibold">Shearwave Elastography (SWE):</span> Tissue stiffness for liver fibrosis, tumors, thyroid, prostate, muscles</li>
+            <li><span class="font-semibold">Fat Quantification (QUS):</span> Liver fat % (UDFF) with Tissue Attenuation & Scattering Index</li>
+          </ul>
+        </div>
+      </div>
     </div>
-
-    <!-- Key Features -->
-    <div class="bg-green-50 border-l-4 border-green-600 p-4 rounded">
-      <h3 class="font-semibold text-green-800">Key Features:</h3>
-      <ul class="list-disc list-inside">
-        <li>No radiation (unlike X-rays or CT scans)</li>
-        <li>Safe for pregnant women and babies</li>
-        <li>Provides real-time imaging (great for observing motion, like fetal heartbeat)</li>
-      </ul>
-    </div>
-
-    <!-- Equipment -->
-    <div class="bg-yellow-50 border-l-4 border-yellow-600 p-4 rounded">
-      <h3 class="font-semibold text-yellow-800">Equipment at Sachdeva Diagnostics:</h3>
-      <p>
-        We use the latest <span class="font-semibold">Samsung RS 85 Prestige Whole Body Ultrasound Scan System</span>, 
-        fully equipped with an array of probes: Convex, High-frequency Linear, Intracavitary (TVS, TRUS), and 3D/4D.
-      </p>
-    </div>
-
-    <!-- Common Uses -->
-    <div>
-      <h3 class="font-semibold text-indigo-700">Common Uses of Ultrasound:</h3>
-      <ul class="list-disc list-inside space-y-1">
-        <li><span class="font-semibold">Obstetric:</span> Monitor pregnancy, fetal growth, heartbeat, position</li>
-        <li><span class="font-semibold">Pelvic:</span> Uterus, ovaries, fallopian tubes, bladder</li>
-        <li><span class="font-semibold">Abdominal:</span> Liver, kidneys, gallbladder, pancreas, spleen</li>
-        <li><span class="font-semibold">KUB:</span> Kidneys, bladder, prostate</li>
-        <li><span class="font-semibold">Vascular/Color Doppler:</span> Blood flow in arteries and veins</li>
-        <li><span class="font-semibold">Musculoskeletal:</span> Muscles, joints, tendons, soft tissues</li>
-      </ul>
-    </div>
-
-    <!-- Specialized Ultrasounds -->
-    <div class="bg-purple-50 border-l-4 border-purple-600 p-4 rounded space-y-4">
-      <h3 class="font-semibold text-purple-800">Specialized Ultrasounds:</h3>
-
-      <ul class="list-disc list-inside space-y-2">
-        <li>
-          <span class="font-semibold">3D/4D Ultrasound:</span> Shows fetus/organs in three-dimensional view.
-        </li>
-        <li>
-          <span class="font-semibold">Transvaginal/Transrectal Ultrasound:</span> Close-up internal imaging using special probes.
-        </li>
-        <li>
-          <span class="font-semibold">Color Doppler:</span> Visualizes blood flow through vessels using color-coded imaging.
-          <br><span class="font-semibold">Purpose:</span> Assess direction, speed, and volume of blood; detect blockages/clots; check fetal blood flow; monitor organ perfusion.
-          <br><span class="font-semibold">Common Uses:</span> DVT, varicose veins, carotid artery, pregnancy circulation, transplant assessments, testicular torsion.
-        </li>
-        <li>
-          <span class="font-semibold">Shearwave Elastography (SWE):</span> Measures tissue stiffness (especially liver, thyroid, prostate, breast, muscles, tumors).
-          <br><span class="font-semibold">How It Works:</span> Tracks shear wave speed → faster = stiffer tissue, slower = softer tissue. Produces a stiffness map (elastogram).
-          <br><span class="font-semibold">Common Uses:</span> Liver fibrosis (Fibroscan), breast & thyroid nodules, prostate evaluation, muscle/tendon strain, lymph nodes.
-        </li>
-        <li>
-          <span class="font-semibold">Fat Quantification (QUS):</span> Evaluates liver fat using TAI (tissue attenuation index) + TSI (tissue scattering index) to give Fat Fraction % (UDFF).
-          <br>At Sachdeva Diagnostics, we provide both <span class="font-semibold">Fat Fraction % (UDFF)</span> and TAI values — ensuring superior accuracy compared to centers providing only CAP/UGAP.
-        </li>
-      </ul>
-    </div>
-
-  </div>
-</div>
-
 
   </div>
 </main>
