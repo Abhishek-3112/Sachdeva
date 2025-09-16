@@ -135,9 +135,9 @@
       <p class="text-sm text-gray-400">Pathology, Imaging & Beyond.</p>
 
       <!-- Social -->
-     <div class="flex space-x-4 mt-4">
-        <a href="https://www.facebook.com/profile.php?id=61580232466681" class="hover:text-blue-400"><img src="https://www.svgrepo.com/show/183607/facebook.svg" class="w-6 h-6" alt="Facebook"></a>
-        <a href="https://www.instagram.com/sachdevadiagnosticsofficial/" class="hover:text-pink-400"><img src="https://www.svgrepo.com/show/111199/instagram.svg" class="w-6 h-6" alt="Instagram"></a>
+      <div class="flex space-x-4 mt-4">
+        <a href="#" class="hover:text-blue-400"><img src="https://www.svgrepo.com/show/183607/facebook.svg" class="w-6 h-6" alt="Facebook"></a>
+        <a href="#" class="hover:text-pink-400"><img src="https://www.svgrepo.com/show/111199/instagram.svg" class="w-6 h-6" alt="Instagram"></a>
       </div>
     </div>
 
@@ -199,7 +199,7 @@
 </footer>
 
    <script>
-const packageDetails = [
+   const packageDetails = [
     {
         sno: 1,
         id: 'mini-screen',
@@ -221,13 +221,13 @@ const packageDetails = [
         discountPrice: 'Rs. 2800',
         description: 'Tells in detail about blood, liver, kidney and thyroid function and also conditions predisposing to heart disease, stroke and diabetes. Recommended once every year for all adults. Fasting is mandatory.',
         tests: `<ul>
-                    <li>Complete Blood Counts (CBC)</li>
-                    <li>Liver Function Test (LFT)</li>
-                    <li>Kidney Function Test (KFT)</li>
-                    <li>Lipid Profile</li>
-                    <li>Thyroid: TSH</li>
-                    <li>Diabetes: HbA1c, Blood Sugar (F/PP)</li>
-                    <li>Routine Tests: Urine R/M, Stool R/M</li>
+                    <li><strong>Complete Blood Counts (CBC):</strong> Hb, TLC, DLC, ESR, PCV, Platelet count & more</li>
+                    <li><strong>Liver Function Test (LFT):</strong> SGOT, SGPT, Bilirubin, Proteins & more</li>
+                    <li><strong>Kidney function test (KFT):</strong> Urea, Creatinine, Uric acid, Electrolytes & e-GFR</li>
+                    <li><strong>Lipid Profile:</strong> Total cholesterol, Triglycerides, HDL, LDL, VLDL</li>
+                    <li><strong>Thyroid:</strong> TSH</li>
+                    <li><strong>Diabetes:</strong> HbA1c, Blood Sugar (F/PP)</li>
+                    <li><strong>Routine Tests:</strong> Urine R/M, Stool R/M</li>
                 </ul>`
     },
     {
@@ -236,8 +236,8 @@ const packageDetails = [
         name: 'Basic Health Check Up with Imaging',
         discountPrice: 'Rs. 4500',
         description: 'This includes the Basic Health Check Up (Lab) along with a full abdomen ultrasound, chest x-ray and ECG. Fasting is mandatory.',
-        tests: `<ul>
-                    <li>All tests from Basic Health Check Up (Lab Only)</li>
+        tests: `<p>Includes all tests from the <strong>Basic Health Check Up (Lab Only)</strong>, plus:</p>
+                <ul>
                     <li>ECG (Electrocardiogram)</li>
                     <li>Digital Chest X-ray</li>
                     <li>Whole Abdomen Ultrasound Scan</li>
@@ -249,8 +249,8 @@ const packageDetails = [
         name: 'Extended Health Check Up (Lab Only)',
         discountPrice: 'Rs. 4800',
         description: 'This is the Basic Health Check Up (Lab) with added Vitamin D3 & Vitamin B12 tests, which are vital for overall health. Fasting is mandatory.',
-        tests: `<ul>
-                    <li>All tests from Basic Health Check Up (Lab Only)</li>
+        tests: `<p>Includes all tests from the <strong>Basic Health Check Up (Lab Only)</strong>, plus:</p>
+                <ul>
                     <li>Serum Vitamin D3</li>
                     <li>Serum Vitamin B12</li>
                 </ul>`
@@ -262,12 +262,12 @@ const packageDetails = [
         discountPrice: 'Rs. 6500',
         description: 'Comprehensive panel covering blood, liver, kidney, lipid, thyroid, diabetes, vitamins, urine and stool tests, with imaging (Ultrasound, X-ray, ECG). Fasting mandatory.',
         tests: `<ul>
-                    <li>CBC with Peripheral Smear</li>
-                    <li>Liver Function Test</li>
-                    <li>Kidney Function Test</li>
+                    <li>Complete Blood Counts (CBC) with Peripheral Smear</li>
+                    <li>Liver Function Test (LFT)</li>
+                    <li>Kidney Function Test (KFT)</li>
                     <li>Lipid Profile</li>
-                    <li>Thyroid (TSH)</li>
-                    <li>HbA1c, Blood Sugar (F/PP)</li>
+                    <li>TSH</li>
+                    <li>HbA1c, Blood Sugar F/PP</li>
                     <li>Urine R/M, Stool R/M</li>
                     <li>Vitamin D3, Vitamin B12</li>
                     <li>Ultrasound Whole Abdomen</li>
@@ -277,225 +277,29 @@ const packageDetails = [
     },
     {
         sno: 6,
-        id: 'diabetic',
-        name: 'Diabetic Health Check Up',
-        discountPrice: 'Rs. 2100',
-        description: 'Essential for all diabetic patients, recommended every 6 months. This package includes microalbuminuria which is the earliest marker of kidney damage in diabetics. Fasting is mandatory.',
-        tests: `<ul>
-                    <li>Blood Sugar (Fasting & PP)</li>
-                    <li>HbA1c</li>
-                    <li>Kidney Function Tests</li>
-                    <li>Lipid Profile</li>
-                    <li>Microalbuminuria & Albumin/Creatinine Ratio</li>
-                </ul>`
-    },
-    {
-        sno: 7,
-        id: 'basic-diabetes',
-        name: 'Basic Diabetes Screen',
-        discountPrice: 'Rs. 550',
-        description: 'Helps in detecting diabetes and pre-diabetes. Advised in all adults even in those who think they are healthy. Fasting is not mandatory.',
-        tests: `<ul>
-                    <li>Blood Sugar (F/PP/Random)</li>
-                    <li>HbA1c</li>
-                    <li>Urine R/M</li>
-                </ul>`
-    },
-    {
-        sno: 8,
-        id: 'maid-panel',
-        name: 'House Help / Maid Health Panel',
-        discountPrice: 'Rs. 800',
-        description: 'This panel is recommended for house helps to prevent diseases which can be transmitted to the employer. Fasting is not mandatory.',
-        tests: `<ul>
-                    <li>CBC</li>
-                    <li>Stool R/M</li>
-                    <li>Urine R/M</li>
-                    <li>Chest X-ray</li>
-                </ul>`
-    },
-    {
-        sno: 9,
-        id: 'hirsutism-panel',
-        name: 'Hirsutism Panel',
-        discountPrice: 'Rs. 4500',
-        description: 'This is recommended for females having unwanted body and facial hair. Fasting is not mandatory.',
-        tests: `<ul>
-                    <li>Total & Free Testosterone</li>
-                    <li>Androstenedione</li>
-                    <li>DHEAS</li>
-                </ul>`
-    },
-    {
-        sno: 10,
-        id: 'cancer-female',
-        name: 'Cancer Screen - Female',
-        discountPrice: 'Rs. 5000',
-        description: 'Helps in detecting cancer at an early stage. Screens for leukaemia, breast, lung, ovarian, colorectal and cervical cancer. Fasting not mandatory.',
-        tests: `<ul>
-                    <li>CBC with Peripheral Smear</li>
-                    <li>AFP, CEA</li>
-                    <li>CA 19.9, CA 125, CA 15.3</li>
-                </ul>`
-    },
-    {
-        sno: 11,
-        id: 'cancer-male',
-        name: 'Cancer Screen - Male',
-        discountPrice: 'Rs. 5000',
-        description: 'Helps in detecting cancer at an early stage. Screens for leukaemia, prostate, lung, colorectal and testicular cancers. Fasting not mandatory.',
-        tests: `<ul>
-                    <li>CBC with Peripheral Smear</li>
-                    <li>AFP, CEA</li>
-                    <li>PSA</li>
-                    <li>CA 19.9</li>
-                </ul>`
-    },
-    {
-        sno: 12,
-        id: 'premarital-screen',
-        name: 'Complete Premarital Health Screening',
-        discountPrice: 'Rs. 6900',
-        description: 'Covers complete health check of all major organs, genetic and sexually transmitted diseases. Fasting not mandatory.',
-        tests: `<ul>
-                    <li>Basic Health Check up (Complete)</li>
-                    <li>VDRL / TPHA for Syphilis</li>
-                    <li>Viral markers: HIV, Hepatitis B, Hepatitis C</li>
-                    <li>Hb HPLC for Thalassemia</li>
-                </ul>`
-    },
-    {
-        sno: 13,
-        id: 'anemia-profile',
-        name: 'Anaemia Profile',
-        discountPrice: 'Rs. 2300',
-        description: 'A comprehensive panel to diagnose the cause of anaemia. Fasting not mandatory.',
-        tests: `<ul>
-                    <li>CBC with Peripheral Smear, Reticulocyte count</li>
-                    <li>Serum Iron, TIBC</li>
-                    <li>Vitamin B12</li>
-                    <li>Serum Total Proteins, Albumin, Globulin, A/G ratio</li>
-                    <li>Stool for occult blood</li>
-                </ul>`
-    },
-    {
-        sno: 14,
         id: 'extended-anemia',
         name: 'Extended Anaemia Profile',
         discountPrice: 'Rs. 4000',
         description: 'A detailed profile to detect and analyze different causes of anaemia. Fasting not mandatory.',
         tests: `<ul>
-                    <li>CBC with ESR</li>
+                    <li>Complete Blood Counts (CBC with ESR)</li>
                     <li>Peripheral Smear</li>
                     <li>Reticulocyte count</li>
                     <li>Hb Electrophoresis (HPLC)</li>
                     <li>Serum Iron, TIBC, Ferritin</li>
                     <li>Vitamin B12, Folic Acid</li>
-                    <li>Serum Proteins, Albumin, Globulin, A/G ratio</li>
+                    <li>S.Proteins, Albumin, Globulin, A/G ratio</li>
                     <li>Stool for occult blood</li>
                 </ul>`
     },
     {
-        sno: 15,
-        id: 'fever-panel',
-        name: 'Fever Panel',
-        discountPrice: 'Rs. 800',
-        description: 'Includes tests for malaria, typhoid, UTI and blood counts which help in differentiating bacterial and viral infections. Fasting not mandatory.',
-        tests: `<ul>
-                    <li>CBC</li>
-                    <li>Malaria Antigen</li>
-                    <li>Widal Test</li>
-                    <li>Urine R/M</li>
-                </ul>`
-    },
-    {
-        sno: 16,
-        id: 'extended-fever-panel',
-        name: 'Extended Fever Panel',
-        discountPrice: 'Rs. 2470',
-        description: 'Besides tests of fever panel, includes dengue antigen/antibody and typhoid antibodies for early detection. Fasting not mandatory.',
-        tests: `<ul>
-                    <li>CBC</li>
-                    <li>Malaria Antigen</li>
-                    <li>Typhidot, Widal Test</li>
-                    <li>Dengue NS1 Antigen, Dengue IgG/IgM</li>
-                    <li>Urine R/M</li>
-                </ul>`
-    },
-    {
-        sno: 17,
-        id: 'bone-health-screen',
-        name: 'Bone Health Screen',
-        discountPrice: 'Rs. 1650',
-        description: 'Useful in children, elderly and post-menopausal females. Fasting not mandatory.',
-        tests: `<ul>
-                    <li>Serum Calcium</li>
-                    <li>Serum Phosphorus</li>
-                    <li>Serum Alkaline Phosphate</li>
-                    <li>Vitamin D3</li>
-                </ul>`
-    },
-    {
-        sno: 18,
-        id: 'std-panel',
-        name: 'STD Screening Panel',
-        discountPrice: 'Rs. 1950',
-        description: 'Best done three months after exposure. Fasting not mandatory.',
-        tests: `<ul>
-                    <li>VDRL, TPHA</li>
-                    <li>HIV 1 & II</li>
-                    <li>HSV 1 & 2 (IgG & IgM)</li>
-                    <li>HBsAg</li>
-                </ul>`
-    },
-    {
-        sno: 19,
-        id: 'pcod-panel',
-        name: 'PCOD Panel',
-        discountPrice: 'Rs. 2450',
-        description: 'Recommended for women suffering from PCOS/PCOD, which can cause weight gain, acne, and irregular periods. Fasting is mandatory.',
-        tests: `<ul>
-                    <li>FSH, LH, FSH/LH ratio</li>
-                    <li>Prolactin</li>
-                    <li>Testosterone</li>
-                    <li>Insulin (Fasting), Sugar (Fasting), Insulin Resistance</li>
-                </ul>`
-    },
-    {
-        sno: 20,
-        id: 'arthritis-panel',
-        name: 'Arthritis Panel',
-        discountPrice: 'Rs. 1500',
-        description: 'Helps rule out common causes of joint pain like Rheumatoid arthritis and Gouty arthritis. Fasting not mandatory.',
-        tests: `<ul>
-                    <li>CBC</li>
-                    <li>RA factor</li>
-                    <li>ASO</li>
-                    <li>CRP</li>
-                    <li>Serum Uric Acid</li>
-                </ul>`
-    },
-    {
-        sno: 21,
-        id: 'coagulation-profile',
-        name: 'Coagulation Profile',
-        discountPrice: 'Rs. 950',
-        description: 'Comprehensive assessment of blood clotting ability. Recommended for patients with excessive bleeding or bruising. Fasting not mandatory.',
-        tests: `<ul>
-                    <li>Platelet count</li>
-                    <li>Bleeding Time, Clotting Time</li>
-                    <li>PT with INR</li>
-                    <li>APTT/PTT</li>
-                </ul>`
-    },
-    {
-        sno: 22,
+        sno: 7,
         id: 'pac-panel-lab',
         name: 'PAC Panel (Lab Only)',
         discountPrice: 'Rs. 2700',
-        description: 'Essential before any surgery to assess readiness for anaesthesia. Fasting not mandatory.',
+        description: 'Recommended before any surgery to assess readiness for anaesthesia and surgery. Fasting not mandatory.',
         tests: `<ul>
-                    <li>CBC with ESR</li>
+                    <li>Complete Blood Counts (CBC with ESR)</li>
                     <li>Bleeding Time, Clotting Time</li>
                     <li>PT with INR, APTT/PTT</li>
                     <li>Blood Group</li>
@@ -506,25 +310,7 @@ const packageDetails = [
                 </ul>`
     },
     {
-        sno: 23,
-        id: 'pac-panel-complete',
-        name: 'PAC Panel (Complete: Lab + X-Ray + ECG)',
-        discountPrice: 'Rs. 3500',
-        description: 'Essential before any surgery to assess readiness. Includes imaging. Fasting not mandatory.',
-        tests: `<ul>
-                    <li>CBC</li>
-                    <li>Coagulation Profile</li>
-                    <li>Blood Group</li>
-                    <li>Blood Sugar F/PP</li>
-                    <li>B.Urea, Creatinine</li>
-                    <li>HIV 1 & 2, HBsAg, HCV</li>
-                    <li>Urine R/M</li>
-                    <li>ECG</li>
-                    <li>Chest X-ray</li>
-                </ul>`
-    },
-    {
-        sno: 24,
+        sno: 8,
         id: 'fatty-liver',
         name: 'Fatty Liver Panel',
         discountPrice: 'Rs. 4000',
@@ -537,7 +323,7 @@ const packageDetails = [
     }
 ];
 
-// RENDER + MODAL LOGIC
+// Wait until DOM is loaded
 document.addEventListener('DOMContentLoaded', function () {
     const packagesGrid = document.getElementById('packages-grid');
     const modal = document.getElementById('details-modal');
@@ -545,14 +331,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const modalBody = document.getElementById('modal-body');
     const closeModalButton = document.getElementById('close-modal');
 
-    // Create cards (without showing price)
+    // Generate package cards
     packageDetails.forEach(pkg => {
         const card = document.createElement('div');
         card.className = 'theme-card flex flex-col justify-between p-6 text-center bg-white rounded-2xl shadow-md hover:shadow-lg transition';
+
         card.innerHTML = `
             <div class="flex-grow flex flex-col items-center justify-center">
                 <h3 class="text-xl font-bold theme-text mb-3">${pkg.sno}. ${pkg.name}</h3>
                 <p class="text-gray-500 text-sm">${pkg.description.split('.')[0]}.</p>
+                <p class="text-lg font-semibold theme-gradient-text mt-3">${pkg.discountPrice}</p>
             </div>
             <div class="mt-6">
                 <button data-package-id="${pkg.id}" 
@@ -564,14 +352,14 @@ document.addEventListener('DOMContentLoaded', function () {
         packagesGrid.appendChild(card);
     });
 
-    // Open modal
+    // Modal open
     const openModal = (packageId) => {
         const details = packageDetails.find(p => p.id === packageId);
         if (!details) return;
         modalBody.innerHTML = `
             <div class="text-center">
                 <h2 class="text-3xl font-bold text-gray-800 mb-2">${details.name}</h2>
-                <p class="text-2xl font-bold theme-gradient-text mb-4">Discounted Price: ${details.discountPrice}</p>
+                <p class="text-2xl font-bold theme-gradient-text mb-4">${details.discountPrice}</p>
                 <p class="text-gray-600 mb-6">${details.description}</p>
             </div>
             <div>
@@ -586,7 +374,8 @@ document.addEventListener('DOMContentLoaded', function () {
         modalContent.classList.remove('scale-95');
     };
 
-       const closeModal = () => {
+    // Modal close
+    const closeModal = () => {
         modal.classList.add('opacity-0', 'pointer-events-none');
         modalContent.classList.add('scale-95');
     };
@@ -619,7 +408,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
-    
 
 </body>
 </html>

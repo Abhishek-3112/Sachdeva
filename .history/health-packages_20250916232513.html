@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Packages | Sachdeva Diagnostics</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Custom styles for theme consistency and modal */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F8F9FA;
+        }
+        .theme-gradient-text {
+            background-image: linear-gradient(to right, #00A6C0, #00C2A3);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .theme-button {
+            display: inline-block;
+            background-image: linear-gradient(to right, #00A6C0, #00C2A3);
+            color: white;
+            font-weight: 600;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            transition: all 0.3s ease-in-out;
+        }
+        #details-modal {
+            transition: opacity 0.3s ease;
+        }
+        /* Custom list styles for the modal content */
+        #modal-body ul {
+            list-style-type: disc;
+            list-style-position: inside;
+            text-align: left;
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+        }
+        #modal-body li {
+            margin-bottom: 0.5rem;
+        }
+
+          .theme-button {
+        display: inline-block;
+        background-image: linear-gradient(to right, #00A6C0, #00C2A3);
+        color: white;
+        font-weight: 600;
+        padding: 0.75rem 2rem;
+        border-radius: 9999px;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 15px 0 rgba(0, 180, 172, 0.4);
+        border: none; /* Ensure no border interferes with style */
+    }
+
+    /* This is the new hover effect */
+    .theme-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 7px 20px 0 rgba(0, 180, 172, 0.6);
+        background-image: linear-gradient(to right, #00C2A3, #00A6C0); /* Reverses gradient on hover */
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/Logo_Sachdeva-Final-Transparent.png" alt="Sachdeva Diagnostics Icon" class="logo-icon" />
+                Sachdeva <span> Diagnostics</span>
+            </a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            ☰
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="facilities.html">Facilities</a></li>
+            <li><a href="lab-tests.html">Tests & Scans</a></li>
+            <li><a href="health-packages.html">Health Packages</a></li>
+            <li><a href="loca.html">Contact Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </nav>
+
+    <section class="py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800">Our Health Packages</h1>
+                <p class="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">
+                    Choose from our wide range of preventive health packages designed to keep you and your family healthy.
+                </p>
+            </div>
+
+            <div id="packages-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                </div>
+        </div>
+    </section>
+
+    <div id="details-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-60 opacity-0 pointer-events-none">
+        <div id="modal-content" class="bg-white w-full max-w-3xl rounded-2xl shadow-2xl p-6 md:p-8 relative transform scale-95 transition-transform duration-300 max-h-[90vh] overflow-y-auto">
+            <button id="close-modal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-800 text-3xl leading-none">&times;</button>
+            <div id="modal-body" class="text-left">
+                </div>
+        </div>
+    </div>
+
+   <footer class="bg-gray-50 text-gray-700">
+
+    <div class="bg-gray-900 text-gray-300">
+  <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-10">
+
+    <!-- Logo & Tagline -->
+    <div>
+      <a href="index.html" class="flex items-center space-x-2 mb-3">
+        <img src="images/Logo_Sachdeva-Final-Transparent.png" alt="Logo" class="w-12 h-12 bg-white">
+        <h3 class="text-2xl font-bold text-white">Sachdeva <span class="text-red-500">Diagnostics</span></h3>
+      </a>
+      <p class="text-sm text-gray-400">Pathology, Imaging & Beyond.</p>
+
+      <!-- Social -->
+      <div class="flex space-x-4 mt-4">
+        <a href="#" class="hover:text-blue-400"><img src="https://www.svgrepo.com/show/183607/facebook.svg" class="w-6 h-6" alt="Facebook"></a>
+        <a href="#" class="hover:text-pink-400"><img src="https://www.svgrepo.com/show/111199/instagram.svg" class="w-6 h-6" alt="Instagram"></a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h4 class="text-lg font-semibold text-white mb-3">Quick Links</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="about.html" class="hover:text-blue-400">About Us</a></li>
+        <li><a href="lab-tests.html" class="hover:text-blue-400">Test List</a></li>
+        <li><a href="loca.html" class="hover:text-blue-400">Location</a></li>
+      </ul>
+    </div>
+
+    <!-- Opening Hours -->
+    <div>
+      <h4 class="text-lg font-semibold text-white mb-3">Opening Hours</h4>
+      <ul class="space-y-2 text-sm">
+        <li class="flex justify-between">
+          <span>Mon - Sat</span>
+          <span class="text-blue-400 font-medium">08:30am – 07:30pm</span>
+        </li>
+        <li class="flex justify-between">
+          <span>Sunday</span>
+          <span class="text-red-400 font-medium">Closed</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div>
+      <h4 class="text-lg font-semibold text-white mb-3">Contact Us</h4>
+      <ul class="space-y-3 text-sm">
+        <li class="flex items-center space-x-2">
+          <span class="text-blue-400">📞</span>
+          <a href="tel:011-41600800" class="hover:text-blue-400 font-semibold">011-41600800</a>
+        </li>
+        <li class="flex items-center space-x-2">
+          <span class="text-yellow-400">✉️</span>
+          <a href="mailto:Sachdevadiagnosticsdelhi@gmail.com" class="hover:text-blue-400">Sachdevadiagnosticsdelhi@gmail.com</a>
+        </li>
+        <li class="flex items-center space-x-2">
+  <span class="text-red-500">📍</span>
+  <a href="https://www.google.com/maps/place/28%C2%B032'15.3%22N+77%C2%B015'22.9%22E/@28.5375711,77.2537896,17z/data=!3m1!4b1!4m4!3m3!8m2!3d28.5375711!4d77.2563645?entry=ttu&g_ep=EgoyMDI1MDgwNi4wIKXMDSoASAFQAw%3D%3D" 
+     target="_blank" 
+     class="hover:text-blue-400">
+    D-616/ C R Park, New Delhi, 110019
+  </a>
+</li>
+
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bottom Strip -->
+  <div class="border-t border-gray-700 py-4">
+    <p class="text-center text-xs text-gray-500">© 2025 Sachdeva Diagnostics. All rights reserved.</p>
+  </div>
+</div>
+</footer>
+ 
+<script>
+   const packageDetails = [
+    {
+        sno: 1,
+        id: 'mini-screen',
+        name: 'Mini Health Screen',
+        discountPrice: 'Rs. 900',
+        description: 'This is the minimal basic check up for people of all ages. Fasting is preferable but not mandatory.',
+        tests: `<ul>
+                    <li>Complete Blood Counts (CBC)</li>
+                    <li>Blood Sugar (Fasting/Random)</li>
+                    <li>Liver Enzymes (SGOT, SGPT, AST/ALT Ratio)</li>
+                    <li>Kidney Markers (B.Urea, BUN, Creatinine, BUN/Creatinine Ratio)</li>
+                    <li>Serum Cholesterol</li>
+                </ul>`
+    },
+    {
+        sno: 2,
+        id: 'basic-lab',
+        name: 'Basic Health Check Up (Lab Only)',
+        discountPrice: 'Rs. 2800',
+        description: 'Tells in detail about blood, liver, kidney and thyroid function and also conditions predisposing to heart disease, stroke and diabetes. Recommended once every year for all adults. Fasting is mandatory.',
+        tests: `<ul>
+                    <li><strong>Complete Blood Counts (CBC):</strong> Hb, TLC, DLC, ESR, PCV, Platelet count & more</li>
+                    <li><strong>Liver Function Test (LFT):</strong> SGOT, SGPT, Bilirubin, Proteins & more</li>
+                    <li><strong>Kidney function test (KFT):</strong> Urea, Creatinine, Uric acid, Electrolytes & e-GFR</li>
+                    <li><strong>Lipid Profile:</strong> Total cholesterol, Triglycerides, HDL, LDL, VLDL</li>
+                    <li><strong>Thyroid:</strong> TSH</li>
+                    <li><strong>Diabetes:</strong> HbA1c, Blood Sugar (F/PP)</li>
+                    <li><strong>Routine Tests:</strong> Urine R/M, Stool R/M</li>
+                </ul>`
+    },
+    {
+        sno: 3,
+        id: 'basic-full',
+        name: 'Basic Health Check Up with Imaging',
+        discountPrice: 'Rs. 4500',
+        description: 'This includes the Basic Health Check Up (Lab) along with a full abdomen ultrasound, chest x-ray and ECG. Fasting is mandatory.',
+        tests: `<p>Includes all tests from the <strong>Basic Health Check Up (Lab Only)</strong>, plus:</p>
+                <ul>
+                    <li>ECG (Electrocardiogram)</li>
+                    <li>Digital Chest X-ray</li>
+                    <li>Whole Abdomen Ultrasound Scan</li>
+                </ul>`
+    },
+    {
+        sno: 4,
+        id: 'extended-lab',
+        name: 'Extended Health Check Up (Lab Only)',
+        discountPrice: 'Rs. 4800',
+        description: 'This is the Basic Health Check Up (Lab) with added Vitamin D3 & Vitamin B12 tests, which are vital for overall health. Fasting is mandatory.',
+        tests: `<p>Includes all tests from the <strong>Basic Health Check Up (Lab Only)</strong>, plus:</p>
+                <ul>
+                    <li>Serum Vitamin D3</li>
+                    <li>Serum Vitamin B12</li>
+                </ul>`
+    },
+    {
+        sno: 5,
+        id: 'extended-full',
+        name: 'Extended Health Check Up with U/S, X-Ray & ECG',
+        discountPrice: 'Rs. 6500',
+        description: 'Comprehensive panel covering blood, liver, kidney, lipid, thyroid, diabetes, vitamins, urine and stool tests, with imaging (Ultrasound, X-ray, ECG). Fasting mandatory.',
+        tests: `<ul>
+                    <li>Complete Blood Counts (CBC) with Peripheral Smear</li>
+                    <li>Liver Function Test (LFT)</li>
+                    <li>Kidney Function Test (KFT)</li>
+                    <li>Lipid Profile</li>
+                    <li>TSH</li>
+                    <li>HbA1c, Blood Sugar F/PP</li>
+                    <li>Urine R/M, Stool R/M</li>
+                    <li>Vitamin D3, Vitamin B12</li>
+                    <li>Ultrasound Whole Abdomen</li>
+                    <li>Chest X-ray</li>
+                    <li>ECG</li>
+                </ul>`
+    },
+    {
+        sno: 6,
+        id: 'extended-anemia',
+        name: 'Extended Anaemia Profile',
+        discountPrice: 'Rs. 4000',
+        description: 'A detailed profile to detect and analyze different causes of anaemia. Fasting not mandatory.',
+        tests: `<ul>
+                    <li>Complete Blood Counts (CBC with ESR)</li>
+                    <li>Peripheral Smear</li>
+                    <li>Reticulocyte count</li>
+                    <li>Hb Electrophoresis (HPLC)</li>
+                    <li>Serum Iron, TIBC, Ferritin</li>
+                    <li>Vitamin B12, Folic Acid</li>
+                    <li>S.Proteins, Albumin, Globulin, A/G ratio</li>
+                    <li>Stool for occult blood</li>
+                </ul>`
+    },
+    {
+        sno: 7,
+        id: 'pac-panel-lab',
+        name: 'PAC Panel (Lab Only)',
+        discountPrice: 'Rs. 2700',
+        description: 'Recommended before any surgery to assess readiness for anaesthesia and surgery. Fasting not mandatory.',
+        tests: `<ul>
+                    <li>Complete Blood Counts (CBC with ESR)</li>
+                    <li>Bleeding Time, Clotting Time</li>
+                    <li>PT with INR, APTT/PTT</li>
+                    <li>Blood Group</li>
+                    <li>Blood Sugar F/PP</li>
+                    <li>B.Urea, S.Creatinine</li>
+                    <li>HIV 1 & 2, HBsAg, HCV</li>
+                    <li>Urine R/M</li>
+                </ul>`
+    },
+    {
+        sno: 8,
+        id: 'fatty-liver',
+        name: 'Fatty Liver Panel',
+        discountPrice: 'Rs. 4000',
+        description: 'Helps in diagnosis, treatment planning and monitoring of fatty liver disease. Fasting is mandatory.',
+        tests: `<ul>
+                    <li>Fibroscan (Ultrasound Shearwave Elastography of Liver)</li>
+                    <li>Insulin Resistance (HOMA-IR)</li>
+                    <li>Fib-4 Index</li>
+                </ul>`
+    }
+    // ... (rest of your packages continue with updated discountPrice and sno)
+];
+</script>
+
+</body>
+</html>
